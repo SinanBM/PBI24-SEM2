@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Nexttech")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c8df237f71ff398c8481a9cbc04e7873f9b085d0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+06c63a5d43f77a9029ce102ee41021f0d5355cfa")]
 [assembly: System.Reflection.AssemblyProductAttribute("Nexttech")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Nexttech")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
