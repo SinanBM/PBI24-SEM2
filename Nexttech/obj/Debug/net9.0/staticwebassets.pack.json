@@ -1,0 +1,69 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\calc-history.html",
+      "PackagePath": "staticwebassets\\html\\calc-history.html"
+    },
+    {
+      "Id": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\index.html",
+      "PackagePath": "staticwebassets\\html\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\login.html",
+      "PackagePath": "staticwebassets\\html\\login.html"
+    },
+    {
+      "Id": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\new-calculation.html",
+      "PackagePath": "staticwebassets\\html\\new-calculation.html"
+    },
+    {
+      "Id": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\results.html",
+      "PackagePath": "staticwebassets\\html\\results.html"
+    },
+    {
+      "Id": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\settings\\material-settings.html",
+      "PackagePath": "staticwebassets\\html\\settings\\material-settings.html"
+    },
+    {
+      "Id": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\settings\\printer-settings.html",
+      "PackagePath": "staticwebassets\\html\\settings\\printer-settings.html"
+    },
+    {
+      "Id": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\settings\\settings.html",
+      "PackagePath": "staticwebassets\\html\\settings\\settings.html"
+    },
+    {
+      "Id": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\settings\\user-settings.html",
+      "PackagePath": "staticwebassets\\html\\settings\\user-settings.html"
+    },
+    {
+      "Id": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\script.js",
+      "PackagePath": "staticwebassets\\script.js"
+    },
+    {
+      "Id": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\style.css",
+      "PackagePath": "staticwebassets\\style.css"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.Nexttech.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.Nexttech.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.Nexttech.props",
+      "PackagePath": "build\\Nexttech.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.Nexttech.props",
+      "PackagePath": "buildMultiTargeting\\Nexttech.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.Nexttech.props",
+      "PackagePath": "buildTransitive\\Nexttech.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
