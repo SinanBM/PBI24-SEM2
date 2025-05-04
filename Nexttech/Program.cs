@@ -1,26 +1,37 @@
-using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.FileProviders;
-using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
+using Nexttech.Data;
+
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Connection string from appsettings.json or direct inline (if needed)
+var connectionString = "server=localhost;database=printdb;user=root;password=;";
+
+// This is from Pomelo
+builder.Services.AddDbContext<DatabaseContext>(options =>
+    options.UseMySql(connectionString, ServerVersion.Create(new Version(8, 0, 0), Pomelo.EntityFrameworkCore.MySql.Infrastructure.ServerType.MySql)));
+
+builder.Services.AddControllers();
+
 var app = builder.Build();
 
-// Serve static files from the "wwwroot" directory
+app.MapControllers();
+
 app.UseDefaultFiles(new DefaultFilesOptions
 {
-    DefaultFileNames = new List<string> { "html/index.html" } // Default page
+    DefaultFileNames = new List<string> { "html/index.html" }
 });
 
 app.UseStaticFiles(new StaticFileOptions
 {
     FileProvider = new PhysicalFileProvider(
-        Path.Combine(Directory.GetCurrentDirectory(), "wwwroot")), // Path to wwwroot folder
-    RequestPath = "" // Serve files at the root URL
+        Path.Combine(Directory.GetCurrentDirectory(), "wwwroot")),
+    RequestPath = ""
 });
 
-// Example API endpoint (optional)
 app.MapGet("/api/hello", () => "Hello from the Web API!");
 
-// Run the app on http://localhost:8080
 app.Urls.Add("http://localhost:5077");
+
 app.Run();

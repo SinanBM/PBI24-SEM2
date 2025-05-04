@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materials</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>  <!-- Axios for making API calls -->
+</head>
+<body>
+    <h1>Materials</h1>
+
+    <!-- Form for creating a new material -->
+    <h3>Add New Material</h3>
+    <form id="addMaterialForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required><br>
+        <label for="material_cost">Material Cost:</label>
+        <input type="number" id="material_cost" required><br>
+        <label for="material_density">Material Density:</label>
+        <input type="number" id="material_density" required><br>
+        <button type="submit">Add Material</button>
+    </form>
+
+    <hr>
+
+    <!-- Table to display existing materials -->
+    <h3>Existing Materials</h3>
+    <table id="materialsTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Material Cost</th>
+                <th>Material Density</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        // Load all materials on page load
+        window.onload = function() {
+            fetchMaterials();
+        };
+
+        // Fetch all materials
+        function fetchMaterials() {
+            axios.get('http://localhost:5077/api/materials')
+                .then(response => {
+                    const materials = response.data;
+                    const tableBody = document.getElementById('materialsTable').getElementsByTagName('tbody')[0];
+                    tableBody.innerHTML = ''; // Clear the table
+
+                    materials.forEach(material => {
+                        const row = tableBody.insertRow();
+                        row.innerHTML = `
+                            <td>${material.name}</td>
+                            <td>${material.material_cost}</td>
+                            <td>${material.material_density}</td>
+                            <td>
+                                <button onclick="editMaterial(${material.id})">Edit</button>
+                                <button onclick="deleteMaterial(${material.id})">Delete</button>
+                            </td>
+                        `;
+                    });
+                })
+                .catch(error => console.error('Error fetching materials:', error));
+        }
+
+        // Add a new material
+        document.getElementById('addMaterialForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const material_cost = document.getElementById('material_cost').value;
+            const material_density = document.getElementById('material_density').value;
+
+            const newMaterial = {
+                name: name,
+                material_cost: material_cost,
+                material_density: material_density
+            };
+
+            axios.post('http://localhost:5077/api/materials', newMaterial)
+                .then(response => {
+                    alert('Material added successfully!');
+                    fetchMaterials();  // Refresh the material list
+                })
+                .catch(error => console.error('Error adding material:', error));
+        });
+
+        // Delete a material
+        function deleteMaterial(id) {
+            axios.delete(`http://localhost:5077/api/materials/${id}`)
+                .then(response => {
+                    alert('Material deleted successfully!');
+                    fetchMaterials();  // Refresh the material list
+                })
+                .catch(error => console.error('Error deleting material:', error));
+        }
+
+        // Edit a material (You can create a separate form or pre-populate the existing form for editing)
+        function editMaterial(id) {
+            alert('Edit functionality is not implemented yet for material ' + id);
+        }
+    </script>
+</body>
+</html>

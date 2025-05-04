@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9sn+uY1lEtQ08JsOO3Mjp1A/EPsq4i4DOn0nkdDyQ4Q=",
+  "Hash": "kazWOFTm/Esrd4pbhyIe1o3FJSbj9Xx7Ffd5YXWIM1I=",
   "Source": "Nexttech",
   "BasePath": "_content/Nexttech",
   "Mode": "Default",
@@ -185,12 +185,12 @@
       "OriginalItemSpec": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\settings\\printer-settings.html"
     },
     {
-      "Identity": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\lwf927u8je-x7fijazpfw.gz",
+      "Identity": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\lwf927u8je-vl1qs1at8k.gz",
       "SourceId": "Nexttech",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Nexttech",
-      "RelativePath": "style#[.{fingerprint=x7fijazpfw}]?.css.gz",
+      "RelativePath": "style#[.{fingerprint=vl1qs1at8k}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -199,8 +199,8 @@
       "RelatedAsset": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\style.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "nhdp2gbcxg",
-      "Integrity": "i0Lh/B+g7Ug+gzO/Nee3tNoe16bf/VMstzBjRD17/E0=",
+      "Fingerprint": "wnb9ynuk1c",
+      "Integrity": "tF6rBlEEmpfra3VcQQEXsoHUwlI2FEGBFfdYorNaO5k=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\style.css"
@@ -472,8 +472,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "x7fijazpfw",
-      "Integrity": "jeiwiuVfDSAnNCoRk8OlsVB8do5cUi5ZXbGLw3GgQRA=",
+      "Fingerprint": "vl1qs1at8k",
+      "Integrity": "XVXZpmQJdPnSnLEBatxhrZeYoJHla8i734akK4anOSI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\style.css"
@@ -3462,12 +3462,12 @@
     },
     {
       "Route": "style.css",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\lwf927u8je-x7fijazpfw.gz",
+      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\lwf927u8je-vl1qs1at8k.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.004854368932"
+          "Quality": "0.007812500000"
         }
       ],
       "ResponseHeaders": [
@@ -3477,15 +3477,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "205"
+          "Value": "127"
         },
         {
           "Name": "ETag",
-          "Value": "\"i0Lh/B+g7Ug+gzO/Nee3tNoe16bf/VMstzBjRD17/E0=\""
+          "Value": "\"tF6rBlEEmpfra3VcQQEXsoHUwlI2FEGBFfdYorNaO5k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 17:57:26 GMT"
+          "Value": "Thu, 01 May 2025 10:52:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3505,13 +3505,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"jeiwiuVfDSAnNCoRk8OlsVB8do5cUi5ZXbGLw3GgQRA=\""
+          "Value": "W/\"XVXZpmQJdPnSnLEBatxhrZeYoJHla8i734akK4anOSI=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-jeiwiuVfDSAnNCoRk8OlsVB8do5cUi5ZXbGLw3GgQRA="
+          "Value": "sha256-XVXZpmQJdPnSnLEBatxhrZeYoJHla8i734akK4anOSI="
         }
       ]
     },
@@ -3526,7 +3526,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "336"
+          "Value": "131"
         },
         {
           "Name": "Content-Type",
@@ -3534,11 +3534,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"jeiwiuVfDSAnNCoRk8OlsVB8do5cUi5ZXbGLw3GgQRA=\""
+          "Value": "\"XVXZpmQJdPnSnLEBatxhrZeYoJHla8i734akK4anOSI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 17:57:26 GMT"
+          "Value": "Thu, 01 May 2025 10:52:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3548,13 +3548,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-jeiwiuVfDSAnNCoRk8OlsVB8do5cUi5ZXbGLw3GgQRA="
+          "Value": "sha256-XVXZpmQJdPnSnLEBatxhrZeYoJHla8i734akK4anOSI="
         }
       ]
     },
     {
       "Route": "style.css.gz",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\lwf927u8je-x7fijazpfw.gz",
+      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\lwf927u8je-vl1qs1at8k.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3563,7 +3563,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "205"
+          "Value": "127"
         },
         {
           "Name": "Content-Type",
@@ -3571,11 +3571,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"i0Lh/B+g7Ug+gzO/Nee3tNoe16bf/VMstzBjRD17/E0=\""
+          "Value": "\"tF6rBlEEmpfra3VcQQEXsoHUwlI2FEGBFfdYorNaO5k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 17:57:26 GMT"
+          "Value": "Thu, 01 May 2025 10:52:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3593,18 +3593,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-i0Lh/B+g7Ug+gzO/Nee3tNoe16bf/VMstzBjRD17/E0="
+          "Value": "sha256-tF6rBlEEmpfra3VcQQEXsoHUwlI2FEGBFfdYorNaO5k="
         }
       ]
     },
     {
-      "Route": "style.x7fijazpfw.css",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\lwf927u8je-x7fijazpfw.gz",
+      "Route": "style.vl1qs1at8k.css",
+      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\lwf927u8je-vl1qs1at8k.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.004854368932"
+          "Quality": "0.007812500000"
         }
       ],
       "ResponseHeaders": [
@@ -3614,15 +3614,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "205"
+          "Value": "127"
         },
         {
           "Name": "ETag",
-          "Value": "\"i0Lh/B+g7Ug+gzO/Nee3tNoe16bf/VMstzBjRD17/E0=\""
+          "Value": "\"tF6rBlEEmpfra3VcQQEXsoHUwlI2FEGBFfdYorNaO5k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 17:57:26 GMT"
+          "Value": "Thu, 01 May 2025 10:52:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3642,13 +3642,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"jeiwiuVfDSAnNCoRk8OlsVB8do5cUi5ZXbGLw3GgQRA=\""
+          "Value": "W/\"XVXZpmQJdPnSnLEBatxhrZeYoJHla8i734akK4anOSI=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "x7fijazpfw"
+          "Value": "vl1qs1at8k"
         },
         {
           "Name": "label",
@@ -3656,12 +3656,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-jeiwiuVfDSAnNCoRk8OlsVB8do5cUi5ZXbGLw3GgQRA="
+          "Value": "sha256-XVXZpmQJdPnSnLEBatxhrZeYoJHla8i734akK4anOSI="
         }
       ]
     },
     {
-      "Route": "style.x7fijazpfw.css",
+      "Route": "style.vl1qs1at8k.css",
       "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\style.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3671,7 +3671,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "336"
+          "Value": "131"
         },
         {
           "Name": "Content-Type",
@@ -3679,11 +3679,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"jeiwiuVfDSAnNCoRk8OlsVB8do5cUi5ZXbGLw3GgQRA=\""
+          "Value": "\"XVXZpmQJdPnSnLEBatxhrZeYoJHla8i734akK4anOSI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 17:57:26 GMT"
+          "Value": "Thu, 01 May 2025 10:52:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3693,7 +3693,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "x7fijazpfw"
+          "Value": "vl1qs1at8k"
         },
         {
           "Name": "label",
@@ -3701,13 +3701,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-jeiwiuVfDSAnNCoRk8OlsVB8do5cUi5ZXbGLw3GgQRA="
+          "Value": "sha256-XVXZpmQJdPnSnLEBatxhrZeYoJHla8i734akK4anOSI="
         }
       ]
     },
     {
-      "Route": "style.x7fijazpfw.css.gz",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\lwf927u8je-x7fijazpfw.gz",
+      "Route": "style.vl1qs1at8k.css.gz",
+      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\lwf927u8je-vl1qs1at8k.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3716,7 +3716,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "205"
+          "Value": "127"
         },
         {
           "Name": "Content-Type",
@@ -3724,11 +3724,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"i0Lh/B+g7Ug+gzO/Nee3tNoe16bf/VMstzBjRD17/E0=\""
+          "Value": "\"tF6rBlEEmpfra3VcQQEXsoHUwlI2FEGBFfdYorNaO5k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 17:57:26 GMT"
+          "Value": "Thu, 01 May 2025 10:52:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3746,7 +3746,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "x7fijazpfw"
+          "Value": "vl1qs1at8k"
         },
         {
           "Name": "label",
@@ -3754,7 +3754,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-i0Lh/B+g7Ug+gzO/Nee3tNoe16bf/VMstzBjRD17/E0="
+          "Value": "sha256-tF6rBlEEmpfra3VcQQEXsoHUwlI2FEGBFfdYorNaO5k="
         }
       ]
     }
