@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\Nexttech.csproj": {}
+    "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\Nexttech.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\Nexttech.csproj": {
+    "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\Nexttech.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\Nexttech.csproj",
+        "projectUniqueName": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\Nexttech.csproj",
         "projectName": "Nexttech",
-        "projectPath": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\Nexttech.csproj",
-        "packagesPath": "C:\\Users\\Sinan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\",
+        "projectPath": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\Nexttech.csproj",
+        "packagesPath": "C:\\Users\\hijra\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Sinan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\hijra\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -46,7 +46,21 @@
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[9.0.2, )"
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             }
           },
           "imports": [
@@ -68,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

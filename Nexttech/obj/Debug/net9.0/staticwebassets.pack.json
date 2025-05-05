@@ -1,47 +1,35 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\calc-history.html",
+      "Id": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\calc-history.html",
       "PackagePath": "staticwebassets\\html\\calc-history.html"
     },
     {
-      "Id": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\index.html",
+      "Id": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\index.html",
       "PackagePath": "staticwebassets\\html\\index.html"
     },
     {
-      "Id": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\login.html",
+      "Id": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\login.html",
       "PackagePath": "staticwebassets\\html\\login.html"
     },
     {
-      "Id": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\new-calculation.html",
+      "Id": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\new-calculation.html",
       "PackagePath": "staticwebassets\\html\\new-calculation.html"
     },
     {
-      "Id": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\results.html",
+      "Id": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\results.html",
       "PackagePath": "staticwebassets\\html\\results.html"
     },
     {
-      "Id": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\settings\\material-settings.html",
-      "PackagePath": "staticwebassets\\html\\settings\\material-settings.html"
-    },
-    {
-      "Id": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\settings\\printer-settings.html",
-      "PackagePath": "staticwebassets\\html\\settings\\printer-settings.html"
-    },
-    {
-      "Id": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\settings\\settings.html",
+      "Id": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\settings\\settings.html",
       "PackagePath": "staticwebassets\\html\\settings\\settings.html"
     },
     {
-      "Id": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\settings\\user-settings.html",
-      "PackagePath": "staticwebassets\\html\\settings\\user-settings.html"
-    },
-    {
-      "Id": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\script.js",
+      "Id": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\script.js",
       "PackagePath": "staticwebassets\\script.js"
     },
     {
-      "Id": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\style.css",
+      "Id": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\style.css",
       "PackagePath": "staticwebassets\\style.css"
     },
     {

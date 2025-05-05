@@ -1,15 +1,52 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #e42484;
     text-align: center;
     padding-top: 50px;
+}
+
+h1 {
+    color: #0078D7;
+    font-size: 36px; 
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.Settings-link {
+    display: block;
+    margin: 10px auto;
+    padding: 12px 20px;
+    width: 250px; 
+    text-decoration: none;
+    color:rgb(228, 27, 27);
+    background-color: #0078D7;
+    border-radius: 8px; 
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+
+
+.Settings-link:hover {
+    background-color: #005fa3;
+}
+
+.home-link {
+    background-color: #2ac66e;
+}
+
+.home-link:hover {
+    background-color: #888;
 }
 
 button {
     padding: 10px 20px;
     font-size: 16px;
     background-color: #4CAF50;
-    color: white;
+    color: rgb(209, 13, 13);
     border: none;
     cursor: pointer;
 }

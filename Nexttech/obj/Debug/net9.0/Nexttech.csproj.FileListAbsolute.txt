@@ -44,3 +44,46 @@ C:\Users\Sinan\Desktop\IT ARKITEKTUR\2. SEMESTER\PROJEKT\nexttech application\Ne
 C:\Users\Sinan\Desktop\IT ARKITEKTUR\2. SEMESTER\PROJEKT\nexttech application\Nexttech\obj\Debug\net9.0\compressed\l9yhnn4byh-kevei5lsyp.gz
 C:\Users\Sinan\Desktop\IT ARKITEKTUR\2. SEMESTER\PROJEKT\nexttech application\Nexttech\obj\Debug\net9.0\compressed\a5f3rtb45c-aaud3crwb4.gz
 C:\Users\Sinan\Desktop\IT ARKITEKTUR\2. SEMESTER\PROJEKT\nexttech application\Nexttech\obj\Debug\net9.0\compressed\9lkos121y3-4hpenzm75m.gz
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\bin\Debug\net9.0\appsettings.Development.json
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\bin\Debug\net9.0\appsettings.json
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\bin\Debug\net9.0\Nexttech.staticwebassets.runtime.json
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\bin\Debug\net9.0\Nexttech.staticwebassets.endpoints.json
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\bin\Debug\net9.0\Nexttech.exe
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\bin\Debug\net9.0\Nexttech.deps.json
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\bin\Debug\net9.0\Nexttech.runtimeconfig.json
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\bin\Debug\net9.0\Nexttech.dll
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\bin\Debug\net9.0\Nexttech.pdb
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\obj\Debug\net9.0\Nexttech.csproj.AssemblyReference.cache
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\obj\Debug\net9.0\Nexttech.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\obj\Debug\net9.0\Nexttech.AssemblyInfoInputs.cache
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\obj\Debug\net9.0\Nexttech.AssemblyInfo.cs
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\obj\Debug\net9.0\Nexttech.csproj.CoreCompileInputs.cache
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\obj\Debug\net9.0\Nexttech.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\obj\Debug\net9.0\Nexttech.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\obj\Debug\net9.0\Nexttech.sourcelink.json
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\obj\Debug\net9.0\scopedcss\bundle\Nexttech.styles.css
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\obj\Debug\net9.0\compressed\dbo2c2dn08-edp6qxx6r5.gz
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\obj\Debug\net9.0\compressed\4aqm5usp5v-ow7fdz36sx.gz
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\obj\Debug\net9.0\compressed\fdpmz9c6p9-7vl0h27yix.gz
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\obj\Debug\net9.0\compressed\q48etva7z1-w63x1a2xnk.gz
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\obj\Debug\net9.0\compressed\u7kl9otn4b-lppxj1mxmh.gz
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\obj\Debug\net9.0\staticwebassets\msbuild.Nexttech.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\obj\Debug\net9.0\staticwebassets\msbuild.Nexttech.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\obj\Debug\net9.0\staticwebassets\msbuild.build.Nexttech.props
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.Nexttech.props
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.Nexttech.props
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\obj\Debug\net9.0\staticwebassets.pack.json
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\obj\Debug\net9.0\Nexttech.csproj.Up2Date
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\obj\Debug\net9.0\Nexttech.dll
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\obj\Debug\net9.0\refint\Nexttech.dll
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\obj\Debug\net9.0\Nexttech.pdb
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\obj\Debug\net9.0\Nexttech.genruntimeconfig.cache
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\obj\Debug\net9.0\ref\Nexttech.dll
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\obj\Debug\net9.0\compressed\1mb5dq9d2g-t3bzo1e73a.gz
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\obj\Debug\net9.0\compressed\a5f3rtb45c-hyxc08o1ph.gz
+C:\Users\hijra\OneDrive - IBA Erhvervsakademi Kolding\Vedhæftede filer\Projekt 2\Nexttech\obj\Debug\net9.0\compressed\lwf927u8je-dh0vgfjbwd.gz

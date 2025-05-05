@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9sn+uY1lEtQ08JsOO3Mjp1A/EPsq4i4DOn0nkdDyQ4Q=",
+  "Hash": "u0cvamOJ5qvqjpHeW5nTKDAwJ9ingDTIRJS7EYDYsqY=",
   "Source": "Nexttech",
   "BasePath": "_content/Nexttech",
   "Mode": "Default",
@@ -10,38 +10,38 @@
     {
       "Name": "Nexttech\\wwwroot",
       "Source": "Nexttech",
-      "ContentRoot": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\",
       "BasePath": "_content/Nexttech",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\1mb5dq9d2g-xd6yxude22.gz",
+      "Identity": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\1mb5dq9d2g-t3bzo1e73a.gz",
       "SourceId": "Nexttech",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Nexttech",
-      "RelativePath": "script#[.{fingerprint=xd6yxude22}]?.js.gz",
+      "RelativePath": "script#[.{fingerprint=t3bzo1e73a}]?.js.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
       "AssetMergeBehavior": "",
       "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\script.js",
+      "RelatedAsset": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\script.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "myqtux31cj",
-      "Integrity": "vp8YAKcuJhcdjN+4QyGFm8vBgbvP3eFIO3NjvEja4LQ=",
+      "Fingerprint": "v1zb2xdokq",
+      "Integrity": "M7zQZjtU8M12sOLv6CtkDX/ss5JH50vHBwT80h+ZWBo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\script.js"
+      "OriginalItemSpec": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\script.js"
     },
     {
-      "Identity": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\4aqm5usp5v-ow7fdz36sx.gz",
+      "Identity": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\4aqm5usp5v-ow7fdz36sx.gz",
       "SourceId": "Nexttech",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Nexttech",
       "RelativePath": "html/index#[.{fingerprint=ow7fdz36sx}]?.html.gz",
       "AssetKind": "All",
@@ -49,83 +49,41 @@
       "AssetRole": "Alternative",
       "AssetMergeBehavior": "",
       "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\index.html",
+      "RelatedAsset": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\index.html",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
       "Fingerprint": "3hodsgdg5i",
       "Integrity": "2ZYpNRo+yWmyrRQqCqsZT97PQsFe9bC+9MHb87rfVs8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\index.html"
+      "OriginalItemSpec": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\index.html"
     },
     {
-      "Identity": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\9lkos121y3-4hpenzm75m.gz",
+      "Identity": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\a5f3rtb45c-hyxc08o1ph.gz",
       "SourceId": "Nexttech",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Nexttech",
-      "RelativePath": "html/settings/user-settings#[.{fingerprint=4hpenzm75m}]?.html.gz",
+      "RelativePath": "html/settings/settings#[.{fingerprint=hyxc08o1ph}]?.html.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
       "AssetMergeBehavior": "",
       "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\settings\\user-settings.html",
+      "RelatedAsset": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\settings\\settings.html",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "38nzuu8agl",
-      "Integrity": "rYkbiJ3fILLebKI6jAd3ilOth4n6ncI4gxe5/Ips9nI=",
+      "Fingerprint": "quwl5w0uvm",
+      "Integrity": "bkGpjYbLwrvmXrZ6T/s5r5ekr1O7V4C2B/QB1HKZh40=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\settings\\user-settings.html"
+      "OriginalItemSpec": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\settings\\settings.html"
     },
     {
-      "Identity": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\a5f3rtb45c-aaud3crwb4.gz",
+      "Identity": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\dbo2c2dn08-edp6qxx6r5.gz",
       "SourceId": "Nexttech",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\",
-      "BasePath": "_content/Nexttech",
-      "RelativePath": "html/settings/settings#[.{fingerprint=aaud3crwb4}]?.html.gz",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\settings\\settings.html",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "Fingerprint": "35uf7hzn4w",
-      "Integrity": "V4E+WjB6/ysrJ1KEZFqZ6b/gSLCxwtazseqqxIIEkok=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\settings\\settings.html"
-    },
-    {
-      "Identity": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\dalhjfd99v-n3i4v0ttkz.gz",
-      "SourceId": "Nexttech",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\",
-      "BasePath": "_content/Nexttech",
-      "RelativePath": "html/settings/material-settings#[.{fingerprint=n3i4v0ttkz}]?.html.gz",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\settings\\material-settings.html",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "Fingerprint": "uif7zgg74k",
-      "Integrity": "Vk05H0YBTnhorKRN53uLgWGwKJ06XXgwuYj+GTziszo=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\settings\\material-settings.html"
-    },
-    {
-      "Identity": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\dbo2c2dn08-edp6qxx6r5.gz",
-      "SourceId": "Nexttech",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Nexttech",
       "RelativePath": "html/calc-history#[.{fingerprint=edp6qxx6r5}]?.html.gz",
       "AssetKind": "All",
@@ -133,20 +91,20 @@
       "AssetRole": "Alternative",
       "AssetMergeBehavior": "",
       "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\calc-history.html",
+      "RelatedAsset": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\calc-history.html",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
       "Fingerprint": "sw58f8twj5",
       "Integrity": "7C7PIxifdgY9RS5rCEaIVJX/3lNrtizuj6gON0U+z3E=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\calc-history.html"
+      "OriginalItemSpec": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\calc-history.html"
     },
     {
-      "Identity": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\fdpmz9c6p9-7vl0h27yix.gz",
+      "Identity": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\fdpmz9c6p9-7vl0h27yix.gz",
       "SourceId": "Nexttech",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Nexttech",
       "RelativePath": "html/login#[.{fingerprint=7vl0h27yix}]?.html.gz",
       "AssetKind": "All",
@@ -154,62 +112,41 @@
       "AssetRole": "Alternative",
       "AssetMergeBehavior": "",
       "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\login.html",
+      "RelatedAsset": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\login.html",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
       "Fingerprint": "gf35y6wlnx",
       "Integrity": "ZOXMnHvhRz3iXxZndjeShOawu8kgfyhuPv5Rp8KQ2Us=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\login.html"
+      "OriginalItemSpec": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\login.html"
     },
     {
-      "Identity": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\l9yhnn4byh-kevei5lsyp.gz",
+      "Identity": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\lwf927u8je-dh0vgfjbwd.gz",
       "SourceId": "Nexttech",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Nexttech",
-      "RelativePath": "html/settings/printer-settings#[.{fingerprint=kevei5lsyp}]?.html.gz",
+      "RelativePath": "style#[.{fingerprint=dh0vgfjbwd}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
       "AssetMergeBehavior": "",
       "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\settings\\printer-settings.html",
+      "RelatedAsset": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\style.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "63f6km0cpd",
-      "Integrity": "4j13hqUIa8EBW6f0jQQDxmxOHTCgEOiCbBhmLdMW8Aw=",
+      "Fingerprint": "crqntxja11",
+      "Integrity": "OPhIWYeedQpFKLmDjWzK0vpDRdQ90uFjznh+jVOHw9w=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\settings\\printer-settings.html"
+      "OriginalItemSpec": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\style.css"
     },
     {
-      "Identity": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\lwf927u8je-x7fijazpfw.gz",
+      "Identity": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\q48etva7z1-w63x1a2xnk.gz",
       "SourceId": "Nexttech",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\",
-      "BasePath": "_content/Nexttech",
-      "RelativePath": "style#[.{fingerprint=x7fijazpfw}]?.css.gz",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\style.css",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "Fingerprint": "nhdp2gbcxg",
-      "Integrity": "i0Lh/B+g7Ug+gzO/Nee3tNoe16bf/VMstzBjRD17/E0=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\style.css"
-    },
-    {
-      "Identity": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\q48etva7z1-w63x1a2xnk.gz",
-      "SourceId": "Nexttech",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Nexttech",
       "RelativePath": "html/new-calculation#[.{fingerprint=w63x1a2xnk}]?.html.gz",
       "AssetKind": "All",
@@ -217,20 +154,20 @@
       "AssetRole": "Alternative",
       "AssetMergeBehavior": "",
       "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\new-calculation.html",
+      "RelatedAsset": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\new-calculation.html",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
       "Fingerprint": "i6xcu7t0ph",
       "Integrity": "BqNJR8aogN/tcpnFiGmarzSMt/YVnIE8GqtJUSHXdLw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\new-calculation.html"
+      "OriginalItemSpec": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\new-calculation.html"
     },
     {
-      "Identity": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\u7kl9otn4b-lppxj1mxmh.gz",
+      "Identity": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\u7kl9otn4b-lppxj1mxmh.gz",
       "SourceId": "Nexttech",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Nexttech",
       "RelativePath": "html/results#[.{fingerprint=lppxj1mxmh}]?.html.gz",
       "AssetKind": "All",
@@ -238,20 +175,20 @@
       "AssetRole": "Alternative",
       "AssetMergeBehavior": "",
       "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\results.html",
+      "RelatedAsset": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\results.html",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
       "Fingerprint": "cb9bj6shg3",
       "Integrity": "6M6iPrEevlJlg8qy/o/GK+pqBdWE6yIFh16U+uDNiI8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\results.html"
+      "OriginalItemSpec": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\results.html"
     },
     {
-      "Identity": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\calc-history.html",
+      "Identity": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\calc-history.html",
       "SourceId": "Nexttech",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\",
       "BasePath": "_content/Nexttech",
       "RelativePath": "html/calc-history#[.{fingerprint}]?.html",
       "AssetKind": "All",
@@ -269,10 +206,10 @@
       "OriginalItemSpec": "wwwroot\\html\\calc-history.html"
     },
     {
-      "Identity": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\index.html",
+      "Identity": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\index.html",
       "SourceId": "Nexttech",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\",
       "BasePath": "_content/Nexttech",
       "RelativePath": "html/index#[.{fingerprint}]?.html",
       "AssetKind": "All",
@@ -290,10 +227,10 @@
       "OriginalItemSpec": "wwwroot\\html\\index.html"
     },
     {
-      "Identity": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\login.html",
+      "Identity": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\login.html",
       "SourceId": "Nexttech",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\",
       "BasePath": "_content/Nexttech",
       "RelativePath": "html/login#[.{fingerprint}]?.html",
       "AssetKind": "All",
@@ -311,10 +248,10 @@
       "OriginalItemSpec": "wwwroot\\html\\login.html"
     },
     {
-      "Identity": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\new-calculation.html",
+      "Identity": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\new-calculation.html",
       "SourceId": "Nexttech",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\",
       "BasePath": "_content/Nexttech",
       "RelativePath": "html/new-calculation#[.{fingerprint}]?.html",
       "AssetKind": "All",
@@ -332,10 +269,10 @@
       "OriginalItemSpec": "wwwroot\\html\\new-calculation.html"
     },
     {
-      "Identity": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\results.html",
+      "Identity": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\results.html",
       "SourceId": "Nexttech",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\",
       "BasePath": "_content/Nexttech",
       "RelativePath": "html/results#[.{fingerprint}]?.html",
       "AssetKind": "All",
@@ -353,52 +290,10 @@
       "OriginalItemSpec": "wwwroot\\html\\results.html"
     },
     {
-      "Identity": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\settings\\material-settings.html",
+      "Identity": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\settings\\settings.html",
       "SourceId": "Nexttech",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\",
-      "BasePath": "_content/Nexttech",
-      "RelativePath": "html/settings/material-settings#[.{fingerprint}]?.html",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "n3i4v0ttkz",
-      "Integrity": "o8NPvf0d3I9CYlJUQtTGaK8/jQ4BH3Pf/ATjbtbT61Q=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\html\\settings\\material-settings.html"
-    },
-    {
-      "Identity": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\settings\\printer-settings.html",
-      "SourceId": "Nexttech",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\",
-      "BasePath": "_content/Nexttech",
-      "RelativePath": "html/settings/printer-settings#[.{fingerprint}]?.html",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "kevei5lsyp",
-      "Integrity": "fGzuwcKDLMdYrDcBfENxvOEfzEmOeANcyj3T5UgQQRg=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\html\\settings\\printer-settings.html"
-    },
-    {
-      "Identity": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\settings\\settings.html",
-      "SourceId": "Nexttech",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\",
       "BasePath": "_content/Nexttech",
       "RelativePath": "html/settings/settings#[.{fingerprint}]?.html",
       "AssetKind": "All",
@@ -409,38 +304,17 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "aaud3crwb4",
-      "Integrity": "kh3wnYJMtj9JYZnvLwwuyqxIFiq2c3e12WtCOjHuZCw=",
+      "Fingerprint": "hyxc08o1ph",
+      "Integrity": "6RYjI/s911khlRXLV+dPQ5lNmgsTW+OkgshfFrBQonU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\html\\settings\\settings.html"
     },
     {
-      "Identity": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\settings\\user-settings.html",
+      "Identity": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\script.js",
       "SourceId": "Nexttech",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\",
-      "BasePath": "_content/Nexttech",
-      "RelativePath": "html/settings/user-settings#[.{fingerprint}]?.html",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "4hpenzm75m",
-      "Integrity": "eHv4EzEEI5N46tyzM9TogKqltGyi/dJf9PBpwQB2msI=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\html\\settings\\user-settings.html"
-    },
-    {
-      "Identity": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\script.js",
-      "SourceId": "Nexttech",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\",
       "BasePath": "_content/Nexttech",
       "RelativePath": "script#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -451,17 +325,17 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "xd6yxude22",
-      "Integrity": "1Z16s0ZtF6cu/2E8T+ZGGGGNYhfYCwwIzDqGNc2bjEY=",
+      "Fingerprint": "t3bzo1e73a",
+      "Integrity": "+X4Mo/MlGt5k8NlKfXpDuXW9E17gnsRTSw3TfCpfH8o=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\script.js"
     },
     {
-      "Identity": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\style.css",
+      "Identity": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\style.css",
       "SourceId": "Nexttech",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\",
       "BasePath": "_content/Nexttech",
       "RelativePath": "style#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -472,8 +346,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "x7fijazpfw",
-      "Integrity": "jeiwiuVfDSAnNCoRk8OlsVB8do5cUi5ZXbGLw3GgQRA=",
+      "Fingerprint": "dh0vgfjbwd",
+      "Integrity": "z08RRaTomoKO3f1SWZ+9gyQw3o2xRWh7yYq1qkuteuc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\style.css"
@@ -482,7 +356,7 @@
   "Endpoints": [
     {
       "Route": "html/calc-history.edp6qxx6r5.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\dbo2c2dn08-edp6qxx6r5.gz",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\dbo2c2dn08-edp6qxx6r5.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -505,7 +379,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 18:47:31 GMT"
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -545,7 +419,7 @@
     },
     {
       "Route": "html/calc-history.edp6qxx6r5.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\calc-history.html",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\calc-history.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -566,7 +440,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 18:47:31 GMT"
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -590,7 +464,7 @@
     },
     {
       "Route": "html/calc-history.edp6qxx6r5.html.gz",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\dbo2c2dn08-edp6qxx6r5.gz",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\dbo2c2dn08-edp6qxx6r5.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -611,7 +485,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 18:47:31 GMT"
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -643,7 +517,7 @@
     },
     {
       "Route": "html/calc-history.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\dbo2c2dn08-edp6qxx6r5.gz",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\dbo2c2dn08-edp6qxx6r5.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -666,7 +540,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 18:47:31 GMT"
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -698,7 +572,7 @@
     },
     {
       "Route": "html/calc-history.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\calc-history.html",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\calc-history.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -719,7 +593,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 18:47:31 GMT"
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -735,7 +609,7 @@
     },
     {
       "Route": "html/calc-history.html.gz",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\dbo2c2dn08-edp6qxx6r5.gz",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\dbo2c2dn08-edp6qxx6r5.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -756,7 +630,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 18:47:31 GMT"
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -780,7 +654,7 @@
     },
     {
       "Route": "html/index.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\4aqm5usp5v-ow7fdz36sx.gz",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\4aqm5usp5v-ow7fdz36sx.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -803,7 +677,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:28:29 GMT"
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -835,7 +709,7 @@
     },
     {
       "Route": "html/index.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\index.html",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\index.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -856,7 +730,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:28:29 GMT"
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -872,7 +746,7 @@
     },
     {
       "Route": "html/index.html.gz",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\4aqm5usp5v-ow7fdz36sx.gz",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\4aqm5usp5v-ow7fdz36sx.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -893,7 +767,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:28:29 GMT"
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -917,7 +791,7 @@
     },
     {
       "Route": "html/index.ow7fdz36sx.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\4aqm5usp5v-ow7fdz36sx.gz",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\4aqm5usp5v-ow7fdz36sx.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -940,7 +814,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:28:29 GMT"
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -980,7 +854,7 @@
     },
     {
       "Route": "html/index.ow7fdz36sx.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\index.html",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\index.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1001,7 +875,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:28:29 GMT"
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1025,7 +899,7 @@
     },
     {
       "Route": "html/index.ow7fdz36sx.html.gz",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\4aqm5usp5v-ow7fdz36sx.gz",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\4aqm5usp5v-ow7fdz36sx.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1046,7 +920,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:28:29 GMT"
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1078,7 +952,7 @@
     },
     {
       "Route": "html/login.7vl0h27yix.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\fdpmz9c6p9-7vl0h27yix.gz",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\fdpmz9c6p9-7vl0h27yix.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -1101,7 +975,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 18:47:43 GMT"
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1141,7 +1015,7 @@
     },
     {
       "Route": "html/login.7vl0h27yix.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\login.html",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\login.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1162,7 +1036,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 18:47:43 GMT"
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1186,7 +1060,7 @@
     },
     {
       "Route": "html/login.7vl0h27yix.html.gz",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\fdpmz9c6p9-7vl0h27yix.gz",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\fdpmz9c6p9-7vl0h27yix.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1207,7 +1081,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 18:47:43 GMT"
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1239,7 +1113,7 @@
     },
     {
       "Route": "html/login.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\fdpmz9c6p9-7vl0h27yix.gz",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\fdpmz9c6p9-7vl0h27yix.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -1262,7 +1136,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 18:47:43 GMT"
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1294,7 +1168,7 @@
     },
     {
       "Route": "html/login.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\login.html",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\login.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1315,7 +1189,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 18:47:43 GMT"
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1331,7 +1205,7 @@
     },
     {
       "Route": "html/login.html.gz",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\fdpmz9c6p9-7vl0h27yix.gz",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\fdpmz9c6p9-7vl0h27yix.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1352,7 +1226,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 18:47:43 GMT"
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1376,7 +1250,7 @@
     },
     {
       "Route": "html/new-calculation.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\q48etva7z1-w63x1a2xnk.gz",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\q48etva7z1-w63x1a2xnk.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -1399,7 +1273,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 18:46:50 GMT"
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1431,7 +1305,7 @@
     },
     {
       "Route": "html/new-calculation.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\new-calculation.html",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\new-calculation.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1452,7 +1326,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 18:46:50 GMT"
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1468,7 +1342,7 @@
     },
     {
       "Route": "html/new-calculation.html.gz",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\q48etva7z1-w63x1a2xnk.gz",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\q48etva7z1-w63x1a2xnk.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1489,7 +1363,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 18:46:50 GMT"
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1513,7 +1387,7 @@
     },
     {
       "Route": "html/new-calculation.w63x1a2xnk.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\q48etva7z1-w63x1a2xnk.gz",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\q48etva7z1-w63x1a2xnk.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -1536,7 +1410,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 18:46:50 GMT"
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1576,7 +1450,7 @@
     },
     {
       "Route": "html/new-calculation.w63x1a2xnk.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\new-calculation.html",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\new-calculation.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1597,7 +1471,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 18:46:50 GMT"
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1621,7 +1495,7 @@
     },
     {
       "Route": "html/new-calculation.w63x1a2xnk.html.gz",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\q48etva7z1-w63x1a2xnk.gz",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\q48etva7z1-w63x1a2xnk.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1642,7 +1516,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 18:46:50 GMT"
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1674,7 +1548,7 @@
     },
     {
       "Route": "html/results.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\u7kl9otn4b-lppxj1mxmh.gz",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\u7kl9otn4b-lppxj1mxmh.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -1697,7 +1571,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 18:48:22 GMT"
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1729,7 +1603,7 @@
     },
     {
       "Route": "html/results.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\results.html",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\results.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1750,7 +1624,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 18:48:22 GMT"
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1766,7 +1640,7 @@
     },
     {
       "Route": "html/results.html.gz",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\u7kl9otn4b-lppxj1mxmh.gz",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\u7kl9otn4b-lppxj1mxmh.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1787,7 +1661,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 18:48:22 GMT"
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1811,7 +1685,7 @@
     },
     {
       "Route": "html/results.lppxj1mxmh.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\u7kl9otn4b-lppxj1mxmh.gz",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\u7kl9otn4b-lppxj1mxmh.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -1834,7 +1708,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 18:48:22 GMT"
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1874,7 +1748,7 @@
     },
     {
       "Route": "html/results.lppxj1mxmh.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\results.html",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\results.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1895,7 +1769,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 18:48:22 GMT"
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1919,7 +1793,7 @@
     },
     {
       "Route": "html/results.lppxj1mxmh.html.gz",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\u7kl9otn4b-lppxj1mxmh.gz",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\u7kl9otn4b-lppxj1mxmh.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1940,7 +1814,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 18:48:22 GMT"
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1971,13 +1845,13 @@
       ]
     },
     {
-      "Route": "html/settings/material-settings.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\dalhjfd99v-n3i4v0ttkz.gz",
+      "Route": "html/settings/settings.html",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\a5f3rtb45c-hyxc08o1ph.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.003717472119"
+          "Quality": "0.003194888179"
         }
       ],
       "ResponseHeaders": [
@@ -1987,15 +1861,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "268"
+          "Value": "312"
         },
         {
           "Name": "ETag",
-          "Value": "\"Vk05H0YBTnhorKRN53uLgWGwKJ06XXgwuYj+GTziszo=\""
+          "Value": "\"bkGpjYbLwrvmXrZ6T/s5r5ekr1O7V4C2B/QB1HKZh40=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:29:48 GMT"
+          "Value": "Sun, 04 May 2025 16:06:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2015,19 +1889,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"o8NPvf0d3I9CYlJUQtTGaK8/jQ4BH3Pf/ATjbtbT61Q=\""
+          "Value": "W/\"6RYjI/s911khlRXLV+dPQ5lNmgsTW+OkgshfFrBQonU=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-o8NPvf0d3I9CYlJUQtTGaK8/jQ4BH3Pf/ATjbtbT61Q="
+          "Value": "sha256-6RYjI/s911khlRXLV+dPQ5lNmgsTW+OkgshfFrBQonU="
         }
       ]
     },
     {
-      "Route": "html/settings/material-settings.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\settings\\material-settings.html",
+      "Route": "html/settings/settings.html",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\settings\\settings.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2036,7 +1910,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "404"
+          "Value": "534"
         },
         {
           "Name": "Content-Type",
@@ -2044,11 +1918,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"o8NPvf0d3I9CYlJUQtTGaK8/jQ4BH3Pf/ATjbtbT61Q=\""
+          "Value": "\"6RYjI/s911khlRXLV+dPQ5lNmgsTW+OkgshfFrBQonU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:29:48 GMT"
+          "Value": "Sun, 04 May 2025 16:06:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2058,13 +1932,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-o8NPvf0d3I9CYlJUQtTGaK8/jQ4BH3Pf/ATjbtbT61Q="
+          "Value": "sha256-6RYjI/s911khlRXLV+dPQ5lNmgsTW+OkgshfFrBQonU="
         }
       ]
     },
     {
-      "Route": "html/settings/material-settings.html.gz",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\dalhjfd99v-n3i4v0ttkz.gz",
+      "Route": "html/settings/settings.html.gz",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\a5f3rtb45c-hyxc08o1ph.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2073,7 +1947,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "268"
+          "Value": "312"
         },
         {
           "Name": "Content-Type",
@@ -2081,11 +1955,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Vk05H0YBTnhorKRN53uLgWGwKJ06XXgwuYj+GTziszo=\""
+          "Value": "\"bkGpjYbLwrvmXrZ6T/s5r5ekr1O7V4C2B/QB1HKZh40=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:29:48 GMT"
+          "Value": "Sun, 04 May 2025 16:06:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2103,18 +1977,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Vk05H0YBTnhorKRN53uLgWGwKJ06XXgwuYj+GTziszo="
+          "Value": "sha256-bkGpjYbLwrvmXrZ6T/s5r5ekr1O7V4C2B/QB1HKZh40="
         }
       ]
     },
     {
-      "Route": "html/settings/material-settings.n3i4v0ttkz.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\dalhjfd99v-n3i4v0ttkz.gz",
+      "Route": "html/settings/settings.hyxc08o1ph.html",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\a5f3rtb45c-hyxc08o1ph.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.003717472119"
+          "Quality": "0.003194888179"
         }
       ],
       "ResponseHeaders": [
@@ -2124,15 +1998,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "268"
+          "Value": "312"
         },
         {
           "Name": "ETag",
-          "Value": "\"Vk05H0YBTnhorKRN53uLgWGwKJ06XXgwuYj+GTziszo=\""
+          "Value": "\"bkGpjYbLwrvmXrZ6T/s5r5ekr1O7V4C2B/QB1HKZh40=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:29:48 GMT"
+          "Value": "Sun, 04 May 2025 16:06:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2152,472 +2026,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"o8NPvf0d3I9CYlJUQtTGaK8/jQ4BH3Pf/ATjbtbT61Q=\""
+          "Value": "W/\"6RYjI/s911khlRXLV+dPQ5lNmgsTW+OkgshfFrBQonU=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "n3i4v0ttkz"
-        },
-        {
-          "Name": "label",
-          "Value": "html/settings/material-settings.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-o8NPvf0d3I9CYlJUQtTGaK8/jQ4BH3Pf/ATjbtbT61Q="
-        }
-      ]
-    },
-    {
-      "Route": "html/settings/material-settings.n3i4v0ttkz.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\settings\\material-settings.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "404"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"o8NPvf0d3I9CYlJUQtTGaK8/jQ4BH3Pf/ATjbtbT61Q=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:29:48 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "n3i4v0ttkz"
-        },
-        {
-          "Name": "label",
-          "Value": "html/settings/material-settings.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-o8NPvf0d3I9CYlJUQtTGaK8/jQ4BH3Pf/ATjbtbT61Q="
-        }
-      ]
-    },
-    {
-      "Route": "html/settings/material-settings.n3i4v0ttkz.html.gz",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\dalhjfd99v-n3i4v0ttkz.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "268"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Vk05H0YBTnhorKRN53uLgWGwKJ06XXgwuYj+GTziszo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:29:48 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "n3i4v0ttkz"
-        },
-        {
-          "Name": "label",
-          "Value": "html/settings/material-settings.html.gz"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Vk05H0YBTnhorKRN53uLgWGwKJ06XXgwuYj+GTziszo="
-        }
-      ]
-    },
-    {
-      "Route": "html/settings/printer-settings.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\l9yhnn4byh-kevei5lsyp.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.003717472119"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "268"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"4j13hqUIa8EBW6f0jQQDxmxOHTCgEOiCbBhmLdMW8Aw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:30:00 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"fGzuwcKDLMdYrDcBfENxvOEfzEmOeANcyj3T5UgQQRg=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-fGzuwcKDLMdYrDcBfENxvOEfzEmOeANcyj3T5UgQQRg="
-        }
-      ]
-    },
-    {
-      "Route": "html/settings/printer-settings.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\settings\\printer-settings.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "403"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"fGzuwcKDLMdYrDcBfENxvOEfzEmOeANcyj3T5UgQQRg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:30:00 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-fGzuwcKDLMdYrDcBfENxvOEfzEmOeANcyj3T5UgQQRg="
-        }
-      ]
-    },
-    {
-      "Route": "html/settings/printer-settings.html.gz",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\l9yhnn4byh-kevei5lsyp.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "268"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"4j13hqUIa8EBW6f0jQQDxmxOHTCgEOiCbBhmLdMW8Aw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:30:00 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-4j13hqUIa8EBW6f0jQQDxmxOHTCgEOiCbBhmLdMW8Aw="
-        }
-      ]
-    },
-    {
-      "Route": "html/settings/printer-settings.kevei5lsyp.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\l9yhnn4byh-kevei5lsyp.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.003717472119"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "268"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"4j13hqUIa8EBW6f0jQQDxmxOHTCgEOiCbBhmLdMW8Aw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:30:00 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"fGzuwcKDLMdYrDcBfENxvOEfzEmOeANcyj3T5UgQQRg=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "kevei5lsyp"
-        },
-        {
-          "Name": "label",
-          "Value": "html/settings/printer-settings.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-fGzuwcKDLMdYrDcBfENxvOEfzEmOeANcyj3T5UgQQRg="
-        }
-      ]
-    },
-    {
-      "Route": "html/settings/printer-settings.kevei5lsyp.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\settings\\printer-settings.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "403"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"fGzuwcKDLMdYrDcBfENxvOEfzEmOeANcyj3T5UgQQRg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:30:00 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "kevei5lsyp"
-        },
-        {
-          "Name": "label",
-          "Value": "html/settings/printer-settings.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-fGzuwcKDLMdYrDcBfENxvOEfzEmOeANcyj3T5UgQQRg="
-        }
-      ]
-    },
-    {
-      "Route": "html/settings/printer-settings.kevei5lsyp.html.gz",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\l9yhnn4byh-kevei5lsyp.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "268"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"4j13hqUIa8EBW6f0jQQDxmxOHTCgEOiCbBhmLdMW8Aw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:30:00 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "kevei5lsyp"
-        },
-        {
-          "Name": "label",
-          "Value": "html/settings/printer-settings.html.gz"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-4j13hqUIa8EBW6f0jQQDxmxOHTCgEOiCbBhmLdMW8Aw="
-        }
-      ]
-    },
-    {
-      "Route": "html/settings/settings.aaud3crwb4.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\a5f3rtb45c-aaud3crwb4.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.003184713376"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "313"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"V4E+WjB6/ysrJ1KEZFqZ6b/gSLCxwtazseqqxIIEkok=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:30:01 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"kh3wnYJMtj9JYZnvLwwuyqxIFiq2c3e12WtCOjHuZCw=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "aaud3crwb4"
+          "Value": "hyxc08o1ph"
         },
         {
           "Name": "label",
@@ -2625,13 +2040,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-kh3wnYJMtj9JYZnvLwwuyqxIFiq2c3e12WtCOjHuZCw="
+          "Value": "sha256-6RYjI/s911khlRXLV+dPQ5lNmgsTW+OkgshfFrBQonU="
         }
       ]
     },
     {
-      "Route": "html/settings/settings.aaud3crwb4.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\settings\\settings.html",
+      "Route": "html/settings/settings.hyxc08o1ph.html",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\settings\\settings.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2640,7 +2055,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "631"
+          "Value": "534"
         },
         {
           "Name": "Content-Type",
@@ -2648,11 +2063,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"kh3wnYJMtj9JYZnvLwwuyqxIFiq2c3e12WtCOjHuZCw=\""
+          "Value": "\"6RYjI/s911khlRXLV+dPQ5lNmgsTW+OkgshfFrBQonU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:30:01 GMT"
+          "Value": "Sun, 04 May 2025 16:06:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2662,7 +2077,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "aaud3crwb4"
+          "Value": "hyxc08o1ph"
         },
         {
           "Name": "label",
@@ -2670,13 +2085,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-kh3wnYJMtj9JYZnvLwwuyqxIFiq2c3e12WtCOjHuZCw="
+          "Value": "sha256-6RYjI/s911khlRXLV+dPQ5lNmgsTW+OkgshfFrBQonU="
         }
       ]
     },
     {
-      "Route": "html/settings/settings.aaud3crwb4.html.gz",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\a5f3rtb45c-aaud3crwb4.gz",
+      "Route": "html/settings/settings.hyxc08o1ph.html.gz",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\a5f3rtb45c-hyxc08o1ph.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2685,7 +2100,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "313"
+          "Value": "312"
         },
         {
           "Name": "Content-Type",
@@ -2693,11 +2108,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"V4E+WjB6/ysrJ1KEZFqZ6b/gSLCxwtazseqqxIIEkok=\""
+          "Value": "\"bkGpjYbLwrvmXrZ6T/s5r5ekr1O7V4C2B/QB1HKZh40=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:30:01 GMT"
+          "Value": "Sun, 04 May 2025 16:06:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2715,7 +2130,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "aaud3crwb4"
+          "Value": "hyxc08o1ph"
         },
         {
           "Name": "label",
@@ -2723,453 +2138,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-V4E+WjB6/ysrJ1KEZFqZ6b/gSLCxwtazseqqxIIEkok="
-        }
-      ]
-    },
-    {
-      "Route": "html/settings/settings.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\a5f3rtb45c-aaud3crwb4.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.003184713376"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "313"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"V4E+WjB6/ysrJ1KEZFqZ6b/gSLCxwtazseqqxIIEkok=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:30:01 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"kh3wnYJMtj9JYZnvLwwuyqxIFiq2c3e12WtCOjHuZCw=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-kh3wnYJMtj9JYZnvLwwuyqxIFiq2c3e12WtCOjHuZCw="
-        }
-      ]
-    },
-    {
-      "Route": "html/settings/settings.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\settings\\settings.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "631"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"kh3wnYJMtj9JYZnvLwwuyqxIFiq2c3e12WtCOjHuZCw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:30:01 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-kh3wnYJMtj9JYZnvLwwuyqxIFiq2c3e12WtCOjHuZCw="
-        }
-      ]
-    },
-    {
-      "Route": "html/settings/settings.html.gz",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\a5f3rtb45c-aaud3crwb4.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "313"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"V4E+WjB6/ysrJ1KEZFqZ6b/gSLCxwtazseqqxIIEkok=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:30:01 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-V4E+WjB6/ysrJ1KEZFqZ6b/gSLCxwtazseqqxIIEkok="
-        }
-      ]
-    },
-    {
-      "Route": "html/settings/user-settings.4hpenzm75m.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\9lkos121y3-4hpenzm75m.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.003745318352"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "266"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"rYkbiJ3fILLebKI6jAd3ilOth4n6ncI4gxe5/Ips9nI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:29:58 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"eHv4EzEEI5N46tyzM9TogKqltGyi/dJf9PBpwQB2msI=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "4hpenzm75m"
-        },
-        {
-          "Name": "label",
-          "Value": "html/settings/user-settings.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-eHv4EzEEI5N46tyzM9TogKqltGyi/dJf9PBpwQB2msI="
-        }
-      ]
-    },
-    {
-      "Route": "html/settings/user-settings.4hpenzm75m.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\settings\\user-settings.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "400"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"eHv4EzEEI5N46tyzM9TogKqltGyi/dJf9PBpwQB2msI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:29:58 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "4hpenzm75m"
-        },
-        {
-          "Name": "label",
-          "Value": "html/settings/user-settings.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-eHv4EzEEI5N46tyzM9TogKqltGyi/dJf9PBpwQB2msI="
-        }
-      ]
-    },
-    {
-      "Route": "html/settings/user-settings.4hpenzm75m.html.gz",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\9lkos121y3-4hpenzm75m.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "266"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"rYkbiJ3fILLebKI6jAd3ilOth4n6ncI4gxe5/Ips9nI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:29:58 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "4hpenzm75m"
-        },
-        {
-          "Name": "label",
-          "Value": "html/settings/user-settings.html.gz"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-rYkbiJ3fILLebKI6jAd3ilOth4n6ncI4gxe5/Ips9nI="
-        }
-      ]
-    },
-    {
-      "Route": "html/settings/user-settings.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\9lkos121y3-4hpenzm75m.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.003745318352"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "266"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"rYkbiJ3fILLebKI6jAd3ilOth4n6ncI4gxe5/Ips9nI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:29:58 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"eHv4EzEEI5N46tyzM9TogKqltGyi/dJf9PBpwQB2msI=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-eHv4EzEEI5N46tyzM9TogKqltGyi/dJf9PBpwQB2msI="
-        }
-      ]
-    },
-    {
-      "Route": "html/settings/user-settings.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\settings\\user-settings.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "400"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"eHv4EzEEI5N46tyzM9TogKqltGyi/dJf9PBpwQB2msI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:29:58 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-eHv4EzEEI5N46tyzM9TogKqltGyi/dJf9PBpwQB2msI="
-        }
-      ]
-    },
-    {
-      "Route": "html/settings/user-settings.html.gz",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\9lkos121y3-4hpenzm75m.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "266"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"rYkbiJ3fILLebKI6jAd3ilOth4n6ncI4gxe5/Ips9nI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:29:58 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-rYkbiJ3fILLebKI6jAd3ilOth4n6ncI4gxe5/Ips9nI="
+          "Value": "sha256-bkGpjYbLwrvmXrZ6T/s5r5ekr1O7V4C2B/QB1HKZh40="
         }
       ]
     },
     {
       "Route": "script.js",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\1mb5dq9d2g-xd6yxude22.gz",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\1mb5dq9d2g-t3bzo1e73a.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.008474576271"
+          "Quality": "0.003921568627"
         }
       ],
       "ResponseHeaders": [
@@ -3179,15 +2159,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "117"
+          "Value": "254"
         },
         {
           "Name": "ETag",
-          "Value": "\"vp8YAKcuJhcdjN+4QyGFm8vBgbvP3eFIO3NjvEja4LQ=\""
+          "Value": "\"M7zQZjtU8M12sOLv6CtkDX/ss5JH50vHBwT80h+ZWBo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 17:57:28 GMT"
+          "Value": "Sun, 04 May 2025 15:51:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3207,19 +2187,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"1Z16s0ZtF6cu/2E8T+ZGGGGNYhfYCwwIzDqGNc2bjEY=\""
+          "Value": "W/\"+X4Mo/MlGt5k8NlKfXpDuXW9E17gnsRTSw3TfCpfH8o=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-1Z16s0ZtF6cu/2E8T+ZGGGGNYhfYCwwIzDqGNc2bjEY="
+          "Value": "sha256-+X4Mo/MlGt5k8NlKfXpDuXW9E17gnsRTSw3TfCpfH8o="
         }
       ]
     },
     {
       "Route": "script.js",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\script.js",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\script.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3228,7 +2208,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "103"
+          "Value": "343"
         },
         {
           "Name": "Content-Type",
@@ -3236,11 +2216,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"1Z16s0ZtF6cu/2E8T+ZGGGGNYhfYCwwIzDqGNc2bjEY=\""
+          "Value": "\"+X4Mo/MlGt5k8NlKfXpDuXW9E17gnsRTSw3TfCpfH8o=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 17:57:28 GMT"
+          "Value": "Sun, 04 May 2025 15:51:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3250,13 +2230,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-1Z16s0ZtF6cu/2E8T+ZGGGGNYhfYCwwIzDqGNc2bjEY="
+          "Value": "sha256-+X4Mo/MlGt5k8NlKfXpDuXW9E17gnsRTSw3TfCpfH8o="
         }
       ]
     },
     {
       "Route": "script.js.gz",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\1mb5dq9d2g-xd6yxude22.gz",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\1mb5dq9d2g-t3bzo1e73a.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3265,7 +2245,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "117"
+          "Value": "254"
         },
         {
           "Name": "Content-Type",
@@ -3273,11 +2253,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"vp8YAKcuJhcdjN+4QyGFm8vBgbvP3eFIO3NjvEja4LQ=\""
+          "Value": "\"M7zQZjtU8M12sOLv6CtkDX/ss5JH50vHBwT80h+ZWBo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 17:57:28 GMT"
+          "Value": "Sun, 04 May 2025 15:51:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3295,18 +2275,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-vp8YAKcuJhcdjN+4QyGFm8vBgbvP3eFIO3NjvEja4LQ="
+          "Value": "sha256-M7zQZjtU8M12sOLv6CtkDX/ss5JH50vHBwT80h+ZWBo="
         }
       ]
     },
     {
-      "Route": "script.xd6yxude22.js",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\1mb5dq9d2g-xd6yxude22.gz",
+      "Route": "script.t3bzo1e73a.js",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\1mb5dq9d2g-t3bzo1e73a.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.008474576271"
+          "Quality": "0.003921568627"
         }
       ],
       "ResponseHeaders": [
@@ -3316,15 +2296,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "117"
+          "Value": "254"
         },
         {
           "Name": "ETag",
-          "Value": "\"vp8YAKcuJhcdjN+4QyGFm8vBgbvP3eFIO3NjvEja4LQ=\""
+          "Value": "\"M7zQZjtU8M12sOLv6CtkDX/ss5JH50vHBwT80h+ZWBo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 17:57:28 GMT"
+          "Value": "Sun, 04 May 2025 15:51:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3344,13 +2324,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"1Z16s0ZtF6cu/2E8T+ZGGGGNYhfYCwwIzDqGNc2bjEY=\""
+          "Value": "W/\"+X4Mo/MlGt5k8NlKfXpDuXW9E17gnsRTSw3TfCpfH8o=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "xd6yxude22"
+          "Value": "t3bzo1e73a"
         },
         {
           "Name": "label",
@@ -3358,13 +2338,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-1Z16s0ZtF6cu/2E8T+ZGGGGNYhfYCwwIzDqGNc2bjEY="
+          "Value": "sha256-+X4Mo/MlGt5k8NlKfXpDuXW9E17gnsRTSw3TfCpfH8o="
         }
       ]
     },
     {
-      "Route": "script.xd6yxude22.js",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\script.js",
+      "Route": "script.t3bzo1e73a.js",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\script.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3373,7 +2353,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "103"
+          "Value": "343"
         },
         {
           "Name": "Content-Type",
@@ -3381,11 +2361,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"1Z16s0ZtF6cu/2E8T+ZGGGGNYhfYCwwIzDqGNc2bjEY=\""
+          "Value": "\"+X4Mo/MlGt5k8NlKfXpDuXW9E17gnsRTSw3TfCpfH8o=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 17:57:28 GMT"
+          "Value": "Sun, 04 May 2025 15:51:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3395,7 +2375,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "xd6yxude22"
+          "Value": "t3bzo1e73a"
         },
         {
           "Name": "label",
@@ -3403,13 +2383,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-1Z16s0ZtF6cu/2E8T+ZGGGGNYhfYCwwIzDqGNc2bjEY="
+          "Value": "sha256-+X4Mo/MlGt5k8NlKfXpDuXW9E17gnsRTSw3TfCpfH8o="
         }
       ]
     },
     {
-      "Route": "script.xd6yxude22.js.gz",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\1mb5dq9d2g-xd6yxude22.gz",
+      "Route": "script.t3bzo1e73a.js.gz",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\1mb5dq9d2g-t3bzo1e73a.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3418,7 +2398,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "117"
+          "Value": "254"
         },
         {
           "Name": "Content-Type",
@@ -3426,11 +2406,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"vp8YAKcuJhcdjN+4QyGFm8vBgbvP3eFIO3NjvEja4LQ=\""
+          "Value": "\"M7zQZjtU8M12sOLv6CtkDX/ss5JH50vHBwT80h+ZWBo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 17:57:28 GMT"
+          "Value": "Sun, 04 May 2025 15:51:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3448,7 +2428,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "xd6yxude22"
+          "Value": "t3bzo1e73a"
         },
         {
           "Name": "label",
@@ -3456,18 +2436,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-vp8YAKcuJhcdjN+4QyGFm8vBgbvP3eFIO3NjvEja4LQ="
+          "Value": "sha256-M7zQZjtU8M12sOLv6CtkDX/ss5JH50vHBwT80h+ZWBo="
         }
       ]
     },
     {
       "Route": "style.css",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\lwf927u8je-x7fijazpfw.gz",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\lwf927u8je-dh0vgfjbwd.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.004854368932"
+          "Quality": "0.002469135802"
         }
       ],
       "ResponseHeaders": [
@@ -3477,15 +2457,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "205"
+          "Value": "404"
         },
         {
           "Name": "ETag",
-          "Value": "\"i0Lh/B+g7Ug+gzO/Nee3tNoe16bf/VMstzBjRD17/E0=\""
+          "Value": "\"OPhIWYeedQpFKLmDjWzK0vpDRdQ90uFjznh+jVOHw9w=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 17:57:26 GMT"
+          "Value": "Sun, 04 May 2025 16:08:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3505,19 +2485,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"jeiwiuVfDSAnNCoRk8OlsVB8do5cUi5ZXbGLw3GgQRA=\""
+          "Value": "W/\"z08RRaTomoKO3f1SWZ+9gyQw3o2xRWh7yYq1qkuteuc=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-jeiwiuVfDSAnNCoRk8OlsVB8do5cUi5ZXbGLw3GgQRA="
+          "Value": "sha256-z08RRaTomoKO3f1SWZ+9gyQw3o2xRWh7yYq1qkuteuc="
         }
       ]
     },
     {
       "Route": "style.css",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\style.css",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\style.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3526,7 +2506,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "336"
+          "Value": "942"
         },
         {
           "Name": "Content-Type",
@@ -3534,11 +2514,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"jeiwiuVfDSAnNCoRk8OlsVB8do5cUi5ZXbGLw3GgQRA=\""
+          "Value": "\"z08RRaTomoKO3f1SWZ+9gyQw3o2xRWh7yYq1qkuteuc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 17:57:26 GMT"
+          "Value": "Sun, 04 May 2025 16:08:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3548,13 +2528,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-jeiwiuVfDSAnNCoRk8OlsVB8do5cUi5ZXbGLw3GgQRA="
+          "Value": "sha256-z08RRaTomoKO3f1SWZ+9gyQw3o2xRWh7yYq1qkuteuc="
         }
       ]
     },
     {
       "Route": "style.css.gz",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\lwf927u8je-x7fijazpfw.gz",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\lwf927u8je-dh0vgfjbwd.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3563,7 +2543,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "205"
+          "Value": "404"
         },
         {
           "Name": "Content-Type",
@@ -3571,11 +2551,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"i0Lh/B+g7Ug+gzO/Nee3tNoe16bf/VMstzBjRD17/E0=\""
+          "Value": "\"OPhIWYeedQpFKLmDjWzK0vpDRdQ90uFjznh+jVOHw9w=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 17:57:26 GMT"
+          "Value": "Sun, 04 May 2025 16:08:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3593,18 +2573,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-i0Lh/B+g7Ug+gzO/Nee3tNoe16bf/VMstzBjRD17/E0="
+          "Value": "sha256-OPhIWYeedQpFKLmDjWzK0vpDRdQ90uFjznh+jVOHw9w="
         }
       ]
     },
     {
-      "Route": "style.x7fijazpfw.css",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\lwf927u8je-x7fijazpfw.gz",
+      "Route": "style.dh0vgfjbwd.css",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\lwf927u8je-dh0vgfjbwd.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.004854368932"
+          "Quality": "0.002469135802"
         }
       ],
       "ResponseHeaders": [
@@ -3614,15 +2594,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "205"
+          "Value": "404"
         },
         {
           "Name": "ETag",
-          "Value": "\"i0Lh/B+g7Ug+gzO/Nee3tNoe16bf/VMstzBjRD17/E0=\""
+          "Value": "\"OPhIWYeedQpFKLmDjWzK0vpDRdQ90uFjznh+jVOHw9w=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 17:57:26 GMT"
+          "Value": "Sun, 04 May 2025 16:08:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3642,13 +2622,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"jeiwiuVfDSAnNCoRk8OlsVB8do5cUi5ZXbGLw3GgQRA=\""
+          "Value": "W/\"z08RRaTomoKO3f1SWZ+9gyQw3o2xRWh7yYq1qkuteuc=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "x7fijazpfw"
+          "Value": "dh0vgfjbwd"
         },
         {
           "Name": "label",
@@ -3656,13 +2636,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-jeiwiuVfDSAnNCoRk8OlsVB8do5cUi5ZXbGLw3GgQRA="
+          "Value": "sha256-z08RRaTomoKO3f1SWZ+9gyQw3o2xRWh7yYq1qkuteuc="
         }
       ]
     },
     {
-      "Route": "style.x7fijazpfw.css",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\style.css",
+      "Route": "style.dh0vgfjbwd.css",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\style.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3671,7 +2651,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "336"
+          "Value": "942"
         },
         {
           "Name": "Content-Type",
@@ -3679,11 +2659,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"jeiwiuVfDSAnNCoRk8OlsVB8do5cUi5ZXbGLw3GgQRA=\""
+          "Value": "\"z08RRaTomoKO3f1SWZ+9gyQw3o2xRWh7yYq1qkuteuc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 17:57:26 GMT"
+          "Value": "Sun, 04 May 2025 16:08:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3693,7 +2673,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "x7fijazpfw"
+          "Value": "dh0vgfjbwd"
         },
         {
           "Name": "label",
@@ -3701,13 +2681,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-jeiwiuVfDSAnNCoRk8OlsVB8do5cUi5ZXbGLw3GgQRA="
+          "Value": "sha256-z08RRaTomoKO3f1SWZ+9gyQw3o2xRWh7yYq1qkuteuc="
         }
       ]
     },
     {
-      "Route": "style.x7fijazpfw.css.gz",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\Debug\\net9.0\\compressed\\lwf927u8je-x7fijazpfw.gz",
+      "Route": "style.dh0vgfjbwd.css.gz",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\obj\\Debug\\net9.0\\compressed\\lwf927u8je-dh0vgfjbwd.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3716,7 +2696,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "205"
+          "Value": "404"
         },
         {
           "Name": "Content-Type",
@@ -3724,11 +2704,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"i0Lh/B+g7Ug+gzO/Nee3tNoe16bf/VMstzBjRD17/E0=\""
+          "Value": "\"OPhIWYeedQpFKLmDjWzK0vpDRdQ90uFjznh+jVOHw9w=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 17:57:26 GMT"
+          "Value": "Sun, 04 May 2025 16:08:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3746,7 +2726,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "x7fijazpfw"
+          "Value": "dh0vgfjbwd"
         },
         {
           "Name": "label",
@@ -3754,7 +2734,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-i0Lh/B+g7Ug+gzO/Nee3tNoe16bf/VMstzBjRD17/E0="
+          "Value": "sha256-OPhIWYeedQpFKLmDjWzK0vpDRdQ90uFjznh+jVOHw9w="
         }
       ]
     }
