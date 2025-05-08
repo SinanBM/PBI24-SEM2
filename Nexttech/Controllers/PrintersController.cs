@@ -11,7 +11,6 @@ namespace Nexttech.Controllers
     {
         private readonly DatabaseContext _context;
 
-        // Constructor that injects the DatabaseContext
         public PrintersController(DatabaseContext context)
         {
             _context = context;

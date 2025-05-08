@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Printers</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <h1>Printers</h1>
+
+  <h3>Add / Edit Printer</h3>
+  <form id="printerForm">
+    <input type="hidden" id="printerId"/>
+
+    <label>Name:</label><input type="text" id="name" required><br>
+    <label>Purchase Cost:</label><input type="number" id="purchase_cost" step="any"required><br>
+    <label>Machine Lifetime:</label><input type="number" id="machine_lifetime" step="any"required><br>
+    <label>Cost Of Capital:</label><input type="number" id="cost_of_capital" step="any"required><br>
+    <label>Infrastructure Cost:</label><input type="number" id="infrastructure_cost" step="any"required><br>
+    <label>Maintenance:</label><input type="number" id="maintenance" step="any"required><br>
+    <label>Machine Build Area:</label><input type="number" id="machine_build_area" step="any"required><br>
+    <label>Machine Build Height:</label><input type="number" id="machine_build_height" step="any"required><br>
+    <label>Machine Build Volume:</label><input type="number" id="machine_build_volume" step="any"required><br>
+    <label>Machine Build Rate:</label><input type="number" id="machine_build_rate" step="any"required><br>
+    <label>Machine Uptime:</label><input type="number" id="machine_uptime" step="any"required><br>
+    <label>Packing Policy:</label><input type="number" id="packing_policy" step="any"required><br>
+    <label>Packing Fraction:</label><input type="number" id="packing_fraction" step="any"required><br>
+    <label>Recycling Fraction:</label><input type="number" id="recycling_fraction" step="any"required><br>
+    <label>Additional Operating Cost:</label><input type="number" id="additional_operating_cost" step="any"required><br>
+    <label>Consumable Cost/Build:</label><input type="number" id="consumable_cost_per_build" step="any"required><br>
+    <label>First-time Build Prep:</label><input type="number" id="first_time_build_preparation" step="any"required><br>
+    <label>Subsequent Build Prep:</label><input type="number" id="subsequent_build_preparation" step="any"required><br>
+    <label>Setup Time/Build:</label><input type="number" id="time_per_build_setup" step="any"required><br>
+    <label>Removal Time/Build:</label><input type="number" id="time_per_build_removal" step="any"required><br>
+    <label>Warm-up Time:</label><input type="number" id="time_per_machine_warm_up" step="any"required><br>
+    <label>Cool-down Time:</label><input type="number" id="time_per_machine_cool_down" step="any"required><br>
+    <label>Support Removal Time Constant:</label><input type="number" id="support_removal_time_labor_constant" step="any"required><br>
+    <label>Hours per Day:</label><input type="number" id="hours_per_day" step="any"required><br>
+    <label>Days per Week:</label><input type="number" id="days_per_week" step="any"required><br>
+    <label>FTE per Machine Supervised:</label><input type="number" id="fte_per_machine_supervised" step="any"required><br>
+    <label>FTE for Build Exchange:</label><input type="number" id="fte_for_build_exchange" step="any"required><br>
+    <label>FTE for Support Removal:</label><input type="number" id="fte_for_support_removal" step="any"required><br>
+    <label>Engineer Salary:</label><input type="number" id="fte_salary_engineer" step="any"required><br>
+    <label>Operator Salary:</label><input type="number" id="fte_salary_operator" step="any"required><br>
+    <label>Technician Salary:</label><input type="number" id="fte_salary_technician" step="any"required><br>
+
+    <button type="submit">Save Printer</button>
+  </form>
+
+  <hr>
+
+  <h3>Printer List</h3>
+  <table id="printersTable" border="1">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    window.onload = fetchPrinters;
+
+    document.getElementById("printerForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      savePrinter();
+    });
+
+    function fetchPrinters() {
+      axios.get("http://localhost:5077/api/printers")
+        .then(res => {
+          const table = document.getElementById("printersTable").getElementsByTagName("tbody")[0];
+          table.innerHTML = "";
+          res.data.forEach(p => {
+            const row = table.insertRow();
+            row.innerHTML = `
+              <td>${p.name}</td>
+              <td>
+                <button onclick="editPrinter(${p.id})">Edit</button>
+                <button onclick="deletePrinter(${p.id})">Delete</button>
+              </td>
+            `;
+          });
+        });
+    }
+
+    function editPrinter(id) {
+      axios.get(`http://localhost:5077/api/printers/${id}`)
+        .then(res => {
+          const printer = res.data;
+          for (const key in printer) {
+            if (document.getElementById(key)) {
+              document.getElementById(key).value = printer[key];
+            }
+          }
+        });
+    }
+
+    function savePrinter() {
+      const id = document.getElementById("printerId").value;
+      const printer = {};
+      Array.from(document.querySelectorAll("form#printerForm input")).forEach(input => {
+        if (input.type === "number") {
+          printer[input.id] = parseFloat(input.value);
+        } else {
+          printer[input.id] = input.value;
+        }
+      });
+
+      const url = id ? `http://localhost:5077/api/printers/${id}` : "http://localhost:5077/api/printers";
+      const method = id ? "put" : "post";
+
+      axios[method](url, printer).then(() => {
+        fetchPrinters();
+        document.getElementById("printerForm").reset();
+        document.getElementById("printerId").value = "";
+      });
+    }
+
+    function deletePrinter(id) {
+      axios.delete(`http://localhost:5077/api/printers/${id}`)
+        .then(() => fetchPrinters());
+    }
+  </script>
+</body>
+</html>

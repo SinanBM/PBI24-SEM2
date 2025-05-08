@@ -1,9 +1,15 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Nexttech.Models
 {
     public class Printer
 {
     // machine
+    [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
+    public double Purchase_cost { get; set; }
     public string Name { get; set; } = "";
     public double Machine_lifetime { get; set; }
     public double Cost_Of_Capital { get; set; }  //interest rate

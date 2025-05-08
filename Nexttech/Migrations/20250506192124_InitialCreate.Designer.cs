@@ -10,7 +10,7 @@ using Nexttech.Data;
 namespace Nexttech.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20250504163404_InitialCreate")]
+    [Migration("20250506192124_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -27,15 +27,15 @@ namespace Nexttech.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    b.Property<double>("Material_cost")
+                        .HasColumnType("double");
+
+                    b.Property<double>("Material_density")
+                        .HasColumnType("double");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("longtext");
-
-                    b.Property<double>("material_cost")
-                        .HasColumnType("double");
-
-                    b.Property<double>("material_density")
-                        .HasColumnType("double");
 
                     b.HasKey("Id");
 
@@ -117,6 +117,9 @@ namespace Nexttech.Migrations
 
                     b.Property<int>("Packing_policy")
                         .HasColumnType("int");
+
+                    b.Property<double>("Purchase_cost")
+                        .HasColumnType("double");
 
                     b.Property<double>("Recycling_fraction")
                         .HasColumnType("double");

@@ -22,8 +22,8 @@ namespace Nexttech.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    material_cost = table.Column<double>(type: "double", nullable: false),
-                    material_density = table.Column<double>(type: "double", nullable: false)
+                    Material_cost = table.Column<double>(type: "double", nullable: false),
+                    Material_density = table.Column<double>(type: "double", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -37,6 +37,7 @@ namespace Nexttech.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Purchase_cost = table.Column<double>(type: "double", nullable: false),
                     Name = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Machine_lifetime = table.Column<double>(type: "double", nullable: false),

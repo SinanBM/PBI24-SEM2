@@ -12,13 +12,18 @@
     <!-- Form for creating a new material -->
     <h3>Add New Material</h3>
     <form id="addMaterialForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" required><br>
-        <label for="material_cost">Material Cost:</label>
-        <input type="number" id="material_cost" required><br>
-        <label for="material_density">Material Density:</label>
-        <input type="number" id="material_density" required><br>
-        <button type="submit">Add Material</button>
+        <input type="hidden" id="materialId">
+    
+        <label for="materialName">Name:</label>
+        <input type="text" id="materialName" required><br>
+    
+        <label for="materialCost">Material Cost:</label>
+        <input type="number" id="materialCost" step="any" required><br>
+    
+        <label for="materialDensity">Material Density:</label>
+        <input type="number" id="materialDensity" step="any" required><br>
+    
+        <button type="submit">Save Material</button>
     </form>
 
     <hr>
@@ -42,7 +47,12 @@
         window.onload = function() {
             fetchMaterials();
         };
-
+        document.addEventListener("click", function (e) {
+    if (e.target.classList.contains("edit-btn")) {
+        const id = e.target.dataset.id;
+        editMaterial(id);
+    }
+});
         // Fetch all materials
         function fetchMaterials() {
             axios.get('http://localhost:5077/api/materials')
@@ -69,25 +79,9 @@
 
         // Add a new material
         document.getElementById('addMaterialForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            const name = document.getElementById('name').value;
-            const material_cost = document.getElementById('material_cost').value;
-            const material_density = document.getElementById('material_density').value;
-
-            const newMaterial = {
-                name: name,
-                material_cost: material_cost,
-                material_density: material_density
-            };
-
-            axios.post('http://localhost:5077/api/materials', newMaterial)
-                .then(response => {
-                    alert('Material added successfully!');
-                    fetchMaterials();  // Refresh the material list
-                })
-                .catch(error => console.error('Error adding material:', error));
-        });
+    event.preventDefault();
+    saveMaterial();
+});
 
         // Delete a material
         function deleteMaterial(id) {
@@ -101,8 +95,46 @@
 
         // Edit a material (You can create a separate form or pre-populate the existing form for editing)
         function editMaterial(id) {
-            alert('Edit functionality is not implemented yet for material ' + id);
+    fetch(`/api/materials/${id}`)
+        .then(res => res.json())
+        .then(material => {
+            document.getElementById("materialName").value = material.name;
+            document.getElementById("materialCost").value = material.material_cost;
+            document.getElementById("materialDensity").value = material.material_density;
+            document.getElementById("materialId").value = material.id; // Hidden field
+        });
+}
+        function saveMaterial() {
+            const id = document.getElementById("materialId").value;
+            const method = id ? "PUT" : "POST";
+            const url = id ? `http://localhost:5077/api/materials/${id}` : "http://localhost:5077/api/materials";
+
+            const material = {
+    id: parseInt(id), // include ID here
+    name: document.getElementById("materialName").value,
+    material_cost: parseFloat(document.getElementById("materialCost").value),
+    material_density: parseFloat(document.getElementById("materialDensity").value)
+};
+
+
+            fetch(url, {
+                method: method,
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(material)
+            }).then(() => {
+                fetchMaterials();
+                resetForm();
+            });
         }
+        function resetForm() {
+    document.getElementById("materialId").value = "";
+    document.getElementById("materialName").value = "";
+    document.getElementById("materialCost").value = "";
+    document.getElementById("materialDensity").value = "";
+}
+
     </script>
 </body>
 </html>

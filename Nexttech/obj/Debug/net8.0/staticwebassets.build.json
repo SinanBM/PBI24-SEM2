@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/vhBYZuWIyRiExhcyW6vPPdpQi7BbUutQ4mGOMu73wA=",
+  "Hash": "9y+afFMxCLPxEExtBvf1DU+wAe6+gK0TVjcvl9kNWKA=",
   "Source": "Nexttech",
   "BasePath": "_content/Nexttech",
   "Mode": "Default",
@@ -94,8 +94,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "rbjjyx6huy",
-      "Integrity": "afFoWX2krYSSFzr1YtnzuOTJp6rhWUIg6yMUSwqAGIQ=",
+      "Fingerprint": "a4bj4uxrix",
+      "Integrity": "9rR0rBSKNt+Z7BSAivbbCzW3tP9oURp3WRwbcqmcbZU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\html\\material.html"
@@ -120,6 +120,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\html\\new-calculation.html"
+    },
+    {
+      "Identity": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\printer.html",
+      "SourceId": "Nexttech",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\",
+      "BasePath": "_content/Nexttech",
+      "RelativePath": "html/printer#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "v17wgvbpnr",
+      "Integrity": "s8dXwzENKeEVxL7fMDFIg0DGhceh8IZfpKfQz8wPXyY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\html\\printer.html"
     },
     {
       "Identity": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\results.html",
@@ -241,8 +262,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "xd6yxude22",
-      "Integrity": "1Z16s0ZtF6cu/2E8T+ZGGGGNYhfYCwwIzDqGNc2bjEY=",
+      "Fingerprint": "t5ym4xu2p8",
+      "Integrity": "cV5/Ct7uCMIxLueIVqI1rMYgz/pUwR4qUJEoxkDnHww=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\script.js"
@@ -517,6 +538,51 @@
       ]
     },
     {
+      "Route": "html/material.a4bj4uxrix.html",
+      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\material.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5281"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9rR0rBSKNt+Z7BSAivbbCzW3tP9oURp3WRwbcqmcbZU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 06 May 2025 17:43:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "a4bj4uxrix"
+        },
+        {
+          "Name": "label",
+          "Value": "html/material.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9rR0rBSKNt+Z7BSAivbbCzW3tP9oURp3WRwbcqmcbZU="
+        }
+      ]
+    },
+    {
       "Route": "html/material.html",
       "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\material.html",
       "Selectors": [],
@@ -527,7 +593,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4216"
+          "Value": "5281"
         },
         {
           "Name": "Content-Type",
@@ -535,11 +601,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"afFoWX2krYSSFzr1YtnzuOTJp6rhWUIg6yMUSwqAGIQ=\""
+          "Value": "\"9rR0rBSKNt+Z7BSAivbbCzW3tP9oURp3WRwbcqmcbZU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 04 May 2025 17:13:44 GMT"
+          "Value": "Tue, 06 May 2025 17:43:53 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -549,52 +615,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-afFoWX2krYSSFzr1YtnzuOTJp6rhWUIg6yMUSwqAGIQ="
-        }
-      ]
-    },
-    {
-      "Route": "html/material.rbjjyx6huy.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\material.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4216"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"afFoWX2krYSSFzr1YtnzuOTJp6rhWUIg6yMUSwqAGIQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 04 May 2025 17:13:44 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "rbjjyx6huy"
-        },
-        {
-          "Name": "label",
-          "Value": "html/material.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-afFoWX2krYSSFzr1YtnzuOTJp6rhWUIg6yMUSwqAGIQ="
+          "Value": "sha256-9rR0rBSKNt+Z7BSAivbbCzW3tP9oURp3WRwbcqmcbZU="
         }
       ]
     },
@@ -677,6 +698,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-aPd2s6NT6O9TUpJTpVbdl9f9xs6qB096LEmu6ds18Ig="
+        }
+      ]
+    },
+    {
+      "Route": "html/printer.html",
+      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\printer.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6142"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"s8dXwzENKeEVxL7fMDFIg0DGhceh8IZfpKfQz8wPXyY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 06 May 2025 17:45:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-s8dXwzENKeEVxL7fMDFIg0DGhceh8IZfpKfQz8wPXyY="
+        }
+      ]
+    },
+    {
+      "Route": "html/printer.v17wgvbpnr.html",
+      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\printer.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6142"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"s8dXwzENKeEVxL7fMDFIg0DGhceh8IZfpKfQz8wPXyY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 06 May 2025 17:45:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "v17wgvbpnr"
+        },
+        {
+          "Name": "label",
+          "Value": "html/printer.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-s8dXwzENKeEVxL7fMDFIg0DGhceh8IZfpKfQz8wPXyY="
         }
       ]
     },
@@ -1101,7 +1204,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "103"
+          "Value": "288"
         },
         {
           "Name": "Content-Type",
@@ -1109,11 +1212,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"1Z16s0ZtF6cu/2E8T+ZGGGGNYhfYCwwIzDqGNc2bjEY=\""
+          "Value": "\"cV5/Ct7uCMIxLueIVqI1rMYgz/pUwR4qUJEoxkDnHww=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 17:57:28 GMT"
+          "Value": "Tue, 06 May 2025 16:31:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1123,12 +1226,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-1Z16s0ZtF6cu/2E8T+ZGGGGNYhfYCwwIzDqGNc2bjEY="
+          "Value": "sha256-cV5/Ct7uCMIxLueIVqI1rMYgz/pUwR4qUJEoxkDnHww="
         }
       ]
     },
     {
-      "Route": "script.xd6yxude22.js",
+      "Route": "script.t5ym4xu2p8.js",
       "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\script.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1138,7 +1241,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "103"
+          "Value": "288"
         },
         {
           "Name": "Content-Type",
@@ -1146,11 +1249,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"1Z16s0ZtF6cu/2E8T+ZGGGGNYhfYCwwIzDqGNc2bjEY=\""
+          "Value": "\"cV5/Ct7uCMIxLueIVqI1rMYgz/pUwR4qUJEoxkDnHww=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 17:57:28 GMT"
+          "Value": "Tue, 06 May 2025 16:31:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1160,7 +1263,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "xd6yxude22"
+          "Value": "t5ym4xu2p8"
         },
         {
           "Name": "label",
@@ -1168,7 +1271,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-1Z16s0ZtF6cu/2E8T+ZGGGGNYhfYCwwIzDqGNc2bjEY="
+          "Value": "sha256-cV5/Ct7uCMIxLueIVqI1rMYgz/pUwR4qUJEoxkDnHww="
         }
       ]
     },

@@ -50,7 +50,7 @@ namespace Nexttech.Controllers
 
         // PUT: api/materials/{id}
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateMaterial(int id, Material material)
+        public async Task<IActionResult> PutMaterial(int id, Material material)
         {
             if (id != material.Id)
             {
@@ -65,7 +65,7 @@ namespace Nexttech.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!MaterialExists(id))
+                if (!_context.Materials.Any(e => e.Id == id))
                 {
                     return NotFound();
                 }
@@ -77,6 +77,7 @@ namespace Nexttech.Controllers
 
             return NoContent();
         }
+
 
         // DELETE: api/materials/{id}
         [HttpDelete("{id}")]
