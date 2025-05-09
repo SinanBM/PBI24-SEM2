@@ -7,7 +7,7 @@ nextdb = mysql.connector.connect(
   password="",
   database="nextdb" # created the database at http://localhost/phpmyadmin
 )
-
+# Hej med dig god dag?
 cursor = nextdb.cursor()
 
 cursor.execute("SHOW DATABASES")
