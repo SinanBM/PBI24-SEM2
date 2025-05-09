@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "1lj5QviYniM=",
+  "dgSpecHash": "+IGdTVp6mpQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\Nexttech.csproj",
+  "projectFilePath": "C:\\Users\\belmi\\OneDrive\\Skrivebord\\Sem2.Project\\Prjct.NextTech v2\\Nexttech\\Nexttech.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Sinan\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.2\\microsoft.aspnetcore.openapi.9.0.2.nupkg.sha512",
-    "C:\\Users\\Sinan\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+    "C:\\Users\\belmi\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.2\\microsoft.aspnetcore.openapi.9.0.2.nupkg.sha512",
+    "C:\\Users\\belmi\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
   ],
   "logs": []
 }

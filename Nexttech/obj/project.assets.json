@@ -75,19 +75,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Sinan\\.nuget\\packages\\": {}
+    "C:\\Users\\belmi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\Nexttech.csproj",
+      "projectUniqueName": "C:\\Users\\belmi\\OneDrive\\Skrivebord\\Sem2.Project\\Prjct.NextTech v2\\Nexttech\\Nexttech.csproj",
       "projectName": "Nexttech",
-      "projectPath": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\Nexttech.csproj",
-      "packagesPath": "C:\\Users\\Sinan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\obj\\",
+      "projectPath": "C:\\Users\\belmi\\OneDrive\\Skrivebord\\Sem2.Project\\Prjct.NextTech v2\\Nexttech\\Nexttech.csproj",
+      "packagesPath": "C:\\Users\\belmi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\belmi\\OneDrive\\Skrivebord\\Sem2.Project\\Prjct.NextTech v2\\Nexttech\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Sinan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\belmi\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
