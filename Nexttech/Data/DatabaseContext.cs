@@ -11,6 +11,7 @@ namespace Nexttech.Data
         // DbSets for Printers and Materials
         public DbSet<Printer> Printers { get; set; }
         public DbSet<Material> Materials { get; set; }
+        public DbSet<User> Users { get; set; }
 
         // Optional: Override OnModelCreating for any custom configuration (e.g., relationships, keys, etc.)
         protected override void OnModelCreating(ModelBuilder modelBuilder)

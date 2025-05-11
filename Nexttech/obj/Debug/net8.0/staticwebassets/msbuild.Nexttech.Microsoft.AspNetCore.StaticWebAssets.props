@@ -66,8 +66,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>a4bj4uxrix</Fingerprint>
-      <Integrity>9rR0rBSKNt+Z7BSAivbbCzW3tP9oURp3WRwbcqmcbZU=</Integrity>
+      <Fingerprint>f0tk11ty3h</Fingerprint>
+      <Integrity>32RTUXQgpIIHFLsyOANYjHNAvzn4WGc2lqqRnopx9jA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\html\material.html'))</OriginalItemSpec>
@@ -84,8 +84,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>w63x1a2xnk</Fingerprint>
-      <Integrity>aPd2s6NT6O9TUpJTpVbdl9f9xs6qB096LEmu6ds18Ig=</Integrity>
+      <Fingerprint>zkbhkxbdg6</Fingerprint>
+      <Integrity>4/zizeH2+sMe4ovuwBxfocRs4az2MRTD9VWYJvMUIbw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\html\new-calculation.html'))</OriginalItemSpec>
@@ -102,8 +102,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>v17wgvbpnr</Fingerprint>
-      <Integrity>s8dXwzENKeEVxL7fMDFIg0DGhceh8IZfpKfQz8wPXyY=</Integrity>
+      <Fingerprint>138x2w1s4o</Fingerprint>
+      <Integrity>LXlB/PY3zS5GVHTbrBZqjd9IdJTJ/vrgHvGi8/1E1p4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\html\printer.html'))</OriginalItemSpec>
@@ -198,6 +198,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\html\settings\user-settings.html'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\html\user.html'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nexttech</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nexttech</BasePath>
+      <RelativePath>html/user.html</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>j98n0yfevc</Fingerprint>
+      <Integrity>l8Fyl5PwfyQAgOSzkCJ4etcIyTXSJ7yPSW5xD4iTUKU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\html\user.html'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\script.js'))">
       <SourceType>Package</SourceType>
       <SourceId>Nexttech</SourceId>
@@ -210,8 +228,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>t5ym4xu2p8</Fingerprint>
-      <Integrity>cV5/Ct7uCMIxLueIVqI1rMYgz/pUwR4qUJEoxkDnHww=</Integrity>
+      <Fingerprint>fzrngwc6fg</Fingerprint>
+      <Integrity>a704iBAFvxEw2LkgmKDpNQ4VZB4dEGmxO8lHN5TFRTE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\script.js'))</OriginalItemSpec>

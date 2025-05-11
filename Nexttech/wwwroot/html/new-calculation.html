@@ -1,17 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Settings</title>
-    <link rel="stylesheet" href="../style.css">
+  <meta charset="UTF-8">
+  <title>3D Print Cost Calculator</title>
+  <style>
+    body { font-family: Arial; max-width: 800px; margin: auto; }
+    label, select, input { display: block; margin: 10px 0; }
+    button { margin: 20px 0; }
+    .result { margin-top: 20px; padding: 10px; border: 1px solid #ccc; }
+  </style>
 </head>
+<link rel="icon" href="/favicon.ico" />
 <body>
-    <h1>New Calculation</h1>
-    <!-- Link to home -->
-    <a href="/html/index.html">Go Home</a> 
+  <h1>3D Print Cost Calculator</h1>
 
+  <label>Calculation Name:
+    <input type="text" id="calcName" required />
+  </label>
 
-    <script src="../script.js"></script>
+  <label>Choose Printer:
+    <select id="printerSelect"></select>
+  </label>
+
+  <label>Choose Material:
+    <select id="materialSelect"></select>
+  </label>
+
+  <label>Parts Produced:
+    <input type="number" id="partsProduced" />
+  </label>
+
+  <label>Number of Builds:
+    <input type="number" id="numberOfBuilds" />
+  </label>
+
+  <label>Part Mass (g):
+    <input type="number" id="partMass" />
+  </label>
+
+  <label>Part Height (cm):
+    <input type="number" id="partHeight" />
+  </label>
+
+  <label>Part Area on Build (cm²):
+    <input type="number" id="partArea" />
+  </label>
+
+  <label>Support material (as % of part mass):
+    <input type="number" id="supportMat" />
+  </label>
+
+  <button onclick="calculate()">Calculate Costs</button>
+
+  <div id="result" class="result"></div>
+
+  <script>
+    let printers = [], materials = [];
+
+    // Example async fetch (replace URLs with your actual API endpoints)
+    async function loadData() {
+        const printerResponse = await fetch('/api/printers');
+        const materialResponse = await fetch('/api/materials');
+
+        printers = await printerResponse.json();
+        materials = await materialResponse.json();
+        
+      const printerSelect = document.getElementById('printerSelect');
+      const materialSelect = document.getElementById('materialSelect');
+
+      printers.forEach(p => {
+        const opt = document.createElement('option');
+        opt.value = p.id;
+        opt.textContent = p.name;
+        printerSelect.appendChild(opt);
+      });
+
+      materials.forEach(m => {
+        const opt = document.createElement('option');
+        opt.value = m.id;
+        opt.textContent = m.name;
+        materialSelect.appendChild(opt);
+      });
+    }
+
+    function getInput(id) {
+      return parseFloat(document.getElementById(id).value) || 0;
+    }
+
+    function calculate() {
+      const partsProduced = getInput('partsProduced');
+      const numberOfBuilds = getInput('numberOfBuilds');
+      const partMass = getInput('partMass');
+      const partHeight = getInput('partHeight');
+      const partArea = getInput('partArea');
+      const supportMat = getInput('supportMat');
+
+      const printer = printers.find(p => p.id == document.getElementById('printerSelect').value);
+      const material = materials.find(m => m.id == document.getElementById('materialSelect').value);
+
+      // === Extract needed properties from selected printer/material ===
+      const {
+        machine_Build_Area: buildArea,
+        machine_Build_Height: buildHeight,
+        recycling_fraction: recycling,
+        purchase_cost: machineCost,
+        infrastructure_Cost: infraCost,
+        cost_Of_Capital: capital,
+        machine_lifetime: life,
+        maintenance: maintenance,
+        hours_per_day: hoursPerDay,
+        days_per_week: daysPerWeek,
+        machine_Uptime: uptime,
+        machine_Build_Rate: buildRate,
+        time_per_machine_warm_up: warmup,
+        time_per_machine_cool_down: cooldown,
+        time_per_build_setup: setup,
+        time_per_build_removal: removal,
+        ftE_for_build_exchange: fteExchange,
+        ftE_for_support_removal: fteSupportRemoval,
+        ftE_per_machine_supervised: fteMachine,
+        ftE_salary_operator: salaryOp,
+        ftE_salary_engineer: salaryEng,
+        ftE_salary_technician: salaryTech,
+        support_removal_time_labor_constant: removalConst,
+        additional_operating_cost: opCost,
+        consumable_cost_per_build: consumableCost,
+        subsequent_build_preparation: subsequentPrep,
+        first_time_build_preparation: firstPrep
+        } = printer;
+
+      const { material_density: density, material_cost: matCost } = material;
+
+      const totalMaterial = partsProduced * partMass;
+      const totalSupport = partsProduced * supportMat;
+      const totalMaterialAllBuilds = (numberOfBuilds * buildArea * buildHeight * density) / 1000;
+      const recycled = (totalMaterialAllBuilds - totalMaterial - totalSupport) * recycling;
+      const waste = totalMaterialAllBuilds - recycled - totalMaterial - totalSupport;
+      const required = waste + totalMaterial + totalSupport;
+      const materialCost = required * matCost;
+
+      const prepTime = ((numberOfBuilds - 1) * subsequentPrep) + firstPrep;
+      const prepCost = prepTime * salaryEng;
+
+      const postTimePerPart = removalConst * (partArea ** 0.5);
+      const totalPostTime = postTimePerPart * partsProduced;
+      const postCost = totalPostTime * salaryTech;
+
+      const upFront = machineCost * (1 + infraCost);
+      const annualDep = capital * upFront / (1 - (1 + capital) ** (-life));
+      const annualMaint = maintenance * machineCost;
+      const annualMachine = annualDep + annualMaint;
+      const hoursPerYear = hoursPerDay * daysPerWeek * 52 * uptime;
+      const machineCostHour = annualMachine / hoursPerYear;
+
+      const warmupTotal = numberOfBuilds * warmup;
+      const partVolume = (partMass*1000)/density;
+      const printTime = partsProduced * partVolume / buildRate;
+      const cooldownTotal = numberOfBuilds * cooldown;
+      const exchangeTime = numberOfBuilds * (setup + removal);
+      const machineTime = warmupTotal + printTime + cooldownTotal + exchangeTime;
+      const machineUsageCost = machineTime * machineCostHour;
+
+      const opTotalCost = opCost * (warmupTotal + printTime + cooldownTotal);
+      const consumables = consumableCost * numberOfBuilds;
+      const totalConsumables = opTotalCost + consumables;
+
+      const laborBuild = (warmupTotal + printTime + cooldownTotal) * fteMachine;
+      const laborExchange = exchangeTime * fteExchange;
+      const totalLabor = (laborBuild + laborExchange) * salaryOp;
+
+      const totalCost = materialCost + prepCost + postCost + machineUsageCost + totalConsumables + totalLabor;
+
+      document.getElementById('result').innerHTML = `
+        <strong>Total Material Cost:</strong> $${materialCost.toFixed(2)}<br/>
+        <strong>Build Prep Cost:</strong> $${prepCost.toFixed(2)}<br/>
+        <strong>Post Process Cost:</strong> $${postCost.toFixed(2)}<br/>
+        <strong>Machine Cost:</strong> $${machineUsageCost.toFixed(2)}<br/>
+        <strong>Consumables:</strong> $${totalConsumables.toFixed(2)}<br/>
+        <strong>Labor:</strong> $${totalLabor.toFixed(2)}<br/>
+        <hr>
+        <strong>Total Cost:</strong> $${totalCost.toFixed(2)}
+      `;
+    }
+
+    loadData();
+
+  </script>
 </body>
 </html>
+

@@ -65,7 +65,7 @@ namespace Nexttech.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!_context.Materials.Any(e => e.Id == id))
+                if (!MaterialExists(id))
                 {
                     return NotFound();
                 }

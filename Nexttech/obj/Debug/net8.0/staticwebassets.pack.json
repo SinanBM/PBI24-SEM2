@@ -45,6 +45,10 @@
       "PackagePath": "staticwebassets\\html\\settings\\user-settings.html"
     },
     {
+      "Id": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\user.html",
+      "PackagePath": "staticwebassets\\html\\user.html"
+    },
+    {
       "Id": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\script.js",
       "PackagePath": "staticwebassets\\script.js"
     },

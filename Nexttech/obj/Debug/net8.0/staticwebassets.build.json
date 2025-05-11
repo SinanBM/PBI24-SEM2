@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9y+afFMxCLPxEExtBvf1DU+wAe6+gK0TVjcvl9kNWKA=",
+  "Hash": "VP4BFY8bWH1xkoJzqMR6gY2bpFkVwimVUIKKtoPn0Yw=",
   "Source": "Nexttech",
   "BasePath": "_content/Nexttech",
   "Mode": "Default",
@@ -94,8 +94,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "a4bj4uxrix",
-      "Integrity": "9rR0rBSKNt+Z7BSAivbbCzW3tP9oURp3WRwbcqmcbZU=",
+      "Fingerprint": "f0tk11ty3h",
+      "Integrity": "32RTUXQgpIIHFLsyOANYjHNAvzn4WGc2lqqRnopx9jA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\html\\material.html"
@@ -115,8 +115,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "w63x1a2xnk",
-      "Integrity": "aPd2s6NT6O9TUpJTpVbdl9f9xs6qB096LEmu6ds18Ig=",
+      "Fingerprint": "zkbhkxbdg6",
+      "Integrity": "4/zizeH2+sMe4ovuwBxfocRs4az2MRTD9VWYJvMUIbw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\html\\new-calculation.html"
@@ -136,8 +136,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "v17wgvbpnr",
-      "Integrity": "s8dXwzENKeEVxL7fMDFIg0DGhceh8IZfpKfQz8wPXyY=",
+      "Fingerprint": "138x2w1s4o",
+      "Integrity": "LXlB/PY3zS5GVHTbrBZqjd9IdJTJ/vrgHvGi8/1E1p4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\html\\printer.html"
@@ -248,6 +248,27 @@
       "OriginalItemSpec": "wwwroot\\html\\settings\\user-settings.html"
     },
     {
+      "Identity": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\user.html",
+      "SourceId": "Nexttech",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\",
+      "BasePath": "_content/Nexttech",
+      "RelativePath": "html/user#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "j98n0yfevc",
+      "Integrity": "l8Fyl5PwfyQAgOSzkCJ4etcIyTXSJ7yPSW5xD4iTUKU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\html\\user.html"
+    },
+    {
       "Identity": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\script.js",
       "SourceId": "Nexttech",
       "SourceType": "Discovered",
@@ -262,8 +283,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "t5ym4xu2p8",
-      "Integrity": "cV5/Ct7uCMIxLueIVqI1rMYgz/pUwR4qUJEoxkDnHww=",
+      "Fingerprint": "fzrngwc6fg",
+      "Integrity": "a704iBAFvxEw2LkgmKDpNQ4VZB4dEGmxO8lHN5TFRTE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\script.js"
@@ -538,7 +559,7 @@
       ]
     },
     {
-      "Route": "html/material.a4bj4uxrix.html",
+      "Route": "html/material.f0tk11ty3h.html",
       "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\material.html",
       "Selectors": [],
       "ResponseHeaders": [
@@ -548,7 +569,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5281"
+          "Value": "3351"
         },
         {
           "Name": "Content-Type",
@@ -556,11 +577,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"9rR0rBSKNt+Z7BSAivbbCzW3tP9oURp3WRwbcqmcbZU=\""
+          "Value": "\"32RTUXQgpIIHFLsyOANYjHNAvzn4WGc2lqqRnopx9jA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 06 May 2025 17:43:53 GMT"
+          "Value": "Sun, 11 May 2025 13:33:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -570,7 +591,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "a4bj4uxrix"
+          "Value": "f0tk11ty3h"
         },
         {
           "Name": "label",
@@ -578,7 +599,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-9rR0rBSKNt+Z7BSAivbbCzW3tP9oURp3WRwbcqmcbZU="
+          "Value": "sha256-32RTUXQgpIIHFLsyOANYjHNAvzn4WGc2lqqRnopx9jA="
         }
       ]
     },
@@ -593,7 +614,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5281"
+          "Value": "3351"
         },
         {
           "Name": "Content-Type",
@@ -601,11 +622,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"9rR0rBSKNt+Z7BSAivbbCzW3tP9oURp3WRwbcqmcbZU=\""
+          "Value": "\"32RTUXQgpIIHFLsyOANYjHNAvzn4WGc2lqqRnopx9jA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 06 May 2025 17:43:53 GMT"
+          "Value": "Sun, 11 May 2025 13:33:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -615,7 +636,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-9rR0rBSKNt+Z7BSAivbbCzW3tP9oURp3WRwbcqmcbZU="
+          "Value": "sha256-32RTUXQgpIIHFLsyOANYjHNAvzn4WGc2lqqRnopx9jA="
         }
       ]
     },
@@ -630,7 +651,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "406"
+          "Value": "8912"
         },
         {
           "Name": "Content-Type",
@@ -638,11 +659,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"aPd2s6NT6O9TUpJTpVbdl9f9xs6qB096LEmu6ds18Ig=\""
+          "Value": "\"4/zizeH2+sMe4ovuwBxfocRs4az2MRTD9VWYJvMUIbw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 18:46:50 GMT"
+          "Value": "Sun, 11 May 2025 22:13:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -652,12 +673,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-aPd2s6NT6O9TUpJTpVbdl9f9xs6qB096LEmu6ds18Ig="
+          "Value": "sha256-4/zizeH2+sMe4ovuwBxfocRs4az2MRTD9VWYJvMUIbw="
         }
       ]
     },
     {
-      "Route": "html/new-calculation.w63x1a2xnk.html",
+      "Route": "html/new-calculation.zkbhkxbdg6.html",
       "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\new-calculation.html",
       "Selectors": [],
       "ResponseHeaders": [
@@ -667,7 +688,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "406"
+          "Value": "8912"
         },
         {
           "Name": "Content-Type",
@@ -675,11 +696,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"aPd2s6NT6O9TUpJTpVbdl9f9xs6qB096LEmu6ds18Ig=\""
+          "Value": "\"4/zizeH2+sMe4ovuwBxfocRs4az2MRTD9VWYJvMUIbw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 18:46:50 GMT"
+          "Value": "Sun, 11 May 2025 22:13:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -689,7 +710,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "w63x1a2xnk"
+          "Value": "zkbhkxbdg6"
         },
         {
           "Name": "label",
@@ -697,7 +718,52 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-aPd2s6NT6O9TUpJTpVbdl9f9xs6qB096LEmu6ds18Ig="
+          "Value": "sha256-4/zizeH2+sMe4ovuwBxfocRs4az2MRTD9VWYJvMUIbw="
+        }
+      ]
+    },
+    {
+      "Route": "html/printer.138x2w1s4o.html",
+      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\printer.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11919"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LXlB/PY3zS5GVHTbrBZqjd9IdJTJ/vrgHvGi8/1E1p4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 11 May 2025 16:57:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "138x2w1s4o"
+        },
+        {
+          "Name": "label",
+          "Value": "html/printer.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-LXlB/PY3zS5GVHTbrBZqjd9IdJTJ/vrgHvGi8/1E1p4="
         }
       ]
     },
@@ -712,7 +778,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6142"
+          "Value": "11919"
         },
         {
           "Name": "Content-Type",
@@ -720,11 +786,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"s8dXwzENKeEVxL7fMDFIg0DGhceh8IZfpKfQz8wPXyY=\""
+          "Value": "\"LXlB/PY3zS5GVHTbrBZqjd9IdJTJ/vrgHvGi8/1E1p4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 06 May 2025 17:45:02 GMT"
+          "Value": "Sun, 11 May 2025 16:57:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -734,52 +800,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-s8dXwzENKeEVxL7fMDFIg0DGhceh8IZfpKfQz8wPXyY="
-        }
-      ]
-    },
-    {
-      "Route": "html/printer.v17wgvbpnr.html",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\printer.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "6142"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"s8dXwzENKeEVxL7fMDFIg0DGhceh8IZfpKfQz8wPXyY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 06 May 2025 17:45:02 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "v17wgvbpnr"
-        },
-        {
-          "Name": "label",
-          "Value": "html/printer.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-s8dXwzENKeEVxL7fMDFIg0DGhceh8IZfpKfQz8wPXyY="
+          "Value": "sha256-LXlB/PY3zS5GVHTbrBZqjd9IdJTJ/vrgHvGi8/1E1p4="
         }
       ]
     },
@@ -1194,6 +1215,133 @@
       ]
     },
     {
+      "Route": "html/user.html",
+      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\user.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3000"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"l8Fyl5PwfyQAgOSzkCJ4etcIyTXSJ7yPSW5xD4iTUKU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 11 May 2025 13:20:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-l8Fyl5PwfyQAgOSzkCJ4etcIyTXSJ7yPSW5xD4iTUKU="
+        }
+      ]
+    },
+    {
+      "Route": "html/user.j98n0yfevc.html",
+      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\html\\user.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3000"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"l8Fyl5PwfyQAgOSzkCJ4etcIyTXSJ7yPSW5xD4iTUKU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 11 May 2025 13:20:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "j98n0yfevc"
+        },
+        {
+          "Name": "label",
+          "Value": "html/user.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-l8Fyl5PwfyQAgOSzkCJ4etcIyTXSJ7yPSW5xD4iTUKU="
+        }
+      ]
+    },
+    {
+      "Route": "script.fzrngwc6fg.js",
+      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\script.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "107"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"a704iBAFvxEw2LkgmKDpNQ4VZB4dEGmxO8lHN5TFRTE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 11 May 2025 12:55:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fzrngwc6fg"
+        },
+        {
+          "Name": "label",
+          "Value": "script.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-a704iBAFvxEw2LkgmKDpNQ4VZB4dEGmxO8lHN5TFRTE="
+        }
+      ]
+    },
+    {
       "Route": "script.js",
       "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\script.js",
       "Selectors": [],
@@ -1204,7 +1352,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "288"
+          "Value": "107"
         },
         {
           "Name": "Content-Type",
@@ -1212,11 +1360,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"cV5/Ct7uCMIxLueIVqI1rMYgz/pUwR4qUJEoxkDnHww=\""
+          "Value": "\"a704iBAFvxEw2LkgmKDpNQ4VZB4dEGmxO8lHN5TFRTE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 06 May 2025 16:31:18 GMT"
+          "Value": "Sun, 11 May 2025 12:55:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1226,52 +1374,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-cV5/Ct7uCMIxLueIVqI1rMYgz/pUwR4qUJEoxkDnHww="
-        }
-      ]
-    },
-    {
-      "Route": "script.t5ym4xu2p8.js",
-      "AssetFile": "C:\\Users\\Sinan\\Desktop\\IT ARKITEKTUR\\2. SEMESTER\\PROJEKT\\nexttech application\\Nexttech\\wwwroot\\script.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "288"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"cV5/Ct7uCMIxLueIVqI1rMYgz/pUwR4qUJEoxkDnHww=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 06 May 2025 16:31:18 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "t5ym4xu2p8"
-        },
-        {
-          "Name": "label",
-          "Value": "script.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-cV5/Ct7uCMIxLueIVqI1rMYgz/pUwR4qUJEoxkDnHww="
+          "Value": "sha256-a704iBAFvxEw2LkgmKDpNQ4VZB4dEGmxO8lHN5TFRTE="
         }
       ]
     },
