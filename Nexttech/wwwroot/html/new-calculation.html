@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" href="favicon.ico" />
   <meta charset="UTF-8">
   <title>3D Print Cost Calculator</title>
   <style>
@@ -59,129 +60,83 @@
 
     // Example async fetch (replace URLs with your actual API endpoints)
     async function loadData() {
-        const printerResponse = await fetch('/api/printers');
-        const materialResponse = await fetch('/api/materials');
+    const printerResponse = await fetch('/api/printers');
+    const materialResponse = await fetch('/api/materials');
 
-        printers = await printerResponse.json();
-        materials = await materialResponse.json();
-        
-      const printerSelect = document.getElementById('printerSelect');
-      const materialSelect = document.getElementById('materialSelect');
+    if (!printerResponse.ok || !materialResponse.ok) {
+        console.error("Failed to fetch printers or materials");
+        return;
+    }
 
-      printers.forEach(p => {
+    const printers = await printerResponse.json();
+    const materials = await materialResponse.json();
+
+    console.log('Printers:', printers);
+    console.log('Materials:', materials);
+
+    const printerSelect = document.getElementById('printerSelect');
+    const materialSelect = document.getElementById('materialSelect');
+
+    printers.forEach(p => {
         const opt = document.createElement('option');
         opt.value = p.id;
         opt.textContent = p.name;
         printerSelect.appendChild(opt);
-      });
+    });
 
-      materials.forEach(m => {
+    materials.forEach(m => {
         const opt = document.createElement('option');
         opt.value = m.id;
         opt.textContent = m.name;
         materialSelect.appendChild(opt);
-      });
-    }
+    });
+}
+
 
     function getInput(id) {
       return parseFloat(document.getElementById(id).value) || 0;
     }
 
-    function calculate() {
-      const partsProduced = getInput('partsProduced');
-      const numberOfBuilds = getInput('numberOfBuilds');
-      const partMass = getInput('partMass');
-      const partHeight = getInput('partHeight');
-      const partArea = getInput('partArea');
-      const supportMat = getInput('supportMat');
+  async function calculate() {
+    const input = {
+      calcName: document.getElementById('calcName').value,
+      printerId: parseInt(document.getElementById('printerSelect').value),
+      materialId: parseInt(document.getElementById('materialSelect').value),
+      partsProduced: parseFloat(document.getElementById('partsProduced').value),
+      numberOfBuilds: parseFloat(document.getElementById('numberOfBuilds').value),
+      partMass: parseFloat(document.getElementById('partMass').value),
+      partHeight: parseFloat(document.getElementById('partHeight').value),
+      partArea: parseFloat(document.getElementById('partArea').value),
+      supportMat: parseFloat(document.getElementById('supportMat').value)
+    };
 
-      const printer = printers.find(p => p.id == document.getElementById('printerSelect').value);
-      const material = materials.find(m => m.id == document.getElementById('materialSelect').value);
+    try {
+      const response = await fetch('/api/calculations', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(input)
+      });
 
-      // === Extract needed properties from selected printer/material ===
-      const {
-        machine_Build_Area: buildArea,
-        machine_Build_Height: buildHeight,
-        recycling_fraction: recycling,
-        purchase_cost: machineCost,
-        infrastructure_Cost: infraCost,
-        cost_Of_Capital: capital,
-        machine_lifetime: life,
-        maintenance: maintenance,
-        hours_per_day: hoursPerDay,
-        days_per_week: daysPerWeek,
-        machine_Uptime: uptime,
-        machine_Build_Rate: buildRate,
-        time_per_machine_warm_up: warmup,
-        time_per_machine_cool_down: cooldown,
-        time_per_build_setup: setup,
-        time_per_build_removal: removal,
-        ftE_for_build_exchange: fteExchange,
-        ftE_for_support_removal: fteSupportRemoval,
-        ftE_per_machine_supervised: fteMachine,
-        ftE_salary_operator: salaryOp,
-        ftE_salary_engineer: salaryEng,
-        ftE_salary_technician: salaryTech,
-        support_removal_time_labor_constant: removalConst,
-        additional_operating_cost: opCost,
-        consumable_cost_per_build: consumableCost,
-        subsequent_build_preparation: subsequentPrep,
-        first_time_build_preparation: firstPrep
-        } = printer;
+      if (!response.ok) {
+        throw new Error(await response.text());
+      }
 
-      const { material_density: density, material_cost: matCost } = material;
-
-      const totalMaterial = partsProduced * partMass;
-      const totalSupport = partsProduced * supportMat;
-      const totalMaterialAllBuilds = (numberOfBuilds * buildArea * buildHeight * density) / 1000;
-      const recycled = (totalMaterialAllBuilds - totalMaterial - totalSupport) * recycling;
-      const waste = totalMaterialAllBuilds - recycled - totalMaterial - totalSupport;
-      const required = waste + totalMaterial + totalSupport;
-      const materialCost = required * matCost;
-
-      const prepTime = ((numberOfBuilds - 1) * subsequentPrep) + firstPrep;
-      const prepCost = prepTime * salaryEng;
-
-      const postTimePerPart = removalConst * (partArea ** 0.5);
-      const totalPostTime = postTimePerPart * partsProduced;
-      const postCost = totalPostTime * salaryTech;
-
-      const upFront = machineCost * (1 + infraCost);
-      const annualDep = capital * upFront / (1 - (1 + capital) ** (-life));
-      const annualMaint = maintenance * machineCost;
-      const annualMachine = annualDep + annualMaint;
-      const hoursPerYear = hoursPerDay * daysPerWeek * 52 * uptime;
-      const machineCostHour = annualMachine / hoursPerYear;
-
-      const warmupTotal = numberOfBuilds * warmup;
-      const partVolume = (partMass*1000)/density;
-      const printTime = partsProduced * partVolume / buildRate;
-      const cooldownTotal = numberOfBuilds * cooldown;
-      const exchangeTime = numberOfBuilds * (setup + removal);
-      const machineTime = warmupTotal + printTime + cooldownTotal + exchangeTime;
-      const machineUsageCost = machineTime * machineCostHour;
-
-      const opTotalCost = opCost * (warmupTotal + printTime + cooldownTotal);
-      const consumables = consumableCost * numberOfBuilds;
-      const totalConsumables = opTotalCost + consumables;
-
-      const laborBuild = (warmupTotal + printTime + cooldownTotal) * fteMachine;
-      const laborExchange = exchangeTime * fteExchange;
-      const totalLabor = (laborBuild + laborExchange) * salaryOp;
-
-      const totalCost = materialCost + prepCost + postCost + machineUsageCost + totalConsumables + totalLabor;
+      const result = await response.json();
 
       document.getElementById('result').innerHTML = `
-        <strong>Total Material Cost:</strong> $${materialCost.toFixed(2)}<br/>
-        <strong>Build Prep Cost:</strong> $${prepCost.toFixed(2)}<br/>
-        <strong>Post Process Cost:</strong> $${postCost.toFixed(2)}<br/>
-        <strong>Machine Cost:</strong> $${machineUsageCost.toFixed(2)}<br/>
-        <strong>Consumables:</strong> $${totalConsumables.toFixed(2)}<br/>
-        <strong>Labor:</strong> $${totalLabor.toFixed(2)}<br/>
+        <strong>Total Material Cost:</strong> $${result.materialCost.toFixed(2)}<br/>
+        <strong>Build Prep Cost:</strong> $${result.prepCost.toFixed(2)}<br/>
+        <strong>Post Process Cost:</strong> $${result.postCost.toFixed(2)}<br/>
+        <strong>Machine Cost:</strong> $${result.machineCost.toFixed(2)}<br/>
+        <strong>Consumables:</strong> $${result.consumables.toFixed(2)}<br/>
+        <strong>Labor:</strong> $${result.labor.toFixed(2)}<br/>
         <hr>
-        <strong>Total Cost:</strong> $${totalCost.toFixed(2)}
+        <strong>Total Cost:</strong> $${result.totalCost.toFixed(2)}
       `;
+    } catch (error) {
+      document.getElementById('result').innerHTML = `<span style="color: red;">Error: ${error.message}</span>`;
     }
+  }
 
     loadData();
 

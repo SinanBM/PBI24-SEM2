@@ -17,31 +17,33 @@ namespace Nexttech.Controllers
             _context = context;
         }
 
-        // GET: api/materials
+        // GET: api/materials/
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Material>>> GetMaterials()
         {
-            return await _context.Materials.ToListAsync();
+            var materials = await _context.Materials.ToListAsync();
+            return Ok(materials);
         }
 
-        // GET: api/materials/{id}
         [HttpGet("{id}")]
         public async Task<ActionResult<Material>> GetMaterial(int id)
         {
             var material = await _context.Materials.FindAsync(id);
-
             if (material == null)
             {
                 return NotFound();
             }
 
-            return material;
+            return Ok(material);
         }
 
         // POST: api/materials
         [HttpPost]
-        public async Task<ActionResult<Material>> CreateMaterial(Material material)
+        public async Task<ActionResult<Material>> CreateMaterial([FromBody] Material material)
         {
+            if (material == null)
+                return BadRequest("Invalid material data.");
+
             _context.Materials.Add(material);
             await _context.SaveChangesAsync();
 

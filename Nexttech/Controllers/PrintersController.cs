@@ -18,9 +18,10 @@ namespace Nexttech.Controllers
 
         // GET: api/printers
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Printer>>> GetPrinters()
+        public ActionResult<IEnumerable<Printer>> GetPrinters()
         {
-            return await _context.Printers.ToListAsync();
+            var printers = _context.Printers.ToList();
+            return Ok(printers);  // Should return JSON array of printers
         }
 
         // GET: api/printers/{id}
