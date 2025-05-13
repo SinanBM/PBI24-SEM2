@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Materials</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <h1>Materials</h1>
+
+  <h3>Add / Edit Material</h3>
+  <form id="materialForm">
+    <input type="hidden" id="materialId"/>
+
+    <label>Name:</label><input type="text" id="Name" required><br>
+    <label>Material Cost:</label><input type="number" id="Material_cost" step="any" required><br>
+    <label>Material Density:</label><input type="number" id="Material_density" step="any" required><br>
+
+    <button type="submit">Save Material</button>
+  </form>
+
+  <hr>
+
+  <h3>Material List</h3>
+  <table id="materialsTable" border="1">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Cost</th>
+        <th>Density</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    window.onload = fetchMaterials;
+
+    document.getElementById("materialForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      saveMaterial();
+    });
+
+    function fetchMaterials() {
+      axios.get("http://localhost:5077/api/materials")
+        .then(res => {
+          const table = document.getElementById("materialsTable").getElementsByTagName("tbody")[0];
+          table.innerHTML = "";
+          res.data.forEach(m => {
+            const row = table.insertRow();
+            row.innerHTML = `
+              <td>${m.name}</td>
+              <td>${m.material_cost}</td>
+              <td>${m.material_density}</td>
+              <td>
+                <button onclick="editMaterial(${m.id})">Edit</button>
+                <button onclick="deleteMaterial(${m.id})">Delete</button>
+              </td>
+            `;
+          });
+        });
+    }
+
+    function editMaterial(id) {
+      axios.get(`http://localhost:5077/api/materials/${id}`)
+        .then(res => {
+          const material = res.data;
+          document.getElementById("materialId").value = material.id;
+          document.getElementById("Name").value = material.name;
+          document.getElementById("Material_cost").value = material.material_cost;
+          document.getElementById("Material_density").value = material.material_density;
+        });
+    }
+
+    function saveMaterial() {
+      const id = document.getElementById("materialId").value;
+
+      const material = {
+        Id: id ? parseInt(id) : 0,
+        Name: document.getElementById("Name").value,
+        Material_cost: parseFloat(document.getElementById("Material_cost").value),
+        Material_density: parseFloat(document.getElementById("Material_density").value)
+      };
+
+      const url = id ? `http://localhost:5077/api/materials/${id}` : "http://localhost:5077/api/materials";
+      const method = id ? "put" : "post";
+
+      axios[method](url, material).then(() => {
+        fetchMaterials();
+        document.getElementById("materialForm").reset();
+        document.getElementById("materialId").value = "";
+      });
+    }
+
+    function deleteMaterial(id) {
+      axios.delete(`http://localhost:5077/api/materials/${id}`)
+        .then(() => fetchMaterials());
+    }
+  </script>
+</body>
+</html>

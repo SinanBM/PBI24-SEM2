@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Users</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <h1>Users</h1>
+
+  <h3>Add / Edit User</h3>
+  <form id="userForm">
+    <input type="hidden" id="userId"/>
+
+    <label>Username:</label><input type="text" id="Username" required><br>
+    <label>Password:</label><input type="password" id="Pwd" required><br>
+    <label>Email:</label><input type="email" id="E_mail" required><br>
+
+    <button type="submit">Save User</button>
+  </form>
+
+  <hr>
+
+  <h3>User List</h3>
+  <table id="usersTable" border="1">
+    <thead>
+      <tr>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    window.onload = fetchUsers;
+
+    document.getElementById("userForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      saveUser();
+    });
+
+    function fetchUsers() {
+      axios.get("http://localhost:5077/api/users")
+        .then(res => {
+          const table = document.getElementById("usersTable").getElementsByTagName("tbody")[0];
+          table.innerHTML = "";
+          res.data.forEach(u => {
+            const row = table.insertRow();
+            row.innerHTML = `
+              <td>${u.username}</td>
+              <td>${u.e_mail}</td>
+              <td>
+                <button onclick="editUser(${u.id})">Edit</button>
+                <button onclick="deleteUser(${u.id})">Delete</button>
+              </td>
+            `;
+          });
+        });
+    }
+
+    function editUser(id) {
+      axios.get(`http://localhost:5077/api/users/${id}`)
+        .then(res => {
+          const user = res.data;
+          document.getElementById("userId").value = user.id;
+          document.getElementById("Username").value = user.username;
+          document.getElementById("Pwd").value = user.pwd;
+          document.getElementById("E_mail").value = user.e_mail;
+        });
+    }
+
+    function saveUser() {
+      const id = document.getElementById("userId").value;
+
+      const user = {
+        Id: id ? parseInt(id) : 0,
+        Username: document.getElementById("Username").value,
+        Pwd: document.getElementById("Pwd").value,
+        E_mail: document.getElementById("E_mail").value
+      };
+
+      const url = id ? `http://localhost:5077/api/users/${id}` : "http://localhost:5077/api/users";
+      const method = id ? "put" : "post";
+
+      axios[method](url, user).then(() => {
+        fetchUsers();
+        document.getElementById("userForm").reset();
+        document.getElementById("userId").value = "";
+      });
+    }
+
+    function deleteUser(id) {
+      axios.delete(`http://localhost:5077/api/users/${id}`)
+        .then(() => fetchUsers());
+    }
+  </script>
+</body>
+</html>

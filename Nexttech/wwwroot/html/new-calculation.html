@@ -1,17 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Settings</title>
-    <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="favicon.ico" />
+  <meta charset="UTF-8">
+  <title>3D Print Cost Calculator</title>
+  <style>
+    body { font-family: Arial; max-width: 800px; margin: auto; }
+    label, select, input { display: block; margin: 10px 0; }
+    button { margin: 20px 0; }
+    .result { margin-top: 20px; padding: 10px; border: 1px solid #ccc; }
+  </style>
 </head>
+<link rel="icon" href="/favicon.ico" />
 <body>
-    <h1>New Calculation</h1>
-    <!-- Link to home -->
-    <a href="/html/index.html">Go Home</a> 
+  <h1>3D Print Cost Calculator</h1>
+
+  <label>Calculation Name:
+    <input type="text" id="calcName" required />
+  </label>
+
+  <label>Choose Printer:
+    <select id="printerSelect"></select>
+  </label>
+
+  <label>Choose Material:
+    <select id="materialSelect"></select>
+  </label>
+
+  <label>Parts Produced:
+    <input type="number" id="partsProduced" />
+  </label>
+
+  <label>Number of Builds:
+    <input type="number" id="numberOfBuilds" />
+  </label>
+
+  <label>Part Mass (g):
+    <input type="number" id="partMass" />
+  </label>
+
+  <label>Part Height (cm):
+    <input type="number" id="partHeight" />
+  </label>
+
+  <label>Part Area on Build (cm²):
+    <input type="number" id="partArea" />
+  </label>
+
+  <label>Support material (as % of part mass):
+    <input type="number" id="supportMat" />
+  </label>
+
+  <button onclick="calculate()">Calculate Costs</button>
+
+  <div id="result" class="result"></div>
+
+  <script>
+    let printers = [], materials = [];
+
+    // Example async fetch (replace URLs with your actual API endpoints)
+    async function loadData() {
+    const printerResponse = await fetch('/api/printers');
+    const materialResponse = await fetch('/api/materials');
+
+    if (!printerResponse.ok || !materialResponse.ok) {
+        console.error("Failed to fetch printers or materials");
+        return;
+    }
+
+    const printers = await printerResponse.json();
+    const materials = await materialResponse.json();
+
+    console.log('Printers:', printers);
+    console.log('Materials:', materials);
+
+    const printerSelect = document.getElementById('printerSelect');
+    const materialSelect = document.getElementById('materialSelect');
+
+    printers.forEach(p => {
+        const opt = document.createElement('option');
+        opt.value = p.id;
+        opt.textContent = p.name;
+        printerSelect.appendChild(opt);
+    });
+
+    materials.forEach(m => {
+        const opt = document.createElement('option');
+        opt.value = m.id;
+        opt.textContent = m.name;
+        materialSelect.appendChild(opt);
+    });
+}
 
 
-    <script src="../script.js"></script>
+    function getInput(id) {
+      return parseFloat(document.getElementById(id).value) || 0;
+    }
+
+  async function calculate() {
+    const input = {
+      calcName: document.getElementById('calcName').value,
+      printerId: parseInt(document.getElementById('printerSelect').value),
+      materialId: parseInt(document.getElementById('materialSelect').value),
+      partsProduced: parseFloat(document.getElementById('partsProduced').value),
+      numberOfBuilds: parseFloat(document.getElementById('numberOfBuilds').value),
+      partMass: parseFloat(document.getElementById('partMass').value),
+      partHeight: parseFloat(document.getElementById('partHeight').value),
+      partArea: parseFloat(document.getElementById('partArea').value),
+      supportMat: parseFloat(document.getElementById('supportMat').value)
+    };
+
+    try {
+      const response = await fetch('/api/calculations', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(input)
+      });
+
+      if (!response.ok) {
+        throw new Error(await response.text());
+      }
+
+      const result = await response.json();
+
+      document.getElementById('result').innerHTML = `
+        <strong>Total Material Cost:</strong> $${result.materialCost.toFixed(2)}<br/>
+        <strong>Build Prep Cost:</strong> $${result.prepCost.toFixed(2)}<br/>
+        <strong>Post Process Cost:</strong> $${result.postCost.toFixed(2)}<br/>
+        <strong>Machine Cost:</strong> $${result.machineCost.toFixed(2)}<br/>
+        <strong>Consumables:</strong> $${result.consumables.toFixed(2)}<br/>
+        <strong>Labor:</strong> $${result.labor.toFixed(2)}<br/>
+        <hr>
+        <strong>Total Cost:</strong> $${result.totalCost.toFixed(2)}
+      `;
+    } catch (error) {
+      document.getElementById('result').innerHTML = `<span style="color: red;">Error: ${error.message}</span>`;
+    }
+  }
+
+    loadData();
+
+  </script>
 </body>
 </html>
+
