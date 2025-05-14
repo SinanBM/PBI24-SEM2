@@ -15,6 +15,7 @@ builder.Services.AddCors(options => {
         builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
 });
 
+builder.Services.AddLogging();
 builder.Services.AddControllers();
 
 var app = builder.Build();
