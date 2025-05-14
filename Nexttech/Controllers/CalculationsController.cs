@@ -10,15 +10,17 @@ namespace Nexttech.Controllers
     public class CalculationsController : ControllerBase
     {
         private readonly DatabaseContext _context;
-
-        public CalculationsController(DatabaseContext context)
+        private readonly ILogger<CalculationsController> _logger;
+        public CalculationsController(DatabaseContext context, ILogger<CalculationsController> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
-        [HttpPost]
-        public async Task<IActionResult> CalculateAndSave([FromBody] CalculationInputDto input)
-        {
+        // POST /api/calculations
+        [HttpPost("preview")]
+        public async Task<IActionResult> PreviewCalculation([FromBody] CalculationInputDto input)
+        {_logger.LogInformation("Input PartsProduced: {PartsProduced}, PartMass: {PartMass}, NumberOfBuilds: {NumberOfBuilds}", input.PartsProduced, input.PartMass, input.NumberOfBuilds);
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
@@ -27,34 +29,15 @@ namespace Nexttech.Controllers
             if (printer == null || material == null)
                 return NotFound("Printer or Material not found");
 
+            _logger.LogError("Printer or material not found. PrinterId: {PrinterId}, MaterialId: {MaterialId}", input.PrinterId, input.MaterialId);
+            _logger.LogInformation("Printer fetched: {PrinterName}, Material fetched: {MaterialName}", printer.Name, material.Name);
+
             // Use a helper function for cleaner logic separation
             var (materialCost, prepCost, postCost, machineUsageCost, totalConsumables, totalLabor, totalCost)
                 = CalculateCosts(input, printer, material);
 
-            // Save the result in the database
-            var result = new Calculation
-            {
-                CalcName = input.CalcName,
-                PrinterId = input.PrinterId,
-                MaterialId = input.MaterialId,
-                PartsProduced = input.PartsProduced,
-                NumberOfBuilds = input.NumberOfBuilds,
-                PartMass = input.PartMass,
-                PartHeight = input.PartHeight,
-                PartArea = input.PartArea,
-                SupportMat = input.SupportMat,
-                MaterialCost = materialCost,
-                BuildPrepCost = prepCost,
-                PostProcessCost = postCost,
-                MachineCost = machineUsageCost,
-                ConsumablesCost = totalConsumables,
-                LaborCost = totalLabor,
-                TotalCost = totalCost,
-                CreatedAt = DateTime.UtcNow
-            };
+                _logger.LogInformation("Returning calculation result: MaterialCost: {MaterialCost}, TotalCost: {TotalCost}", materialCost, totalCost);
 
-            _context.Calculations.Add(result);
-            await _context.SaveChangesAsync();
 
             return Ok(new CalculationResultDto
             {
@@ -66,7 +49,71 @@ namespace Nexttech.Controllers
                 Labor = totalLabor,
                 TotalCost = totalCost
             });
+
         }
+            // Save the result in the database
+            [HttpPost]
+            public async Task<IActionResult> SaveCalculation([FromBody] CalculationSaveDto input)
+            {
+                if (!ModelState.IsValid)
+                    return BadRequest(ModelState);
+
+                    // Check for duplicate calc name
+                bool nameExists = await _context.Calculations
+                    .AnyAsync(c => c.CalcName == input.CalcName);
+                if (nameExists)
+                    return Conflict("A calculation with the same name already exists.");
+
+                var printer = await _context.Printers.FindAsync(input.PrinterId);
+                var material = await _context.Materials.FindAsync(input.MaterialId);
+                if (printer == null || material == null)
+                    return NotFound("Printer or Material not found");
+
+                var calculation = new Calculation
+                {
+                    CalcName = input.CalcName,
+                    PrinterId = input.PrinterId,
+                    MaterialId = input.MaterialId,
+                    PartsProduced = input.PartsProduced,
+                    NumberOfBuilds = input.NumberOfBuilds,
+                    PartMass = input.PartMass,
+                    PartHeight = input.PartHeight,
+                    PartArea = input.PartArea,
+                    SupportMat = input.SupportMat,
+                    MaterialCost = input.MaterialCost,
+                    BuildPrepCost = input.PrepCost,
+                    PostProcessCost = input.PostCost,
+                    MachineCost = input.MachineCost,
+                    ConsumablesCost = input.Consumables,
+                    LaborCost = input.Labor,
+                    TotalCost = input.TotalCost,
+                    CreatedAt = DateTime.UtcNow
+                };
+
+                _context.Calculations.Add(calculation);
+                await _context.SaveChangesAsync();
+
+                return CreatedAtAction(nameof(GetCalculation), new { id = calculation.Id }, new CalculationSaveDto
+                {
+                    CalcName = calculation.CalcName,
+                    PrinterId = calculation.PrinterId,
+                    MaterialId = calculation.MaterialId,
+                    PartsProduced = calculation.PartsProduced,
+                    NumberOfBuilds = calculation.NumberOfBuilds,
+                    PartMass = calculation.PartMass,
+                    PartHeight = calculation.PartHeight,
+                    PartArea = calculation.PartArea,
+                    SupportMat = calculation.SupportMat,
+                    MaterialCost = calculation.MaterialCost,
+                    PrepCost = calculation.BuildPrepCost,
+                    PostCost = calculation.PostProcessCost,
+                    MachineCost = calculation.MachineCost,
+                    Consumables = calculation.ConsumablesCost,
+                    Labor = calculation.LaborCost,
+                    TotalCost = calculation.TotalCost
+                
+                });
+                }
 
         // Helper method to calculate costs
         private static (double materialCost, double prepCost, double postCost, double machineUsageCost, double totalConsumables, double totalLabor, double totalCost)
@@ -81,7 +128,7 @@ namespace Nexttech.Controllers
             double waste = totalMaterialAllBuilds - recycled - totalMaterial - totalSupport;
             double required = waste + totalMaterial + totalSupport;
             double materialCost = required * material.Material_cost;
-
+            
             double prepTime = ((input.NumberOfBuilds - 1) * printer.Subsequent_build_preparation) + printer.First_time_build_preparation;
             double prepCost = prepTime * printer.FTE_salary_engineer;
 
@@ -126,6 +173,36 @@ namespace Nexttech.Controllers
                 .Include(c => c.Material)
                 .OrderByDescending(c => c.CreatedAt)
                 .ToListAsync();
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<CalculationSaveDto>> GetCalculation(int id)
+        {
+            var calc = await _context.Calculations.FindAsync(id);
+            if (calc == null)
+                return NotFound();
+
+            var dto = new CalculationSaveDto
+            {
+                CalcName = calc.CalcName,
+                PrinterId = calc.PrinterId,
+                MaterialId = calc.MaterialId,
+                PartsProduced = calc.PartsProduced,
+                NumberOfBuilds = calc.NumberOfBuilds,
+                PartMass = calc.PartMass,
+                PartHeight = calc.PartHeight,
+                PartArea = calc.PartArea,
+                SupportMat = calc.SupportMat,
+                MaterialCost = calc.MaterialCost,
+                PrepCost = calc.BuildPrepCost,
+                PostCost = calc.PostProcessCost,
+                MachineCost = calc.MachineCost,
+                Consumables = calc.ConsumablesCost,
+                Labor = calc.LaborCost,
+                TotalCost = calc.TotalCost
+            };
+
+            return Ok(dto);
         }
     }
 }

@@ -52,11 +52,16 @@
   </label>
 
   <button onclick="calculate()">Calculate Costs</button>
+  <button onclick="saveCalculation()">Save Calculation</button>
+  <button onclick="resetFields()">Reset Fields</button>
 
   <div id="result" class="result"></div>
 
   <script>
+
     let printers = [], materials = [];
+    let lastCalculationInput = null;
+    let lastCalculationResult = null;
 
     // Example async fetch (replace URLs with your actual API endpoints)
     async function loadData() {
@@ -92,14 +97,13 @@
     });
 }
 
-
     function getInput(id) {
       return parseFloat(document.getElementById(id).value) || 0;
     }
 
   async function calculate() {
     const input = {
-      calcName: document.getElementById('calcName').value,
+      calcName: document.getElementById('calcName').value.trim(),
       printerId: parseInt(document.getElementById('printerSelect').value),
       materialId: parseInt(document.getElementById('materialSelect').value),
       partsProduced: parseFloat(document.getElementById('partsProduced').value),
@@ -108,10 +112,23 @@
       partHeight: parseFloat(document.getElementById('partHeight').value),
       partArea: parseFloat(document.getElementById('partArea').value),
       supportMat: parseFloat(document.getElementById('supportMat').value)
+
+      
     };
 
+      // Check required fields
+    if (
+      !input.calcName || isNaN(input.printerId) || isNaN(input.materialId) ||
+      isNaN(input.partsProduced) || isNaN(input.numberOfBuilds) ||
+      isNaN(input.partMass) || isNaN(input.partHeight) ||
+      isNaN(input.partArea) || isNaN(input.supportMat)
+    ) {
+      alert("Please fill in all fields before calculating.");
+      return;
+    }
+
     try {
-      const response = await fetch('/api/calculations', {
+      const response = await fetch('/api/calculations/preview', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(input)
@@ -122,6 +139,9 @@
       }
 
       const result = await response.json();
+      console.log(result);  
+      lastCalculationInput = input;
+      lastCalculationResult = result;
 
       document.getElementById('result').innerHTML = `
         <strong>Total Material Cost:</strong> $${result.materialCost.toFixed(2)}<br/>
@@ -138,7 +158,68 @@
     }
   }
 
-    loadData();
+    async function saveCalculation() {
+      if (!lastCalculationInput || !lastCalculationResult) {
+      alert("Please run a calculation first before saving.");
+      return;
+      } 
+
+    const payload = {
+      ...lastCalculationInput,
+      ...{
+        materialCost: lastCalculationResult.materialCost,
+        prepCost: lastCalculationResult.prepCost,
+        postCost: lastCalculationResult.postCost,
+        machineCost: lastCalculationResult.machineCost,
+        consumables: lastCalculationResult.consumables,
+        labor: lastCalculationResult.labor,
+        totalCost: lastCalculationResult.totalCost
+      }
+    };
+          //check calc name
+      if (!payload.calcName || payload.calcName.trim() === "") {
+      alert("Calculation name is required.");
+      return;
+      }
+
+    try {
+      const response = await fetch('/api/calculations', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+
+      if (!response.ok) {
+        throw new Error(await response.text());
+      }
+
+      alert("Calculation saved successfully!");
+    } catch (error) {
+      alert("Save failed: " + error.message);
+    }
+  } 
+      function resetFields() {
+      const fields = [
+        'calcName', 'printerSelect', 'materialSelect',
+        'partsProduced', 'numberOfBuilds', 'partMass',
+        'partHeight', 'partArea', 'supportMat'
+      ];
+
+      fields.forEach(id => {
+        const el = document.getElementById(id);
+        if (el.tagName === 'SELECT') {
+          el.selectedIndex = 0;
+        } else {
+          el.value = '';
+        }
+      });
+
+      document.getElementById('result').innerHTML = '';
+      lastCalculationInput = null;
+      lastCalculationResult = null;
+    }
+
+  loadData();
 
   </script>
 </body>
