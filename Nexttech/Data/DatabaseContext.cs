@@ -22,12 +22,12 @@ namespace Nexttech.Data
             // Define relationships (if any)
             modelBuilder.Entity<Calculation>()
                     .HasOne(c => c.Printer)
-                    .WithMany()  // Printer doesn't need a collection of Calculations
+                    .WithMany()  
                     .HasForeignKey(c => c.PrinterId);
 
             modelBuilder.Entity<Calculation>()
                     .HasOne(c => c.Material)
-                    .WithMany()  // Material doesn't need a collection of Calculations
+                    .WithMany()  
                     .HasForeignKey(c => c.MaterialId);
             
             // Add any custom configurations if necessary

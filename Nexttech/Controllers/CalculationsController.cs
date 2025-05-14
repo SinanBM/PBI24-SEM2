@@ -117,5 +117,15 @@ namespace Nexttech.Controllers
             // Return the tuple with all calculated costs
             return (materialCost, prepCost, postCost, machineUsageCost, totalConsumables, totalLabor, totalCost);
         }
+
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Calculation>>> GetCalculations()
+        {
+            return await _context.Calculations
+                .Include(c => c.Printer)
+                .Include(c => c.Material)
+                .OrderByDescending(c => c.CreatedAt)
+                .ToListAsync();
+        }
     }
 }

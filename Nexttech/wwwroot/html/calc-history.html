@@ -3,15 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Settings</title>
+    <title>Calculation History</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <h1>Calculation History</h1>
-    <!-- Link to home -->
-    <a href="/html/index.html">Go Home</a> 
+    <a href="/html/index.html">Go Home</a>
 
+    <table id="historyTable">
+        <thead>
+            <tr>
+                <th>Calc Name</th>
+                <th>Printer</th>
+                <th>Material</th>
+                <th>Part Mass (g)</th>
+                <th>Total Cost ($)</th>
+                <th>Created At</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
 
-    <script src="../script.js"></script>
+    <script>
+        fetch("http://localhost:5077/api/calculations")
+            .then(response => response.json())
+            .then(data => {
+                const tbody = document.querySelector("#historyTable tbody");
+                data.forEach(calc => {
+                    const row = document.createElement("tr");
+                    row.innerHTML = `
+                        <td>${calc.calcName}</td>
+                        <td>${calc.printer?.name || "N/A"}</td>
+                        <td>${calc.material?.name || "N/A"}</td>
+                        <td>${calc.partMass}</td>
+                        <td>$${calc.totalCost.toFixed(2)}</td>
+                        <td>${new Date(calc.createdAt).toLocaleString()}</td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            })
+            .catch(err => {
+                console.error("Failed to load calculations:", err);
+            });
+    </script>
 </body>
 </html>
