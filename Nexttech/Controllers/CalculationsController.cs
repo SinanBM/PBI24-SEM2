@@ -29,21 +29,34 @@ namespace Nexttech.Controllers
                 return BadRequest(ModelState);
 
             var printer = await _context.Printers.FindAsync(input.PrinterId);
-            var material = await _context.Materials.FindAsync(input.MaterialId);
-
-            if (printer == null || material == null)
+            if (printer == null)
             {
-                _logger.LogError("Printer or material not found. PrinterId: {PrinterId}, MaterialId: {MaterialId}",
-                    input.PrinterId, input.MaterialId);
-                return NotFound("Printer or Material not found");
+                _logger.LogError("Printer not found. PrinterId: {PrinterId}", input.PrinterId);
+                return NotFound("Printer not found");
             }
 
-            _logger.LogInformation("Printer fetched: {PrinterName}, Material fetched: {MaterialName}", printer.Name, material.Name);
+            var material = await _context.Materials.FindAsync(input.MaterialId);
+            if (material == null)
+            {
+                _logger.LogError("Material not found. MaterialId: {MaterialId}", input.MaterialId);
+                return NotFound("Material not found");
+            }
+                _logger.LogInformation("Material fetched: {MaterialName}", material.Name);
+            
+
+                _logger.LogInformation("Printer fetched: {PrinterName}", printer.Name);
 
             var calculation = GenerateFullCalculation(input, printer, material);
 
             _logger.LogInformation("Returning calculation result: MaterialCost: {MaterialCost}, TotalCost: {TotalCost}",
                 calculation.MaterialCost, calculation.TotalCost);
+
+            // Delete all temporary materials after using the current calculation
+            var tempMaterials = _context.Materials.Where(m => m.IsTemporary);
+            _context.Materials.RemoveRange(tempMaterials);
+            await _context.SaveChangesAsync();
+
+            _logger.LogInformation("All temporary materials deleted.");
 
             return Ok(new CalculationResultDto
             {
@@ -56,6 +69,7 @@ namespace Nexttech.Controllers
                 TotalCost = calculation.TotalCost
             });
         }
+
 
         // POST /api/calculations
         [HttpPost]
@@ -70,6 +84,8 @@ namespace Nexttech.Controllers
 
             var printer = await _context.Printers.FindAsync(input.PrinterId);
             var material = await _context.Materials.FindAsync(input.MaterialId);
+                
+
 
             if (printer == null || material == null)
                 return NotFound("Printer or Material not found");
@@ -198,7 +214,7 @@ namespace Nexttech.Controllers
             // Calculation logic
             calc.TotalMaterial = input.PartsProduced * input.PartMass;
             calc.SupportMass = input.SupportMat * input.PartMass;
-            calc.TotalSupport = input.PartsProduced * (input.SupportMat * calc.SupportMass);
+            calc.TotalSupport = input.PartsProduced * calc.SupportMass;
             calc.TotalMaterialAllBuilds = input.NumberOfBuilds * printer.Machine_Build_Area * printer.Machine_Build_Height * material.Material_density / 1000;
             calc.Recycled = (calc.TotalMaterialAllBuilds - calc.TotalMaterial - calc.TotalSupport) * printer.Recycling_fraction;
             calc.Waste = calc.TotalMaterialAllBuilds - calc.Recycled - calc.TotalMaterial - calc.TotalSupport;

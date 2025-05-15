@@ -10,6 +10,9 @@ namespace Nexttech.Models
     public int Id { get; set; }
     public string Name { get; set; } = "";
     public decimal Material_cost { get; set; } //dollar/kg
-    public decimal Material_density { get; set; } //g/cm^3
+    public decimal Material_density { get; set; } //g/cm^3 
+
+    //temporary material handling
+    public bool IsTemporary { get; set; } = false;
 }
 }

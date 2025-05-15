@@ -19,13 +19,26 @@
     <input type="text" id="calcName" required />
   </label>
 
-  <label>Choose Printer:
-    <select id="printerSelect"></select>
+  <select id="printerSelect">
+    <option value="" disabled selected>Select a printer</option>
+  </select>
+
+  <select id="materialSelect">
+    <option value="" disabled selected>Select a material</option>
+  </select>
+  <div id="customMaterialFields" style="display: none; padding-left: 10px; border-left: 2px solid #ccc;">
+  <label>Material Name:
+    <input type="text" id="customMatName" />
   </label>
 
-  <label>Choose Material:
-    <select id="materialSelect"></select>
+  <label>Density (g/cm³):
+    <input type="number" id="customMatDensity" step="0.01" />
   </label>
+
+  <label>Cost per kg ($):
+    <input type="number" id="customMatCost" step="0.01" />
+  </label>
+</div>
 
   <label>Parts Produced:
     <input type="number" id="partsProduced" min="1" step="1"/>
@@ -73,8 +86,8 @@
         return;
     }
 
-    const printers = await printerResponse.json();
-    const materials = await materialResponse.json();
+    printers = await printerResponse.json();
+    materials = await materialResponse.json();
 
     console.log('Printers:', printers);
     console.log('Materials:', materials);
@@ -95,9 +108,23 @@
         opt.textContent = m.name;
         materialSelect.appendChild(opt);
     });
+    // Add a "Custom Material" option
+    const customOpt = document.createElement('option');
+    customOpt.value = "custom";
+    customOpt.textContent = "-- Custom Material --";
+    materialSelect.appendChild(customOpt);
+      [
+    'calcName', 'printerSelect', 'materialSelect',
+    'partsProduced', 'numberOfBuilds',
+    'partMass', 'partHeight', 'partArea', 'supportMat'
+  ].forEach(id => {
+    document.getElementById(id).addEventListener('input', () => {
+      document.getElementById('result').innerHTML = '';
+    });
+  });
 }
 
-    function getInput(id) {
+    function getFloatInput(id) {
       return parseFloat(document.getElementById(id).value) || 0;
     }
     function getIntInput(id) {
@@ -105,63 +132,109 @@
     }
 
     async function calculate() {
-      const input = {
-      calcName: document.getElementById('calcName').value.trim(),
-      printerId: getIntInput('printerSelect'),
-      materialId: getIntInput('materialSelect'),
-      partsProduced: getIntInput('partsProduced'),
-      numberOfBuilds: getIntInput('numberOfBuilds'),
-      partMass: getFloatInput('partMass'),
-      partHeight: getFloatInput('partHeight'),
-      partArea: getFloatInput('partArea'),
-      supportMat: getFloatInput('supportMat') 
-    };
+      const selectedMaterial = document.getElementById('materialSelect').value;
+      let customMaterial = null;
+      let materialId = null;
+      let tempMaterialCreated = false;
 
-      // Check required fields
-    if (
-      !input.calcName || isNaN(input.printerId) || isNaN(input.materialId) ||
-      isNaN(input.partsProduced) || isNaN(input.numberOfBuilds) ||
-      isNaN(input.partMass) || isNaN(input.partHeight) ||
-      isNaN(input.partArea) || isNaN(input.supportMat)
-    ) {
-      alert("Please fill in all fields before calculating.");
-      return;
-    }
+      // If "custom" material selected, extract and validate custom fields
+      if (selectedMaterial === "custom") {
+        const name = document.getElementById("customMatName").value.trim();
+        const density = parseFloat(document.getElementById("customMatDensity").value);
+        const costPerKg = parseFloat(document.getElementById("customMatCost").value);
 
-    try {
-      const response = await fetch('/api/calculations/preview', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(input)
-      });
+        if (!name || isNaN(density) || isNaN(costPerKg)) {
+          alert("Please fill in all custom material fields.");
+          return;
+        }
 
-      if (!response.ok) {
-        throw new Error(await response.text());
+        // Post to /api/materials/temp to create a temporary material
+        try {
+          const tempMaterialRes = await fetch("/api/materials/temp", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              name: name,
+              materialCost: costPerKg,
+              materialDensity: density
+            })
+          });
+
+          if (!tempMaterialRes.ok) {
+            throw new Error(await tempMaterialRes.text());
+          }
+
+          const tempData = await tempMaterialRes.json();
+          materialId = tempData.id;
+          tempMaterialCreated = true;
+        } catch (err) {
+          alert("Failed to create temporary material: " + err.message);
+          return;
+        }
+      } else {
+        materialId = parseInt(selectedMaterial);
+        if (isNaN(materialId)) {
+          alert("Please select a valid material.");
+          return;
+        }
       }
 
-      const result = await response.json();
-      console.log(result);  
-      lastCalculationInput = input;
-      lastCalculationResult = result;
+      const input = {
+        calcName: document.getElementById('calcName').value.trim(),
+        printerId: getIntInput('printerSelect'),
+        materialId: materialId,
+        partsProduced: getIntInput('partsProduced'),
+        numberOfBuilds: getIntInput('numberOfBuilds'),
+        partMass: getFloatInput('partMass'),
+        partHeight: getFloatInput('partHeight'),
+        partArea: getFloatInput('partArea'),
+        supportMat: getFloatInput('supportMat')
+      };
 
-      function safeToFixed(num) {
-        return (typeof num === 'number' ? num : 0).toFixed(2);
-    }
+      if (
+        !input.calcName || isNaN(input.printerId) ||
+        isNaN(input.partsProduced) || isNaN(input.numberOfBuilds) ||
+        isNaN(input.partMass) || isNaN(input.partHeight) ||
+        isNaN(input.partArea) || isNaN(input.supportMat)
+      ) {
+        alert("Please fill in all required fields before calculating.");
+        return;
+      }
 
-      document.getElementById('result').innerHTML = `
-        <strong>Total Material Cost:</strong> $${safeToFixed(result.materialCost)}<br/>
-        <strong>Build Prep Cost:</strong> $${safeToFixed(result.buildPrepCost)}<br/>
-        <strong>Post Process Cost:</strong> $${safeToFixed(result.postProcessCost)}<br/>
-        <strong>Machine Cost:</strong> $${safeToFixed(result.machineCost)}<br/>
-        <strong>Consumables:</strong> $${safeToFixed(result.consumables)}<br/>
-        <strong>Labor:</strong> $${safeToFixed(result.labor)}<br/>
-        <hr>
-        <strong>Total Cost:</strong> $${safeToFixed(result.totalCost)}
-      `;
-    } catch (error) {
-      document.getElementById('result').innerHTML = `<span style="color: red;">Error: ${error.message}</span>`;
+      try {
+        const response = await fetch('/api/calculations/preview', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(input)
+        });
+
+        if (!response.ok) {
+          throw new Error(await response.text());
+        }
+
+        const result = await response.json();
+        console.log(result);
+        lastCalculationInput = input;
+        lastCalculationResult = result;
+
+        function safeToFixed(num) {
+          return (typeof num === 'number' ? num : 0).toFixed(2);
+        }
+
+        document.getElementById('result').innerHTML = `
+          <strong>Total Material Cost:</strong> $${safeToFixed(result.materialCost)}<br/>
+          <strong>Build Prep Cost:</strong> $${safeToFixed(result.buildPrepCost)}<br/>
+          <strong>Post Process Cost:</strong> $${safeToFixed(result.postProcessCost)}<br/>
+          <strong>Machine Cost:</strong> $${safeToFixed(result.machineCost)}<br/>
+          <strong>Consumables:</strong> $${safeToFixed(result.consumables)}<br/>
+          <strong>Labor:</strong> $${safeToFixed(result.labor)}<br/>
+          <hr>
+          <strong>Total Cost:</strong> $${safeToFixed(result.totalCost)}
+        `;
+      } catch (error) {
+        document.getElementById('result').innerHTML = `<span style="color: red;">Error: ${error.message}</span>`;
+      } 
     }
-  }
 
     async function saveCalculation() {
       if (!lastCalculationInput || !lastCalculationResult) {
@@ -203,7 +276,7 @@
       alert("Save failed: " + error.message);
     }
   } 
-      function resetFields() {
+    function resetFields() {
       const fields = [
         'calcName', 'printerSelect', 'materialSelect',
         'partsProduced', 'numberOfBuilds', 'partMass',
@@ -213,9 +286,9 @@
       fields.forEach(id => {
         const el = document.getElementById(id);
         if (el.tagName === 'SELECT') {
-          el.selectedIndex = 0;
+          el.selectedIndex = 0; // Reset dropdown
         } else {
-          el.value = '';
+          el.value = ''; // Clear input
         }
       });
 
@@ -224,7 +297,16 @@
       lastCalculationResult = null;
     }
 
+
   loadData();
+  document.getElementById("materialSelect").addEventListener("change", function () {
+  const customFields = document.getElementById("customMaterialFields");
+  if (this.value === "custom") {
+    customFields.style.display = "block";
+  } else {
+    customFields.style.display = "none";
+  }
+});
 
   </script>
 </body>
