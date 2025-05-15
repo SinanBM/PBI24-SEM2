@@ -2,12 +2,12 @@ namespace Nexttech.Models
 {
     public class CalculationResultDto
     {
-    public double MaterialCost { get; set; }
-    public double BuildPrepCost { get; set; }
-    public double PostProcessCost { get; set; }
-    public double MachineCost { get; set; }
-    public double Consumables { get; set; }
-    public double Labor { get; set; }
-    public double TotalCost { get; set; }
+    public decimal MaterialCost { get; set; }
+    public decimal BuildPrepCost { get; set; }
+    public decimal PostProcessCost { get; set; }
+    public decimal MachineCost { get; set; }
+    public decimal Consumables { get; set; }
+    public decimal Labor { get; set; }
+    public decimal TotalCost { get; set; }
     }
 }

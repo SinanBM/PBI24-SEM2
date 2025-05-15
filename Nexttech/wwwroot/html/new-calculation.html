@@ -28,27 +28,27 @@
   </label>
 
   <label>Parts Produced:
-    <input type="number" id="partsProduced" />
+    <input type="number" id="partsProduced" min="1" step="1"/>
   </label>
 
   <label>Number of Builds:
-    <input type="number" id="numberOfBuilds" />
+    <input type="number" id="numberOfBuilds" min="1" step="1"/>
   </label>
 
   <label>Part Mass (g):
-    <input type="number" id="partMass" />
+    <input type="number" id="partMass" step="0.01" min="0" />
   </label>
 
   <label>Part Height (cm):
-    <input type="number" id="partHeight" />
+    <input type="number" id="partHeight" step="0.01" min="0"/>
   </label>
 
   <label>Part Area on Build (cm²):
-    <input type="number" id="partArea" />
+    <input type="number" id="partArea" step="0.01" min="0"/>
   </label>
 
   <label>Support material (as % of part mass):
-    <input type="number" id="supportMat" />
+    <input type="number" id="supportMat" step="0.01" min="0"/>
   </label>
 
   <button onclick="calculate()">Calculate Costs</button>
@@ -100,20 +100,21 @@
     function getInput(id) {
       return parseFloat(document.getElementById(id).value) || 0;
     }
+    function getIntInput(id) {
+      return parseInt(document.getElementById(id).value) || 0;
+    }
 
-  async function calculate() {
-    const input = {
+    async function calculate() {
+      const input = {
       calcName: document.getElementById('calcName').value.trim(),
-      printerId: parseInt(document.getElementById('printerSelect').value),
-      materialId: parseInt(document.getElementById('materialSelect').value),
-      partsProduced: parseInt(document.getElementById('partsProduced').value),
-      numberOfBuilds: parseInt(document.getElementById('numberOfBuilds').value),
-      partMass: parseFloat(document.getElementById('partMass').value),
-      partHeight: parseFloat(document.getElementById('partHeight').value),
-      partArea: parseFloat(document.getElementById('partArea').value),
-      supportMat: parseFloat(document.getElementById('supportMat').value)
-
-      
+      printerId: getIntInput('printerSelect'),
+      materialId: getIntInput('materialSelect'),
+      partsProduced: getIntInput('partsProduced'),
+      numberOfBuilds: getIntInput('numberOfBuilds'),
+      partMass: getFloatInput('partMass'),
+      partHeight: getFloatInput('partHeight'),
+      partArea: getFloatInput('partArea'),
+      supportMat: getFloatInput('supportMat') 
     };
 
       // Check required fields

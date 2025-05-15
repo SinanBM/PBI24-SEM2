@@ -208,12 +208,12 @@ namespace Nexttech.Controllers
             calc.PrepTime = ((input.NumberOfBuilds - 1) * printer.Subsequent_build_preparation) + printer.First_time_build_preparation;
             calc.BuildPrepCost = calc.PrepTime * printer.FTE_salary_engineer;
 
-            calc.PostTimePerPart = printer.Support_removal_time_labor_constant * Math.Sqrt(input.PartArea);
+            calc.PostTimePerPart = printer.Support_removal_time_labor_constant * (decimal)Math.Sqrt((double)input.PartArea);
             calc.TotalPostTime = calc.PostTimePerPart * input.PartsProduced;
             calc.PostProcessCost = calc.TotalPostTime * printer.FTE_salary_technician;
 
             calc.UpFront = printer.Purchase_cost * (1 + printer.Infrastructure_Cost);
-            calc.AnnualDepreciation = printer.Cost_Of_Capital * calc.UpFront / (1 - Math.Pow(1 + printer.Cost_Of_Capital, -printer.Machine_lifetime));
+            calc.AnnualDepreciation = printer.Cost_Of_Capital * calc.UpFront / (1 - (decimal)Math.Pow((double)(1 + printer.Cost_Of_Capital), -(double)printer.Machine_lifetime));
             calc.AnnualMaintenance = printer.Maintenance * printer.Purchase_cost;
             calc.AnnualMachineCost = calc.AnnualDepreciation + calc.AnnualMaintenance;
             calc.HoursPerYear = printer.Hours_per_day * printer.Days_per_week * 52 * printer.Machine_Uptime;
