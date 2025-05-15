@@ -23,6 +23,28 @@ namespace Nexttech.Controllers
         {
             var materials = await _context.Materials.ToListAsync();
             return Ok(materials);
+
+
+        // Temp material creator   
+        }
+        [HttpPost("temp")]
+        public async Task<IActionResult> CreateTemporaryMaterial([FromBody] TempMaterialDto dto)
+        {
+            if (string.IsNullOrWhiteSpace(dto.Name) || dto.MaterialCost <= 0 || dto.MaterialDensity <= 0)
+                return BadRequest("Invalid material data.");
+
+            var material = new Material
+            {
+                Name = dto.Name,
+                Material_cost = dto.MaterialCost,
+                Material_density = dto.MaterialDensity,
+                IsTemporary = true
+            };
+
+            _context.Materials.Add(material);
+            await _context.SaveChangesAsync();
+
+            return Ok(new { material.Id });
         }
 
         [HttpGet("{id}")]
@@ -86,7 +108,7 @@ namespace Nexttech.Controllers
         public async Task<IActionResult> DeleteMaterial(int id)
         {
             var material = await _context.Materials.FindAsync(id);
-            if (material == null)
+            if (material == null || !material.IsTemporary)
             {
                 return NotFound();
             }
