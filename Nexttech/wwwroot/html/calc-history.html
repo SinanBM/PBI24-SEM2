@@ -13,6 +13,7 @@
     <table id="historyTable">
         <thead>
             <tr>
+                <th>Product Image</th>
                 <th>Calc Name</th>
                 <th>Printer</th>
                 <th>Material</th>
@@ -33,6 +34,15 @@
                 data.forEach(calc => {
                     const row = document.createElement("tr");
                     row.innerHTML = `
+                        <td>
+                            <img src="${calc.productImage || '../assets/placeholder.png'}" 
+                                alt="Product Image" 
+                                style="width:200px; height:155px;" 
+                                id="img-${calc.id}"><br>
+
+                            <input type="file" accept="image/*" onchange="uploadPhoto(event, ${calc.id})">
+                            <button onclick="deletePhoto(${calc.id})">Delete</button>
+                        </td>
                         <td>${calc.calcName}</td>
                         <td>${calc.printer?.name || "N/A"}</td>
                         <td>${calc.material?.name || "N/A"}</td>
@@ -40,6 +50,7 @@
                         <td>$${calc.totalCost.toFixed(2)}</td>
                         <td>${new Date(calc.createdAt).toLocaleString()}</td>
                         <td><a href="results.html?id=${calc.id}">[details]</a></td>
+                        
                     `;
                     tbody.appendChild(row);
                 });
@@ -47,6 +58,38 @@
             .catch(err => {
                 console.error("Failed to load calculations:", err);
             });
+
+        function uploadPhoto(event, id) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const formData = new FormData();
+            formData.append("photo", file);
+
+            fetch(`http://localhost:5077/api/calculations/upload-photo/${id}`, {
+                method: "POST",
+                body: formData
+            })
+            .then(res => res.ok ? res.json() : Promise.reject("Upload failed"))
+            .then(data => {
+                document.getElementById(`img-${id}`).src = data.productImage;
+            })
+            .catch(err => console.error("Upload error:", err));
+        }
+
+        function deletePhoto(id) {
+            fetch(`http://localhost:5077/api/calculations/delete-photo/${id}`, {
+                method: "DELETE"
+            })
+            .then(res => {
+                if (res.ok) {
+                    document.getElementById(`img-${id}`).src = "../assets/placeholder.png";
+                } else {
+                    console.error("Failed to delete image");
+                }
+            });
+        }
+
     </script>
 </body>
 </html>

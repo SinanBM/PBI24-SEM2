@@ -248,6 +248,7 @@ namespace Nexttech.Controllers
                 .Include(c => c.Material)
             .ToListAsync();
         }
+
         [HttpGet("{id}")]
         public async Task<ActionResult<Calculation>> GetCalculation(int id)
         {
@@ -260,5 +261,82 @@ namespace Nexttech.Controllers
                 return NotFound();
 
             return calculation;
+        }
+
+        [HttpPost("upload-photo/{id}")]
+        public async Task<IActionResult> UploadPhoto(int id, IFormFile photo)
+        {
+            var calculation = await _context.Calculations.FindAsync(id);
+            if (calculation == null)
+                return NotFound();
+
+            if (photo == null || photo.Length == 0)
+                return BadRequest("No photo uploaded.");
+
+            // Validate file extension
+            var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".webp" };
+            var extension = Path.GetExtension(photo.FileName).ToLowerInvariant();
+
+            if (!allowedExtensions.Contains(extension))
+                return BadRequest("Unsupported file type. Allowed types are: .jpg, .jpeg, .png, .webp");
+            
+            // Delete old photo if exists
+            if (!string.IsNullOrWhiteSpace(calculation.ProductImage))
+            {
+                var oldPath = Path.Combine("wwwroot", calculation.ProductImage.TrimStart('/'));
+                if (System.IO.File.Exists(oldPath))
+                    System.IO.File.Delete(oldPath);
+            }
+            
+            // Save new photo
+            var uploadsFolder = Path.Combine("wwwroot", "uploads");
+            if (!Directory.Exists(uploadsFolder))
+                Directory.CreateDirectory(uploadsFolder);
+
+            // Save file with unique name
+            var uniqueFileName = Guid.NewGuid() + extension;
+            var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                await photo.CopyToAsync(stream);
+            }
+
+            // Store relative path in DB
+            calculation.ProductImage = "/uploads/" + uniqueFileName;
+            await _context.SaveChangesAsync();
+
+            return Ok(new { calculation.ProductImage });
+        }
+
+
+        [HttpDelete("delete-photo/{id}")]
+        public async Task<IActionResult> DeletePhoto(int id)
+        {
+            var calculation = await _context.Calculations.FindAsync(id);
+            if (calculation == null)
+                return NotFound();
+
+            if (!string.IsNullOrWhiteSpace(calculation.ProductImage))
+            {
+                var relativePath = calculation.ProductImage.TrimStart('/');
+                var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", relativePath);
+
+                try
+                {
+                    if (System.IO.File.Exists(filePath))
+                        System.IO.File.Delete(filePath);
+                }
+                catch (Exception ex)
+                {
+                    // Optional: log this
+                    return StatusCode(500, $"Error deleting photo: {ex.Message}");
+                }
+            }
+
+            calculation.ProductImage = null;
+            await _context.SaveChangesAsync();
+
+            return NoContent();
         }
 }}
