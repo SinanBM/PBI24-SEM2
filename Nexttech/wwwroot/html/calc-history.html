@@ -4,91 +4,203 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculation History</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
+<style>
+    #historyTable thead th[data-sort] {
+    cursor: pointer;
+    position: relative;
+    padding-right: 20px;
+    }
+
+    #historyTable thead th[data-sort]::after {
+    content: "▲"; /* Only show one triangle */
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    font-size: 0.7em;
+    color: #000000;
+    transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    /* Rotate for descending sort */
+    #historyTable thead th.sorted-desc::after {
+    transform: translateY(-50%) rotate(180deg);
+    color: #000;
+    }
+
+    /* Highlight ascending sort */
+    #historyTable thead th.sorted-asc::after {
+    transform: translateY(-50%) rotate(0deg);
+    color: #000;
+    }
+
+    /* Optional: make it more obvious on hover */
+    #historyTable thead th[data-sort]:hover::after {
+    color: #000000;
+    }
+</style>
+
 <body>
     <h1>Calculation History</h1>
     <a href="/html/index.html">Go Home</a>
 
+    <!-- Search bar -->
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search by project name, printer, or material..."
+    />
+
     <table id="historyTable">
         <thead>
-            <tr>
-                <th>Product Image</th>
-                <th>Calc Name</th>
-                <th>Printer</th>
-                <th>Material</th>
-                <th>Part Mass (g)</th>
-                <th>Total Cost ($)</th>
-                <th>Created At</th>
-                <th>Details</th>
-            </tr>
+        <tr>
+            <th>Product Image</th>
+            <th data-sort="calcName">Calc Name</th>
+            <th data-sort="printer">Printer</th>
+            <th data-sort="material">Material</th>
+            <th data-sort="totalCost">Total Cost ($)</th>
+            <th data-sort="createdAt">Created At</th>
+            <th>Details</th>
+        </tr>
         </thead>
         <tbody></tbody>
     </table>
 
     <script>
-        fetch("http://localhost:5077/api/calculations")
-            .then(response => response.json())
-            .then(data => {
-                const tbody = document.querySelector("#historyTable tbody");
-                data.forEach(calc => {
-                    const row = document.createElement("tr");
-                    row.innerHTML = `
-                        <td>
-                            <img src="${calc.productImage || '../assets/placeholder.png'}" 
-                                alt="Product Image" 
-                                style="width:200px; height:155px;" 
-                                id="img-${calc.id}"><br>
+        document.addEventListener("DOMContentLoaded", () => {
+            let calculations = [];
+            let currentSort = { column: null, asc: true };
 
-                            <input type="file" accept="image/*" onchange="uploadPhoto(event, ${calc.id})">
-                            <button onclick="deletePhoto(${calc.id})">Delete</button>
-                        </td>
-                        <td>${calc.calcName}</td>
-                        <td>${calc.printer?.name || "N/A"}</td>
-                        <td>${calc.material?.name || "N/A"}</td>
-                        <td>${calc.partMass}</td>
-                        <td>$${calc.totalCost.toFixed(2)}</td>
-                        <td>${new Date(calc.createdAt).toLocaleString()}</td>
-                        <td><a href="results.html?id=${calc.id}">[details]</a></td>
-                        
-                    `;
-                    tbody.appendChild(row);
-                });
+            const tbody = document.querySelector("#historyTable tbody");
+            const searchInput = document.getElementById("searchInput");
+            const headers = document.querySelectorAll("#historyTable thead th[data-sort]");
+
+            // Fetch data once
+            fetch("http://localhost:5077/api/calculations")
+            .then(res => res.json())
+            .then(data => {
+                calculations = data;
+                renderTable(calculations);
             })
-            .catch(err => {
-                console.error("Failed to load calculations:", err);
+            .catch(err => console.error("Failed to load calculations:", err));
+
+            // Render table rows based on data array
+            function renderTable(data) {
+            tbody.innerHTML = "";
+            data.forEach(calc => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                <td>
+                    <img src="${calc.productImage || '../assets/placeholder.png'}" 
+                        alt="Product Image" 
+                        style="width:200px; height:155px;" 
+                        id="img-${calc.id}"><br>
+                    <input type="file" accept="image/*" onchange="uploadPhoto(event, ${calc.id})">
+                    <button onclick="deletePhoto(${calc.id})">Delete</button>
+                </td>
+                <td>${calc.calcName}</td>
+                <td>${calc.printer?.name || "N/A"}</td>
+                <td>${calc.material?.name || "N/A"}</td>
+                <td>$${calc.totalCost.toFixed(2)}</td>
+                <td>${new Date(calc.createdAt).toLocaleString()}</td>
+                <td><a href="results.html?id=${calc.id}">[details]</a></td>
+                `;
+                tbody.appendChild(row);
+            });
+            }
+
+            // Search filter
+            searchInput.addEventListener("input", () => {
+            const query = searchInput.value.toLowerCase();
+            const filtered = calculations.filter(calc => {
+                return (
+                calc.calcName.toLowerCase().includes(query) ||
+                (calc.printer?.name || "").toLowerCase().includes(query) ||
+                (calc.material?.name || "").toLowerCase().includes(query)
+                );
+            });
+            renderTable(filtered);
             });
 
-        function uploadPhoto(event, id) {
-            const file = event.target.files[0];
-            if (!file) return;
+            /// Sort function
+            headers.forEach(header => {
+            header.addEventListener("click", () => {
+                const sortKey = header.getAttribute("data-sort");
 
-            const formData = new FormData();
-            formData.append("photo", file);
-
-            fetch(`http://localhost:5077/api/calculations/upload-photo/${id}`, {
-                method: "POST",
-                body: formData
-            })
-            .then(res => res.ok ? res.json() : Promise.reject("Upload failed"))
-            .then(data => {
-                document.getElementById(`img-${id}`).src = data.productImage;
-            })
-            .catch(err => console.error("Upload error:", err));
-        }
-
-        function deletePhoto(id) {
-            fetch(`http://localhost:5077/api/calculations/delete-photo/${id}`, {
-                method: "DELETE"
-            })
-            .then(res => {
-                if (res.ok) {
-                    document.getElementById(`img-${id}`).src = "../assets/placeholder.png";
+                if (currentSort.column === sortKey) {
+                currentSort.asc = !currentSort.asc;
                 } else {
-                    console.error("Failed to delete image");
+                currentSort.column = sortKey;
+                currentSort.asc = true;
                 }
+
+                // Clear previous sorting indicators
+                headers.forEach(h => h.classList.remove("sorted-asc", "sorted-desc"));
+
+                // Add new indicator
+                header.classList.add(currentSort.asc ? "sorted-asc" : "sorted-desc");
+
+                const sorted = [...calculations].sort((a, b) => {
+                let valA = getSortValue(a, sortKey);
+                let valB = getSortValue(b, sortKey);
+
+                if (typeof valA === "string") valA = valA.toLowerCase();
+                if (typeof valB === "string") valB = valB.toLowerCase();
+
+                if (valA < valB) return currentSort.asc ? -1 : 1;
+                if (valA > valB) return currentSort.asc ? 1 : -1;
+                return 0;
+                });
+
+                renderTable(sorted);
             });
-        }
+            });
+        
+
+            function getSortValue(item, key) {
+            switch (key) {
+                case "printer":
+                return item.printer?.name || "";
+                case "material":
+                return item.material?.name || "";
+                case "createdAt":
+                return new Date(item.createdAt).getTime();
+                default:
+                return item[key] ?? "";
+            }};
+
+                function uploadPhoto(event, id) {
+                    const file = event.target.files[0];
+                    if (!file) return;
+
+                    const formData = new FormData();
+                    formData.append("photo", file);
+
+                    fetch(`http://localhost:5077/api/calculations/upload-photo/${id}`, {
+                        method: "POST",
+                        body: formData
+                    })
+                    .then(res => res.ok ? res.json() : Promise.reject("Upload failed"))
+                    .then(data => {
+                        document.getElementById(`img-${id}`).src = data.productImage;
+                    })
+                    .catch(err => console.error("Upload error:", err));
+                }
+
+                function deletePhoto(id) {
+                    fetch(`http://localhost:5077/api/calculations/delete-photo/${id}`, {
+                        method: "DELETE"
+                    })
+                    .then(res => {
+                        if (res.ok) {
+                            document.getElementById(`img-${id}`).src = "../assets/placeholder.png";
+                        } else {
+                            console.error("Failed to delete image");
+                        }
+                    });
+                }})
 
     </script>
 </body>
