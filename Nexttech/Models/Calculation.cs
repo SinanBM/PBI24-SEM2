@@ -58,5 +58,6 @@ using System.ComponentModel.DataAnnotations;
 
     public Printer Printer { get; set; }
     public Material Material { get; set; }
+    public string? ProductImage { get; set; }
 
     }
