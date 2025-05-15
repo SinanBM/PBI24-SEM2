@@ -339,4 +339,19 @@ namespace Nexttech.Controllers
 
             return NoContent();
         }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteCalculation(int id)
+        {
+            var calculation = await _context.Calculations.FindAsync(id);
+            if (calculation == null)
+            {
+                return NotFound();
+            }
+
+            _context.Calculations.Remove(calculation);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+
 }}
