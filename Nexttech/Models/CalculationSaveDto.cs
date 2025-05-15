@@ -1,14 +1,54 @@
 namespace Nexttech.Models
 {
-    public class CalculationSaveDto : CalculationInputDto
+    public class CalculationSaveDto
     {
-        public int Id { get; set; }
+        // Input properties from CalculationInputDto
+        public string? CalcName { get; set; }
+        public int PrinterId { get; set; }
+        public int MaterialId { get; set; }
+
+        public int PartsProduced { get; set; }
+        public int NumberOfBuilds { get; set; }
+        public double PartMass { get; set; }
+        public double PartHeight { get; set; }
+        public double PartArea { get; set; }
+        public double SupportMat { get; set; }
+
+        // Output properties for calculated results
+        public double TotalMaterial { get; set; }
+        public double SupportMass { get; set; }
+        public double TotalSupport { get; set; }
+        public double TotalMaterialAllBuilds { get; set; }
+        public double Recycled { get; set; }
+        public double Waste { get; set; }
+        public double RequiredMaterial { get; set; }
         public double MaterialCost { get; set; }
-        public double PrepCost { get; set; }
-        public double PostCost { get; set; }
+        public double PrepTime { get; set; }
+        public double BuildPrepCost { get; set; }
+        public double PostTimePerPart { get; set; }
+        public double TotalPostTime { get; set; }
+        public double PostProcessCost { get; set; }
+        public double UpFront { get; set; }
+        public double AnnualDepreciation { get; set; }
+        public double AnnualMaintenance { get; set; }
+        public double AnnualMachineCost { get; set; }
+        public double HoursPerYear { get; set; }
+        public double MachineCostPerHour { get; set; }
+        public double WarmupTotal { get; set; }
+        public double PartVolume { get; set; }
+        public double PrintTime { get; set; }
+        public double CooldownTotal { get; set; }
+        public double ExchangeTime { get; set; }
+        public double MachineTime { get; set; }
         public double MachineCost { get; set; }
+        public double OperatingTotalCost { get; set; }
         public double Consumables { get; set; }
-        public double Labor { get; set; }
+        public double ConsumablesCost { get; set; }
+        public double LaborBuildTime { get; set; }
+        public double LaborExchangeTime { get; set; }
+        public double LaborCost { get; set; }
         public double TotalCost { get; set; }
+
+        public DateTime CreatedAt { get; set; }
     }
 }

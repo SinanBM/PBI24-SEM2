@@ -106,8 +106,8 @@
       calcName: document.getElementById('calcName').value.trim(),
       printerId: parseInt(document.getElementById('printerSelect').value),
       materialId: parseInt(document.getElementById('materialSelect').value),
-      partsProduced: parseFloat(document.getElementById('partsProduced').value),
-      numberOfBuilds: parseFloat(document.getElementById('numberOfBuilds').value),
+      partsProduced: parseInt(document.getElementById('partsProduced').value),
+      numberOfBuilds: parseInt(document.getElementById('numberOfBuilds').value),
       partMass: parseFloat(document.getElementById('partMass').value),
       partHeight: parseFloat(document.getElementById('partHeight').value),
       partArea: parseFloat(document.getElementById('partArea').value),
@@ -143,15 +143,19 @@
       lastCalculationInput = input;
       lastCalculationResult = result;
 
+      function safeToFixed(num) {
+        return (typeof num === 'number' ? num : 0).toFixed(2);
+    }
+
       document.getElementById('result').innerHTML = `
-        <strong>Total Material Cost:</strong> $${result.materialCost.toFixed(2)}<br/>
-        <strong>Build Prep Cost:</strong> $${result.prepCost.toFixed(2)}<br/>
-        <strong>Post Process Cost:</strong> $${result.postCost.toFixed(2)}<br/>
-        <strong>Machine Cost:</strong> $${result.machineCost.toFixed(2)}<br/>
-        <strong>Consumables:</strong> $${result.consumables.toFixed(2)}<br/>
-        <strong>Labor:</strong> $${result.labor.toFixed(2)}<br/>
+        <strong>Total Material Cost:</strong> $${safeToFixed(result.materialCost)}<br/>
+        <strong>Build Prep Cost:</strong> $${safeToFixed(result.buildPrepCost)}<br/>
+        <strong>Post Process Cost:</strong> $${safeToFixed(result.postProcessCost)}<br/>
+        <strong>Machine Cost:</strong> $${safeToFixed(result.machineCost)}<br/>
+        <strong>Consumables:</strong> $${safeToFixed(result.consumables)}<br/>
+        <strong>Labor:</strong> $${safeToFixed(result.labor)}<br/>
         <hr>
-        <strong>Total Cost:</strong> $${result.totalCost.toFixed(2)}
+        <strong>Total Cost:</strong> $${safeToFixed(result.totalCost)}
       `;
     } catch (error) {
       document.getElementById('result').innerHTML = `<span style="color: red;">Error: ${error.message}</span>`;
@@ -168,8 +172,8 @@
       ...lastCalculationInput,
       ...{
         materialCost: lastCalculationResult.materialCost,
-        prepCost: lastCalculationResult.prepCost,
-        postCost: lastCalculationResult.postCost,
+        buildPrepCost: lastCalculationResult.buildPrepCost,
+        postProcessCost: lastCalculationResult.postProcessCost,
         machineCost: lastCalculationResult.machineCost,
         consumables: lastCalculationResult.consumables,
         labor: lastCalculationResult.labor,
