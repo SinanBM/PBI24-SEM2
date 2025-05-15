@@ -1,7 +1,33 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    text-align: center;
-    padding-top: 50px;
+#historyTable thead th[data-sort] {
+  cursor: pointer;
+  position: relative;
+  padding-right: 25px;
 }
 
+#historyTable thead th[data-sort]::after {
+  content: "⇅";
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.7em;
+  color: #bbb;
+}
+
+#historyTable thead th.sorted-asc::after {
+  content: "▲";
+  color: #000;
+}
+
+#historyTable thead th.sorted-desc::after {
+  content: "▼";
+  color: #000;
+}
+#historyTable thead th[data-sort]:hover::before {
+  content: "Click to sort ";
+  position: absolute;
+  left: 8px;
+  top: -1.2em;
+  font-size: 0.6em;
+  color: #666;
+}
