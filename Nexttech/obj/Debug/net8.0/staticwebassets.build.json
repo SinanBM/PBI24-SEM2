@@ -1,0 +1,1155 @@
+{
+  "Version": 1,
+  "Hash": "kmiC6MXYneerUvtEB8X7bSiNTG60hEJ+KGR0cZJxB64=",
+  "Source": "Nexttech",
+  "BasePath": "_content/Nexttech",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Nexttech\\wwwroot",
+      "Source": "Nexttech",
+      "ContentRoot": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\",
+      "BasePath": "_content/Nexttech",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\calc-history.html",
+      "SourceId": "Nexttech",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\",
+      "BasePath": "_content/Nexttech",
+      "RelativePath": "html/calc-history#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "edp6qxx6r5",
+      "Integrity": "DixMKyc3RxSNsNah8/0nk+x6EelAAYyj9K1CH8AaFV0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\html\\calc-history.html"
+    },
+    {
+      "Identity": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\index.html",
+      "SourceId": "Nexttech",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\",
+      "BasePath": "_content/Nexttech",
+      "RelativePath": "html/index#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ow7fdz36sx",
+      "Integrity": "yB6f5YjzGSQ3fAk17arT5Hz3HErxIaFh/N59Rv4UA/0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\html\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\login.html",
+      "SourceId": "Nexttech",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\",
+      "BasePath": "_content/Nexttech",
+      "RelativePath": "html/login#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "7vl0h27yix",
+      "Integrity": "TajibsAtrm3qJUmIuL15/V8RdZsgpqJ38Z6cdHcOaMU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\html\\login.html"
+    },
+    {
+      "Identity": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\new-calculation.html",
+      "SourceId": "Nexttech",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\",
+      "BasePath": "_content/Nexttech",
+      "RelativePath": "html/new-calculation#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "w63x1a2xnk",
+      "Integrity": "aPd2s6NT6O9TUpJTpVbdl9f9xs6qB096LEmu6ds18Ig=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\html\\new-calculation.html"
+    },
+    {
+      "Identity": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\results.html",
+      "SourceId": "Nexttech",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\",
+      "BasePath": "_content/Nexttech",
+      "RelativePath": "html/results#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "lppxj1mxmh",
+      "Integrity": "aTeVEfmRJNRbCJTiQRoI9NRDroo9YpHu/UHNdhcbx8Y=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\html\\results.html"
+    },
+    {
+      "Identity": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\settings\\script.js",
+      "SourceId": "Nexttech",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\",
+      "BasePath": "_content/Nexttech",
+      "RelativePath": "html/settings/script#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hmkdvt35ga",
+      "Integrity": "qSwVUO4koGssoPH5NGbtIRUtjYWSvE05uCkRvA4If3E=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\html\\settings\\script.js"
+    },
+    {
+      "Identity": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\settings\\settings.html",
+      "SourceId": "Nexttech",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\",
+      "BasePath": "_content/Nexttech",
+      "RelativePath": "html/settings/settings#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "v0hyv71gln",
+      "Integrity": "UWruM8hVn/a1w0e3yysKiTWagJNLmw2tl4mxeJ7GiJk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\html\\settings\\settings.html"
+    },
+    {
+      "Identity": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\settings\\style.css",
+      "SourceId": "Nexttech",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\",
+      "BasePath": "_content/Nexttech",
+      "RelativePath": "html/settings/style#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "p4dbl180zl",
+      "Integrity": "x4/TlDAie/TXbWvuladl+EHOm4/XwEKxF6oU6pd0A64=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\html\\settings\\style.css"
+    },
+    {
+      "Identity": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\settings\\tester.html",
+      "SourceId": "Nexttech",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\",
+      "BasePath": "_content/Nexttech",
+      "RelativePath": "html/settings/tester#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2d3a0w0mxq",
+      "Integrity": "etBBxsKvqF2imNo+xJ6GfiuRleH6BswRSQGPHVoowM0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\html\\settings\\tester.html"
+    },
+    {
+      "Identity": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\script.js",
+      "SourceId": "Nexttech",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\",
+      "BasePath": "_content/Nexttech",
+      "RelativePath": "script#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hmkdvt35ga",
+      "Integrity": "qSwVUO4koGssoPH5NGbtIRUtjYWSvE05uCkRvA4If3E=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\script.js"
+    },
+    {
+      "Identity": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\style.css",
+      "SourceId": "Nexttech",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\",
+      "BasePath": "_content/Nexttech",
+      "RelativePath": "style#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "p4dbl180zl",
+      "Integrity": "x4/TlDAie/TXbWvuladl+EHOm4/XwEKxF6oU6pd0A64=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\style.css"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "html/calc-history.edp6qxx6r5.html",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\calc-history.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "410"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DixMKyc3RxSNsNah8/0nk+x6EelAAYyj9K1CH8AaFV0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "edp6qxx6r5"
+        },
+        {
+          "Name": "label",
+          "Value": "html/calc-history.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DixMKyc3RxSNsNah8/0nk+x6EelAAYyj9K1CH8AaFV0="
+        }
+      ]
+    },
+    {
+      "Route": "html/calc-history.html",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\calc-history.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "410"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DixMKyc3RxSNsNah8/0nk+x6EelAAYyj9K1CH8AaFV0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DixMKyc3RxSNsNah8/0nk+x6EelAAYyj9K1CH8AaFV0="
+        }
+      ]
+    },
+    {
+      "Route": "html/index.html",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "607"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yB6f5YjzGSQ3fAk17arT5Hz3HErxIaFh/N59Rv4UA/0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-yB6f5YjzGSQ3fAk17arT5Hz3HErxIaFh/N59Rv4UA/0="
+        }
+      ]
+    },
+    {
+      "Route": "html/index.ow7fdz36sx.html",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "607"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yB6f5YjzGSQ3fAk17arT5Hz3HErxIaFh/N59Rv4UA/0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ow7fdz36sx"
+        },
+        {
+          "Name": "label",
+          "Value": "html/index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-yB6f5YjzGSQ3fAk17arT5Hz3HErxIaFh/N59Rv4UA/0="
+        }
+      ]
+    },
+    {
+      "Route": "html/login.7vl0h27yix.html",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\login.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "396"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TajibsAtrm3qJUmIuL15/V8RdZsgpqJ38Z6cdHcOaMU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7vl0h27yix"
+        },
+        {
+          "Name": "label",
+          "Value": "html/login.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-TajibsAtrm3qJUmIuL15/V8RdZsgpqJ38Z6cdHcOaMU="
+        }
+      ]
+    },
+    {
+      "Route": "html/login.html",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\login.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "396"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TajibsAtrm3qJUmIuL15/V8RdZsgpqJ38Z6cdHcOaMU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-TajibsAtrm3qJUmIuL15/V8RdZsgpqJ38Z6cdHcOaMU="
+        }
+      ]
+    },
+    {
+      "Route": "html/new-calculation.html",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\new-calculation.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "406"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aPd2s6NT6O9TUpJTpVbdl9f9xs6qB096LEmu6ds18Ig=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-aPd2s6NT6O9TUpJTpVbdl9f9xs6qB096LEmu6ds18Ig="
+        }
+      ]
+    },
+    {
+      "Route": "html/new-calculation.w63x1a2xnk.html",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\new-calculation.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "406"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aPd2s6NT6O9TUpJTpVbdl9f9xs6qB096LEmu6ds18Ig=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w63x1a2xnk"
+        },
+        {
+          "Name": "label",
+          "Value": "html/new-calculation.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-aPd2s6NT6O9TUpJTpVbdl9f9xs6qB096LEmu6ds18Ig="
+        }
+      ]
+    },
+    {
+      "Route": "html/results.html",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\results.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "398"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aTeVEfmRJNRbCJTiQRoI9NRDroo9YpHu/UHNdhcbx8Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-aTeVEfmRJNRbCJTiQRoI9NRDroo9YpHu/UHNdhcbx8Y="
+        }
+      ]
+    },
+    {
+      "Route": "html/results.lppxj1mxmh.html",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\results.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "398"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aTeVEfmRJNRbCJTiQRoI9NRDroo9YpHu/UHNdhcbx8Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 02 May 2025 08:44:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lppxj1mxmh"
+        },
+        {
+          "Name": "label",
+          "Value": "html/results.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-aTeVEfmRJNRbCJTiQRoI9NRDroo9YpHu/UHNdhcbx8Y="
+        }
+      ]
+    },
+    {
+      "Route": "html/settings/script.hmkdvt35ga.js",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\settings\\script.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2325"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qSwVUO4koGssoPH5NGbtIRUtjYWSvE05uCkRvA4If3E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 13:24:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hmkdvt35ga"
+        },
+        {
+          "Name": "label",
+          "Value": "html/settings/script.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qSwVUO4koGssoPH5NGbtIRUtjYWSvE05uCkRvA4If3E="
+        }
+      ]
+    },
+    {
+      "Route": "html/settings/script.js",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\settings\\script.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2325"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qSwVUO4koGssoPH5NGbtIRUtjYWSvE05uCkRvA4If3E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 13:24:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qSwVUO4koGssoPH5NGbtIRUtjYWSvE05uCkRvA4If3E="
+        }
+      ]
+    },
+    {
+      "Route": "html/settings/settings.html",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\settings\\settings.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1000"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UWruM8hVn/a1w0e3yysKiTWagJNLmw2tl4mxeJ7GiJk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 06 May 2025 15:51:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-UWruM8hVn/a1w0e3yysKiTWagJNLmw2tl4mxeJ7GiJk="
+        }
+      ]
+    },
+    {
+      "Route": "html/settings/settings.v0hyv71gln.html",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\settings\\settings.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1000"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UWruM8hVn/a1w0e3yysKiTWagJNLmw2tl4mxeJ7GiJk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 06 May 2025 15:51:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "v0hyv71gln"
+        },
+        {
+          "Name": "label",
+          "Value": "html/settings/settings.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-UWruM8hVn/a1w0e3yysKiTWagJNLmw2tl4mxeJ7GiJk="
+        }
+      ]
+    },
+    {
+      "Route": "html/settings/style.css",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\settings\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3121"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"x4/TlDAie/TXbWvuladl+EHOm4/XwEKxF6oU6pd0A64=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 13:25:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-x4/TlDAie/TXbWvuladl+EHOm4/XwEKxF6oU6pd0A64="
+        }
+      ]
+    },
+    {
+      "Route": "html/settings/style.p4dbl180zl.css",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\settings\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3121"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"x4/TlDAie/TXbWvuladl+EHOm4/XwEKxF6oU6pd0A64=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 13:25:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "p4dbl180zl"
+        },
+        {
+          "Name": "label",
+          "Value": "html/settings/style.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-x4/TlDAie/TXbWvuladl+EHOm4/XwEKxF6oU6pd0A64="
+        }
+      ]
+    },
+    {
+      "Route": "html/settings/tester.2d3a0w0mxq.html",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\settings\\tester.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1040"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"etBBxsKvqF2imNo+xJ6GfiuRleH6BswRSQGPHVoowM0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 13:28:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2d3a0w0mxq"
+        },
+        {
+          "Name": "label",
+          "Value": "html/settings/tester.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-etBBxsKvqF2imNo+xJ6GfiuRleH6BswRSQGPHVoowM0="
+        }
+      ]
+    },
+    {
+      "Route": "html/settings/tester.html",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\html\\settings\\tester.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1040"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"etBBxsKvqF2imNo+xJ6GfiuRleH6BswRSQGPHVoowM0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 13:28:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-etBBxsKvqF2imNo+xJ6GfiuRleH6BswRSQGPHVoowM0="
+        }
+      ]
+    },
+    {
+      "Route": "script.hmkdvt35ga.js",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\script.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2325"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qSwVUO4koGssoPH5NGbtIRUtjYWSvE05uCkRvA4If3E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 13:24:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hmkdvt35ga"
+        },
+        {
+          "Name": "label",
+          "Value": "script.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qSwVUO4koGssoPH5NGbtIRUtjYWSvE05uCkRvA4If3E="
+        }
+      ]
+    },
+    {
+      "Route": "script.js",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\script.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2325"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qSwVUO4koGssoPH5NGbtIRUtjYWSvE05uCkRvA4If3E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 13:24:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qSwVUO4koGssoPH5NGbtIRUtjYWSvE05uCkRvA4If3E="
+        }
+      ]
+    },
+    {
+      "Route": "style.css",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3121"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"x4/TlDAie/TXbWvuladl+EHOm4/XwEKxF6oU6pd0A64=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 13:25:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-x4/TlDAie/TXbWvuladl+EHOm4/XwEKxF6oU6pd0A64="
+        }
+      ]
+    },
+    {
+      "Route": "style.p4dbl180zl.css",
+      "AssetFile": "C:\\Users\\hijra\\OneDrive - IBA Erhvervsakademi Kolding\\Vedhæftede filer\\Projekt 2\\Nexttech\\wwwroot\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3121"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"x4/TlDAie/TXbWvuladl+EHOm4/XwEKxF6oU6pd0A64=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 13:25:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "p4dbl180zl"
+        },
+        {
+          "Name": "label",
+          "Value": "style.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-x4/TlDAie/TXbWvuladl+EHOm4/XwEKxF6oU6pd0A64="
+        }
+      ]
+    }
+  ]
+}

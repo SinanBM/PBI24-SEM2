@@ -1,19 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Settings</title>
-    <link rel="stylesheet" href="/style.css">
+  <meta charset="UTF-8">
+  <title>3D Print Omkostnings Beregner</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Settings Page</h1>
-    <!-- Link to other settings pages -->
-    <a href="/html/index.html" class="Settings-link">Hisran</a>
-    
-    <!-- Example of a button -->
-    <a href="/html/home.html" class="home-link">Home</a>
+  <div class="container">
+    <div class="sidebar">
+      <div class="menu-top">
+        <button class="menu-button active" data-page="Settings">Settings</button>
 
-    <script src="/script.js"></script>
+        <button class="sub-button" data-page="Printer Settings">Print Settings</button>
+        <button class="sub-button" data-page="Material Settings">Material Settings</button>
+        <button class="sub-button" data-page="User Settings">User Settings</button>
+      </div>
+
+      <div class="bottom-buttons">
+        <button class="back-button" data-page="Tilbage">Tilbage</button>
+        <button class="logout-button" onclick="alert('Du er logget ud')">Log ud</button>
+      </div>
+    </div>
+    <div class="main">
+      <h1 id="main-title">Settings</h1>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

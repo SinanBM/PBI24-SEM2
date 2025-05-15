@@ -1,56 +1,186 @@
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #e42484;
-    text-align: center;
-    padding-top: 50px;
-}
-
-h1 {
-    color: #0078D7;
-    font-size: 36px; 
-}
-
-h2 {
-    color: #333;
-    font-size: 24px;
-    margin-bottom: 30px;
-}
-
-.Settings-link {
-    display: block;
-    margin: 10px auto;
-    padding: 12px 20px;
-    width: 250px; 
-    text-decoration: none;
-    color:rgb(228, 27, 27);
-    background-color: #0078D7;
-    border-radius: 8px; 
-    font-size: 16px;
-    transition: background-color 0.2s ease;
-}
-
-
-.Settings-link:hover {
-    background-color: #005fa3;
-}
-
-.home-link {
-    background-color: #2ac66e;
-}
-
-.home-link:hover {
-    background-color: #888;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: rgb(209, 13, 13);
+  }
+  
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background: linear-gradient(to bottom, #e6f0ff, #ffffff);
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .menu-top {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .menu-button {
+    padding: 10px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: left;
+  }
+  
+  .menu-button.active {
+    background-color: #009fe3;
+    color: white;
+  }
+  
+  .sub-button {
+    padding: 8px;
+    background-color: #eee;
+    border: 1px solid #999;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: left;
+  }
+  
+  .bottom-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .back-button {
+    background-color: #999;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
     border: none;
     cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
-}
+  }
+  
+  .logout-button {
+    background-color: #e63946;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .main {
+    flex-grow: 1;
+    padding: 40px;
+    background: linear-gradient(to bottom, #ffffff, #f2f2f2);
+  }
+  
+  .main h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+  #content-area {
+    padding: 20px;
+  }
+  
+  .user-settings {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .user-settings table {
+    border-collapse: collapse;
+    width: 60%;
+  }
+  
+  .user-settings th,
+  .user-settings td {
+    border: 1px solid #444;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .user-settings th {
+    background-color: #ccc;
+  }
+  
+  .user-admin {
+    width: 35%;
+  }
+  
+  .user-admin label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .user-admin input,
+  .user-admin select {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+  }
+  
+  .user-admin .btn-row {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn-edit {
+    background-color: #8ecae6;
+    color: black;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+  }
+  
+  .btn-delete {
+    background-color: #e63946;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+  }
+  
+  .user-form {
+    margin-top: 30px;
+  }
+  
+  .user-form label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .user-form input,
+  .user-form select {
+    padding: 5px;
+    width: 200px;
+  }
+  
+  .form-buttons {
+    margin-top: 15px;
+  }
+  
+  .form-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  .btn-reset {
+    background-color: #666;
+    color: white;
+  }
+  
+  .btn-create {
+    background-color: #b6fcb6;
+    color: black;
+  }
+  
+  
+  
