@@ -16,6 +16,11 @@
     <label>Username:</label><input type="text" id="Username" required><br>
     <label>Password:</label><input type="password" id="Pwd" required><br>
     <label>Email:</label><input type="email" id="E_mail" required><br>
+    <label for="Role">Role:</label>
+    <select id="Role" required>
+      <option value="user">User</option>
+      <option value="admin">Admin</option>
+    </select>
 
     <button type="submit">Save User</button>
   </form>
@@ -28,6 +33,7 @@
       <tr>
         <th>Username</th>
         <th>Email</th>
+        <th>Role</th>
         <th>Actions</th>
       </tr>
     </thead>
@@ -52,6 +58,7 @@
             row.innerHTML = `
               <td>${u.username}</td>
               <td>${u.e_mail}</td>
+              <td>${u.role}</td>
               <td>
                 <button onclick="editUser(${u.id})">Edit</button>
                 <button onclick="deleteUser(${u.id})">Delete</button>
@@ -69,8 +76,10 @@
           document.getElementById("Username").value = user.username;
           document.getElementById("Pwd").value = user.pwd;
           document.getElementById("E_mail").value = user.e_mail;
+          document.getElementById("Role").value = user.role;
         });
     }
+
 
     function saveUser() {
       const id = document.getElementById("userId").value;
@@ -79,7 +88,8 @@
         Id: id ? parseInt(id) : 0,
         Username: document.getElementById("Username").value,
         Pwd: document.getElementById("Pwd").value,
-        E_mail: document.getElementById("E_mail").value
+        E_mail: document.getElementById("E_mail").value,
+        Role: document.getElementById("Role").value
       };
 
       const url = id ? `http://localhost:5077/api/users/${id}` : "http://localhost:5077/api/users";
@@ -91,6 +101,7 @@
         document.getElementById("userId").value = "";
       });
     }
+
 
     function deleteUser(id) {
       axios.delete(`http://localhost:5077/api/users/${id}`)

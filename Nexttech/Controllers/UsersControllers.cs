@@ -40,12 +40,18 @@ namespace Nexttech.Controllers
 
         // POST: api/users
         [HttpPost]
-        public async Task<ActionResult<User>> CreateUser(User user)
+        [Route("api/users")]
+        public async Task<IActionResult> CreateUser([FromBody] User newUser)
         {
-            _context.Users.Add(user);
+            if (newUser.Role != "admin" && newUser.Role != "user")
+            {
+                return BadRequest("Invalid role specified.");
+            }
+
+            _context.Users.Add(newUser);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetUser), new { id = user.Id }, user);
+            return Ok(newUser);
         }
 
         // PUT: api/users/{id}
