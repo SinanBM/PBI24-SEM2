@@ -15,6 +15,12 @@ builder.Services.AddCors(options => {
         builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
 });
 
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.PropertyNamingPolicy = System.Text.Json.JsonNamingPolicy.CamelCase;
+    });
+
 builder.Services.AddLogging();
 builder.Services.AddControllers();
 

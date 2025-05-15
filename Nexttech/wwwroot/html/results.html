@@ -3,15 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Settings</title>
+    <title>Calculation Details</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <h1>Results</h1>
-    <!-- Link to home -->
-    <a href="/html/index.html">Go Home</a> 
+    <h2>Calculation Details</h2>
 
+    <div style="display: flex;">
+        <!-- Left Side - Inputs -->
+        <div style="flex: 1; padding-right: 20px;">
+            <h3>Inputs</h3>
+            <p><strong>Calculation Name:</strong> <span id="calcName"></span></p>
+            <p><strong>Printer ID:</strong> <span id="printerId"></span></p>
+            <p><strong>Material ID:</strong> <span id="materialId"></span></p>
+            <p><strong>Parts Produced:</strong> <span id="partsProduced"></span></p>
+            <p><strong>Number of Builds:</strong> <span id="numberOfBuilds"></span></p>
+            <p><strong>Part Mass (g):</strong> <span id="partMass"></span></p>
+            <p><strong>Part Height:</strong> <span id="partHeight"></span></p>
+            <p><strong>Part Area:</strong> <span id="partArea"></span></p>
+            <p><strong>Support Material:</strong> <span id="supportMat"></span></p>
+        </div>
 
-    <script src="../script.js"></script>
+        <!-- Right Side - Outputs -->
+        <div style="flex: 1; padding-left: 20px;">
+            <h3>Outputs</h3>
+            <p><strong>Material Cost:</strong> <span id="materialCost"></span></p>
+            <p><strong>Prep Time:</strong> <span id="prepTime"></span></p>
+            <p><strong>Prep Cost:</strong> <span id="prepCost"></span></p>
+            <p><strong>Post Time per Part:</strong> <span id="postTimePerPart"></span></p>
+            <p><strong>Total Post Time:</strong> <span id="totalPostTime"></span></p>
+            <p><strong>Post Cost:</strong> <span id="postCost"></span></p>
+            <p><strong>Up Front Cost:</strong> <span id="upFront"></span></p>
+            <p><strong>Annual Depreciation:</strong> <span id="annualDep"></span></p>
+            <p><strong>Annual Maintenance:</strong> <span id="annualMaint"></span></p>
+            <p><strong>Annual Machine Cost:</strong> <span id="annualMachine"></span></p>
+            <p><strong>Hours per Year:</strong> <span id="hoursPerYear"></span></p>
+            <p><strong>Machine Cost per Hour:</strong> <span id="machineCostHour"></span></p>
+            <p><strong>Warmup Total:</strong> <span id="warmupTotal"></span></p>
+            <p><strong>Part Volume:</strong> <span id="partVolume"></span></p>
+            <p><strong>Print Time:</strong> <span id="printTime"></span></p>
+            <p><strong>Cooldown Total:</strong> <span id="cooldownTotal"></span></p>
+            <p><strong>Exchange Time:</strong> <span id="exchangeTime"></span></p>
+            <p><strong>Machine Time:</strong> <span id="machineTime"></span></p>
+            <p><strong>Machine Usage Cost:</strong> <span id="machineUsageCost"></span></p>
+            <p><strong>Operational Total Cost:</strong> <span id="opTotalCost"></span></p>
+            <p><strong>Consumables:</strong> <span id="consumables"></span></p>
+            <p><strong>Total Consumables:</strong> <span id="totalConsumables"></span></p>
+            <p><strong>Labor Build Cost:</strong> <span id="laborBuild"></span></p>
+            <p><strong>Labor Exchange Cost:</strong> <span id="laborExchange"></span></p>
+            <p><strong>Total Labor Cost:</strong> <span id="totalLabor"></span></p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", async () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const id = urlParams.get("id");
+
+            if (!id) return alert("No calculation ID provided.");
+
+            const res = await fetch(`/api/calculations/${id}`);
+            const data = await res.json();
+
+            // Populate Inputs Section
+            document.getElementById("calcName").textContent = data.calcName;
+            document.getElementById("printerId").textContent = data.printerId;
+            document.getElementById("materialId").textContent = data.materialId;
+            document.getElementById("partsProduced").textContent = data.partsProduced;
+            document.getElementById("numberOfBuilds").textContent = data.numberOfBuilds;
+            document.getElementById("partMass").textContent = data.partMass;
+            document.getElementById("partHeight").textContent = data.partHeight;
+            document.getElementById("partArea").textContent = data.partArea;
+            document.getElementById("supportMat").textContent = data.supportMat;
+
+            // Populate Outputs Section
+            document.getElementById("materialCost").textContent = `$${data.materialCost.toFixed(2)}`;
+            document.getElementById("prepTime").textContent = data.buildPrepTime || 'N/A';
+            document.getElementById("prepCost").textContent = `$${data.buildPrepCost.toFixed(2)}`;
+            document.getElementById("postTimePerPart").textContent = data.postTimePerPart || 'N/A';
+            document.getElementById("totalPostTime").textContent = data.totalPostTime || 'N/A';
+            document.getElementById("postCost").textContent = `$${data.postProcessCost.toFixed(2)}`;
+            document.getElementById("upFront").textContent = `$${data.upFront.toFixed(2)}`;
+            document.getElementById("annualDep").textContent = `$${data.annualDepreciation.toFixed(2)}`;
+            document.getElementById("annualMaint").textContent = `$${data.annualMaintenance.toFixed(2)}`;
+            document.getElementById("annualMachine").textContent = `$${data.annualMachineCost.toFixed(2)}`;
+            document.getElementById("hoursPerYear").textContent = data.hoursPerYear;
+            document.getElementById("machineCostHour").textContent = `$${data.machineCostPerHour.toFixed(2)}`;
+            document.getElementById("warmupTotal").textContent = data.warmupTotal || 'N/A';
+            document.getElementById("partVolume").textContent = data.partVolume || 'N/A';
+            document.getElementById("printTime").textContent = data.printTime || 'N/A';
+            document.getElementById("cooldownTotal").textContent = data.cooldownTotal || 'N/A';
+            document.getElementById("exchangeTime").textContent = data.exchangeTime || 'N/A';
+            document.getElementById("machineTime").textContent = data.machineTime || 'N/A';
+            document.getElementById("machineUsageCost").textContent = `$${data.machineCost.toFixed(2)}`;
+            document.getElementById("opTotalCost").textContent = `$${data.operatingTotalCost.toFixed(2)}`;
+            document.getElementById("consumables").textContent = `$${data.consumables.toFixed(2)}`;
+            document.getElementById("totalConsumables").textContent = `$${data.consumablesCost.toFixed(2)}`;
+            document.getElementById("laborBuild").textContent = `$${data.laborBuildTime.toFixed(2)}`;
+            document.getElementById("laborExchange").textContent = `$${data.laborExchangeTime.toFixed(2)}`;
+            document.getElementById("totalLabor").textContent = `$${data.laborCost.toFixed(2)}`;
+        });
+    </script>
 </body>
 </html>

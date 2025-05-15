@@ -19,6 +19,7 @@
                 <th>Part Mass (g)</th>
                 <th>Total Cost ($)</th>
                 <th>Created At</th>
+                <th>Details</th>
             </tr>
         </thead>
         <tbody></tbody>
@@ -38,6 +39,7 @@
                         <td>${calc.partMass}</td>
                         <td>$${calc.totalCost.toFixed(2)}</td>
                         <td>${new Date(calc.createdAt).toLocaleString()}</td>
+                        <td><a href="results.html?id=${calc.id}">[details]</a></td>
                     `;
                     tbody.appendChild(row);
                 });
