@@ -7,10 +7,10 @@ namespace Nexttech.Models
         public int MaterialId { get; set; }
         public int PartsProduced { get; set; }
         public int NumberOfBuilds { get; set; }
-        public double PartMass { get; set; }
-        public double PartHeight { get; set; }
-        public double PartArea { get; set; }
-        public double SupportMat { get; set; }
+        public decimal PartMass { get; set; }
+        public decimal PartHeight { get; set; }
+        public decimal PartArea { get; set; }
+        public decimal SupportMat { get; set; }
 
     }
 }

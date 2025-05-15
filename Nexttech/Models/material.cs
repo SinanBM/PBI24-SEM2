@@ -9,7 +9,7 @@ namespace Nexttech.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
     public string Name { get; set; } = "";
-    public double Material_cost { get; set; } //dollar/kg
-    public double Material_density { get; set; } //g/cm^3
+    public decimal Material_cost { get; set; } //dollar/kg
+    public decimal Material_density { get; set; } //g/cm^3
 }
 }

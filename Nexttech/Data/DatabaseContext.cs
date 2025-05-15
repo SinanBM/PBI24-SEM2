@@ -21,17 +21,27 @@ namespace Nexttech.Data
 
             // Define relationships (if any)
             modelBuilder.Entity<Calculation>()
-                    .HasOne(c => c.Printer)
-                    .WithMany()  
-                    .HasForeignKey(c => c.PrinterId);
+                .HasOne(c => c.Printer)
+                .WithMany()
+                .HasForeignKey(c => c.PrinterId);
 
             modelBuilder.Entity<Calculation>()
-                    .HasOne(c => c.Material)
-                    .WithMany()  
-                    .HasForeignKey(c => c.MaterialId);
-            
-            // Add any custom configurations if necessary
-            // Example: modelBuilder.Entity<Printer>().HasKey(p => p.Id);
+                .HasOne(c => c.Material)
+                .WithMany()
+                .HasForeignKey(c => c.MaterialId);
+
+            // Global decimal precision setting
+            foreach (var entityType in modelBuilder.Model.GetEntityTypes())
+            {
+                var decimalProperties = entityType.ClrType.GetProperties()
+                    .Where(p => p.PropertyType == typeof(decimal) || p.PropertyType == typeof(decimal?));
+
+                foreach (var property in decimalProperties)
+                {
+                    modelBuilder.Entity(entityType.Name).Property(property.Name).HasColumnType("decimal(18,2)");
+                }
+            }
         }
+
     }
 }
