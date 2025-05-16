@@ -5,53 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculation Details</title>
     <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
 </head>
+<style>
+  body, html {
+    margin: 0; 
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+  .left-side {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .inputs, .outputs {
+    flex: 1;
+    padding: 0 10px;
+    overflow-y: auto;
+  }
+  .right-side {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  canvas {
+    max-width: 90%;
+    max-height: 90%;
+  }
+</style>
 <body>
     <h2>Calculation Details</h2>
 
-    <div style="display: flex;">
-        <!-- Left Side - Inputs -->
-        <div style="flex: 1; padding-right: 20px;">
-            <h3>Inputs</h3>
-            <p><strong>Calculation Name:</strong> <span id="calcName"></span></p>
-            <p><strong>Printer ID:</strong> <span id="printerId"></span></p>
-            <p><strong>Material ID:</strong> <span id="materialId"></span></p>
-            <p><strong>Parts Produced:</strong> <span id="partsProduced"></span></p>
-            <p><strong>Number of Builds:</strong> <span id="numberOfBuilds"></span></p>
-            <p><strong>Part Mass (g):</strong> <span id="partMass"></span></p>
-            <p><strong>Part Height:</strong> <span id="partHeight"></span></p>
-            <p><strong>Part Area:</strong> <span id="partArea"></span></p>
-            <p><strong>Support Material:</strong> <span id="supportMat"></span></p>
-        </div>
+        <div class="container">
+        <div class="left-side">
+            <div class="inputs">
+                <h3>Inputs</h3>
+                <p><strong>Calculation Name:</strong> <span id="calcName"></span></p>
+                <p><strong>Printer ID:</strong> <span id="printerId"></span></p>
+                <p><strong>Material ID:</strong> <span id="materialId"></span></p>
+                <p><strong>Parts Produced:</strong> <span id="partsProduced"></span></p>
+                <p><strong>Number of Builds:</strong> <span id="numberOfBuilds"></span></p>
+                <p><strong>Part Mass (g):</strong> <span id="partMass"></span></p>
+                <p><strong>Part Height:</strong> <span id="partHeight"></span></p>
+                <p><strong>Part Area:</strong> <span id="partArea"></span></p>
+                <p><strong>Support Material:</strong> <span id="supportMat"></span></p>
+            </div>
 
         <!-- Right Side - Outputs -->
-        <div style="flex: 1; padding-left: 20px;">
-            <h3>Outputs</h3>
-            <p><strong>Material Cost:</strong> <span id="materialCost"></span></p>
-            <p><strong>Prep Time:</strong> <span id="prepTime"></span></p>
-            <p><strong>Prep Cost:</strong> <span id="prepCost"></span></p>
-            <p><strong>Post Time per Part:</strong> <span id="postTimePerPart"></span></p>
-            <p><strong>Total Post Time:</strong> <span id="totalPostTime"></span></p>
-            <p><strong>Post Cost:</strong> <span id="postCost"></span></p>
-            <p><strong>Up Front Cost:</strong> <span id="upFront"></span></p>
-            <p><strong>Annual Depreciation:</strong> <span id="annualDep"></span></p>
-            <p><strong>Annual Maintenance:</strong> <span id="annualMaint"></span></p>
-            <p><strong>Annual Machine Cost:</strong> <span id="annualMachine"></span></p>
-            <p><strong>Hours per Year:</strong> <span id="hoursPerYear"></span></p>
-            <p><strong>Machine Cost per Hour:</strong> <span id="machineCostHour"></span></p>
-            <p><strong>Warmup Total:</strong> <span id="warmupTotal"></span></p>
-            <p><strong>Part Volume:</strong> <span id="partVolume"></span></p>
-            <p><strong>Print Time:</strong> <span id="printTime"></span></p>
-            <p><strong>Cooldown Total:</strong> <span id="cooldownTotal"></span></p>
-            <p><strong>Exchange Time:</strong> <span id="exchangeTime"></span></p>
-            <p><strong>Machine Time:</strong> <span id="machineTime"></span></p>
-            <p><strong>Machine Usage Cost:</strong> <span id="machineUsageCost"></span></p>
-            <p><strong>Operational Total Cost:</strong> <span id="opTotalCost"></span></p>
-            <p><strong>Consumables:</strong> <span id="consumables"></span></p>
-            <p><strong>Total Consumables:</strong> <span id="totalConsumables"></span></p>
-            <p><strong>Labor Build Cost:</strong> <span id="laborBuild"></span></p>
-            <p><strong>Labor Exchange Cost:</strong> <span id="laborExchange"></span></p>
-            <p><strong>Total Labor Cost:</strong> <span id="totalLabor"></span></p>
+            <div class="Outputs">
+                <h3>Outputs</h3>
+                <p><strong>Material Cost:</strong> <span id="materialCost"></span></p>
+                <p><strong>Prep Time:</strong> <span id="prepTime"></span></p>
+                <p><strong>Prep Cost:</strong> <span id="prepCost"></span></p>
+                <p><strong>Post Time per Part:</strong> <span id="postTimePerPart"></span></p>
+                <p><strong>Total Post Time:</strong> <span id="totalPostTime"></span></p>
+                <p><strong>Post Cost:</strong> <span id="postCost"></span></p>
+                <p><strong>Up Front Cost:</strong> <span id="upFront"></span></p>
+                <p><strong>Annual Depreciation:</strong> <span id="annualDep"></span></p>
+                <p><strong>Annual Maintenance:</strong> <span id="annualMaint"></span></p>
+                <p><strong>Annual Machine Cost:</strong> <span id="annualMachine"></span></p>
+                <p><strong>Hours per Year:</strong> <span id="hoursPerYear"></span></p>
+                <p><strong>Machine Cost per Hour:</strong> <span id="machineCostHour"></span></p>
+                <p><strong>Warmup Total:</strong> <span id="warmupTotal"></span></p>
+                <p><strong>Part Volume:</strong> <span id="partVolume"></span></p>
+                <p><strong>Print Time:</strong> <span id="printTime"></span></p>
+                <p><strong>Cooldown Total:</strong> <span id="cooldownTotal"></span></p>
+                <p><strong>Exchange Time:</strong> <span id="exchangeTime"></span></p>
+                <p><strong>Machine Time:</strong> <span id="machineTime"></span></p>
+                <p><strong>Machine Usage Cost:</strong> <span id="machineUsageCost"></span></p>
+                <p><strong>Operational Total Cost:</strong> <span id="opTotalCost"></span></p>
+                <p><strong>Consumables:</strong> <span id="consumables"></span></p>
+                <p><strong>Total Consumables:</strong> <span id="totalConsumables"></span></p>
+                <p><strong>Labor Build Cost:</strong> <span id="laborBuild"></span></p>
+                <p><strong>Labor Exchange Cost:</strong> <span id="laborExchange"></span></p>
+                <p><strong>Total Labor Cost:</strong> <span id="totalLabor"></span></p>
+            </div>
+        </div>
+        <div class="right-side">
+            <canvas id="costDoughnutChart" ></canvas>
         </div>
     </div>
 
@@ -102,7 +143,73 @@
             document.getElementById("laborBuild").textContent = `$${data.laborBuildTime.toFixed(2)}`;
             document.getElementById("laborExchange").textContent = `$${data.laborExchangeTime.toFixed(2)}`;
             document.getElementById("totalLabor").textContent = `$${data.laborCost.toFixed(2)}`;
-        });
+
+            // Create Doughnut Chart
+            const ctx = document.getElementById('costDoughnutChart').getContext('2d');
+            const centerTextPlugin = {
+                id: 'centerText',
+                beforeDraw(chart) {
+                    const { width, height, ctx } = chart;
+                    const total = chart.data.datasets[0].data.reduce((a, b) => a + b, 0);
+
+                    ctx.save();
+                    ctx.font = 'bold 30px Arial';
+                    ctx.fillStyle = '#666';
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'middle';
+                    ctx.fillText('Total', width / 2, height / 2 - 12);  // label
+
+                    ctx.font = 'bold 20px Arial';
+                    ctx.fillStyle = '#333';
+                    ctx.fillText(`$${total.toFixed(2)}`, width / 2, height / 2 + 12);  // value
+
+                    ctx.restore();
+                }
+            };
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["Material", "Build Prep", "Machine Cost", "Consumables", "Labor", "Post Process"],
+                    datasets: [{
+                        data: [
+                            data.materialCost,
+                            data.buildPrepCost,
+                            data.machineCost,
+                            data.consumablesCost,
+                            data.laborCost,
+                            data.postProcessCost
+                        ],
+                        backgroundColor: [
+                            "#4caf50", "#2196f3", "#ff9800", "#9c27b0", "#f44336", "#795548"
+                        ]
+                    }]
+                },
+                options: {
+                    cutout: '70%',  // doughnut hole size
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom' },
+                        datalabels: {
+                            color: '#fff',
+                            formatter: (value, context) => {
+                                const data = context.chart.data.datasets[0].data;
+                                const total = data.reduce((a, b) => a + b, 0);
+                                const percent = ((value / total) * 100).toFixed(1);
+                                return `${percent}%`;
+                            },
+                            font: {
+                            weight: 'bold',
+                            size: 14
+                        }
+                    }
+                }},
+                plugins: [ChartDataLabels, centerTextPlugin]
+                
+                });
+
+})
+        
     </script>
 </body>
 </html>
