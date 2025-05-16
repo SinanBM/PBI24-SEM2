@@ -26,6 +26,7 @@
   <table id="materialsTable" border="1">
     <thead>
       <tr>
+        <th>#</th>
         <th>Name</th>
         <th>Cost</th>
         <th>Density</th>
@@ -48,9 +49,10 @@
         .then(res => {
           const table = document.getElementById("materialsTable").getElementsByTagName("tbody")[0];
           table.innerHTML = "";
-          res.data.forEach(m => {
+          res.data.forEach((m, index) => {
             const row = table.insertRow();
             row.innerHTML = `
+              <td>${index + 1}</td>
               <td>${m.name}</td>
               <td>${m.material_cost}</td>
               <td>${m.material_density}</td>

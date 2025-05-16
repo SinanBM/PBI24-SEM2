@@ -40,9 +40,10 @@
     #historyTable thead th[data-sort]:hover::after {
     color: #000000;
     }
-    tr.selected {
-  background-color: #f32929;
-}
+    #historyTable tbody tr:hover {
+    cursor: pointer;
+    background-color: #beddf6; /* color on hover */
+  }
 </style>
 
 <body>
@@ -60,6 +61,7 @@
     <table id="historyTable">
         <thead>
         <tr>
+            <th>#</th>
             <th>Product Image</th>
             <th data-sort="calcName">Calc Name</th>
             <th data-sort="printer">Printer</th>
@@ -73,6 +75,10 @@
     </table>
 
   <script>
+    function normalize(str) {
+  return str.toLowerCase().trim();
+};
+
 let selectedRowId = null;
 document.addEventListener("DOMContentLoaded", () => {
     let calculations = [];
@@ -93,12 +99,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function renderTable(data) {
         tbody.innerHTML = "";
-        data.forEach(calc => {
+        data.forEach((calc, index) => {
             const row = document.createElement("tr");
             row.onclick = () => selectRow(row, calc.id);
             row.style.cursor = "pointer";
             row.innerHTML = `
+                <td>${index + 1}</td>
                 <td>
+                    
                     <img src="${calc.productImage || '../assets/placeholder.png'}" 
                         alt="Product Image" 
                         style="width:200px; height:155px;" 
@@ -153,16 +161,48 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    searchInput.addEventListener("input", () => {
-        const query = searchInput.value.toLowerCase();
-        const filtered = calculations.filter(calc =>
-            calc.calcName.toLowerCase().includes(query) ||
-            (calc.printer?.name || "").toLowerCase().includes(query) ||
-            (calc.material?.name || "").toLowerCase().includes(query)
-        );
-        renderTable(filtered);
+    searchInput.addEventListener("input", function () {
+    const filter = normalize(searchInput.value);
+    // render table if search input has not matches
+    if (filter === "") {
+        renderTable(calculations);
+        return;
+    }
+
+    const rows = Array.from(document.querySelectorAll("#historyTable tbody tr"));
+
+    const matched = rows.map(row => {
+        const project = normalize(row.cells[0].textContent);
+        const printer = normalize(row.cells[1].textContent);
+        const material = normalize(row.cells[2].textContent);
+
+        const combined = `${project} ${printer} ${material}`;
+
+        let score = 0;
+        if (project.startsWith(filter)) score += 3;
+        if (printer.startsWith(filter)) score += 2;
+        if (material.startsWith(filter)) score += 1;
+        if (combined.includes(filter)) score += 0.5;
+
+        return { row, score };
     });
-});
+
+    matched.sort((a, b) => b.score - a.score);
+
+    const tbody = document.querySelector("#historyTable tbody");
+    tbody.innerHTML = "";
+    matched.forEach(match => {
+        if (match.score > 0) {
+        tbody.appendChild(match.row);
+        match.row.style.display = "";
+        } else {
+        match.row.style.display = "none";
+        }
+    });
+    });
+
+
+    });
 
 function selectRow(row, id) {
     const previouslySelected = document.querySelector("tr.selected");
