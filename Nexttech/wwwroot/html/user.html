@@ -31,6 +31,7 @@
   <table id="usersTable" border="1">
     <thead>
       <tr>
+        <th>#</th>
         <th>Username</th>
         <th>Email</th>
         <th>Role</th>
@@ -53,9 +54,10 @@
         .then(res => {
           const table = document.getElementById("usersTable").getElementsByTagName("tbody")[0];
           table.innerHTML = "";
-          res.data.forEach(u => {
+          res.data.forEach((u, index) => {
             const row = table.insertRow();
             row.innerHTML = `
+              <td>${index + 1}</td>
               <td>${u.username}</td>
               <td>${u.e_mail}</td>
               <td>${u.role}</td>
