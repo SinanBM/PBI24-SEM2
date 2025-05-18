@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Nexttech.Data;
 using Nexttech.Models;
+using Nexttech.Services;
 
 namespace Nexttech.Controllers
 {
@@ -41,10 +42,10 @@ namespace Nexttech.Controllers
                 _logger.LogError("Material not found. MaterialId: {MaterialId}", input.MaterialId);
                 return NotFound("Material not found");
             }
-                _logger.LogInformation("Material fetched: {MaterialName}", material.Name);
-            
+            _logger.LogInformation("Material fetched: {MaterialName}", material.Name);
 
-                _logger.LogInformation("Printer fetched: {PrinterName}", printer.Name);
+
+            _logger.LogInformation("Printer fetched: {PrinterName}", printer.Name);
 
             var calculation = GenerateFullCalculation(input, printer, material);
 
@@ -84,7 +85,7 @@ namespace Nexttech.Controllers
 
             var printer = await _context.Printers.FindAsync(input.PrinterId);
             var material = await _context.Materials.FindAsync(input.MaterialId);
-                
+
 
 
             if (printer == null || material == null)
@@ -100,9 +101,9 @@ namespace Nexttech.Controllers
                 MaterialId = input.MaterialId,
                 PartsProduced = input.PartsProduced,
                 NumberOfBuilds = input.NumberOfBuilds,
-                PartMass = input.PartMass,
-                PartHeight = input.PartHeight,
-                PartArea = input.PartArea,
+                PartMass = input.PartMass!.Value,
+                PartHeight = input.PartHeight!.Value,
+                PartArea = input.PartArea!.Value,
                 SupportMat = input.SupportMat,
 
                 // Map calculated results
@@ -205,15 +206,15 @@ namespace Nexttech.Controllers
                 MaterialId = input.MaterialId,
                 PartsProduced = input.PartsProduced,
                 NumberOfBuilds = input.NumberOfBuilds,
-                PartMass = input.PartMass,
-                PartHeight = input.PartHeight,
-                PartArea = input.PartArea,
+                PartMass = input.PartMass!.Value,
+                PartHeight = input.PartHeight!.Value,
+                PartArea = input.PartArea!.Value,
                 SupportMat = input.SupportMat
             };
 
             // Calculation logic
-            calc.TotalMaterial = input.PartsProduced * input.PartMass;
-            calc.SupportMass = input.SupportMat * input.PartMass;
+            calc.TotalMaterial = input.PartsProduced * input.PartMass.Value;
+            calc.SupportMass = input.SupportMat * input.PartMass.Value;
             calc.TotalSupport = input.PartsProduced * calc.SupportMass;
             calc.TotalMaterialAllBuilds = input.NumberOfBuilds * printer.Machine_Build_Area * printer.Machine_Build_Height * material.Material_density / 1000;
             calc.Recycled = (calc.TotalMaterialAllBuilds - calc.TotalMaterial - calc.TotalSupport) * printer.Recycling_fraction;
@@ -236,7 +237,7 @@ namespace Nexttech.Controllers
             calc.MachineCostPerHour = calc.AnnualMachineCost / calc.HoursPerYear;
 
             calc.WarmupTotal = input.NumberOfBuilds * printer.Time_per_machine_warm_up;
-            calc.PartVolume = input.PartMass * 1000 / material.Material_density;
+            calc.PartVolume = input.PartMass.Value * 1000 / material.Material_density;
             calc.PrintTime = input.PartsProduced * calc.PartVolume / printer.Machine_Build_Rate;
             calc.CooldownTotal = input.NumberOfBuilds * printer.Time_per_machine_cool_down;
             calc.ExchangeTime = input.NumberOfBuilds * (printer.Time_per_build_setup + printer.Time_per_build_removal);
@@ -295,7 +296,7 @@ namespace Nexttech.Controllers
 
             if (!allowedExtensions.Contains(extension))
                 return BadRequest("Unsupported file type. Allowed types are: .jpg, .jpeg, .png, .webp");
-            
+
             // Delete old photo if exists
             if (!string.IsNullOrWhiteSpace(calculation.ProductImage))
             {
@@ -303,7 +304,7 @@ namespace Nexttech.Controllers
                 if (System.IO.File.Exists(oldPath))
                     System.IO.File.Delete(oldPath);
             }
-            
+
             // Save new photo
             var uploadsFolder = Path.Combine("wwwroot", "uploads");
             if (!Directory.Exists(uploadsFolder))
@@ -370,4 +371,94 @@ namespace Nexttech.Controllers
             return NoContent();
         }
 
-}}
+        [HttpPost("upload-stl")]
+        public async Task<IActionResult> UploadStl(IFormFile stlFileInput, [FromForm] int materialId)
+        {
+             if (stlFileInput == null || stlFileInput.Length == 0)
+                return BadRequest("No file uploaded");
+
+            try
+            {
+                // Save to temp path
+                var tempPath = Path.GetTempFileName();
+                using (var stream = System.IO.File.Create(tempPath))
+                {
+                    await stlFileInput.CopyToAsync(stream);
+                }
+
+                // Create an instance of StlParser
+                var parser = new StlParser();
+
+                // Parse STL to DTO
+                var stlDto = parser.ParseToDto(tempPath);
+
+                // Delete temp file
+                System.IO.File.Delete(tempPath);
+
+                // Fetch material (replace this with your actual material retrieval logic)
+                var material = await _context.Materials.FindAsync(materialId);
+                if (material == null)
+                    return BadRequest("Invalid material ID");
+                
+                    // Calculate PartArea (Length * Width)
+                stlDto.PartArea = (decimal)(stlDto.Length * stlDto.Width);
+
+                    // Calculate PartMass (Volume * density / 1000 for kg if density is g/cm3)
+                stlDto.PartMass = (decimal)stlDto.Volume * material.Material_density / 1000m;
+                
+         
+                return Ok(stlDto);
+            }
+            catch (Exception ex)
+            {
+                // Log ex here if you have logging
+                return StatusCode(500, "Error parsing STL: " + ex.Message);
+            }
+        }
+
+       [HttpPost("calculate")]
+        public IActionResult Calculate(
+            [FromForm] CalculationInputDto input, 
+            IFormFile? stlFile,
+            [FromForm] Printer printer,
+            [FromForm] Material material)
+        {
+            StlInputDto? stlData = null;
+
+            if (stlFile != null)
+            {
+                // Save and parse STL file
+                var tempPath = Path.GetTempFileName();
+                using (var stream = System.IO.File.Create(tempPath))
+                {
+                    stlFile.CopyTo(stream);
+                }
+                stlData = new StlParser().ParseToDto(tempPath);
+                System.IO.File.Delete(tempPath);
+            }
+
+            if (stlData != null)
+            {
+                if (stlData.Height == null)
+                {
+                    return BadRequest("STL parsing failed to produce required values.");
+                }
+                input = CalculationMapper.MapStlToCalculationInput(stlData, input, material);
+                input.PartHeight = (decimal)stlData.Height.Value;
+                input.PartMass = stlData.PartMass.Value;
+                input.PartArea = stlData.PartArea.Value;
+            }
+            else
+            {
+                if (input.PartHeight == null || input.PartMass == null || input.PartArea == null)
+                {
+                    return BadRequest("Missing required part dimensions when no STL file is uploaded.");
+                }
+            }
+
+            var calculation = GenerateFullCalculation(input, printer, material);
+            return Ok(calculation);
+        }
+
+}
+}

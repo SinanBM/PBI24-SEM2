@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" />
   <meta charset="UTF-8">
   <title>3D Print Cost Calculator</title>
   <style>
@@ -71,7 +71,6 @@ style="display: none;
   <label>Upload STL File:
     <input type="file" id="stlFileInput" accept=".stl" />
   </label>
-  <button id="uploadStlBtn">Upload STL</button>
 
   <label>Part Mass (g):
     <input type="number" id="partMass" step="0.01" min="0" />
@@ -90,7 +89,7 @@ style="display: none;
   </label>
 
   <button id="calculateBtn">Calculate Costs</button>
-
+  
   <button onclick="saveCalculation()">Save Calculation</button>
   <button onclick="resetFields()">Reset Fields</button>
 
@@ -152,9 +151,6 @@ style="display: none;
           });
         
       }
-      function safeToFixed(num) {
-        return (typeof num === 'number' ? num : 0).toFixed(2);
-        }
 
       function getFloatInput(id) {
         const el = document.getElementById(id);
@@ -166,8 +162,7 @@ style="display: none;
         return el ? parseInt(el.value) || 0 : 0;
       }
 
-        document.getElementById('calculateBtn').addEventListener('click', async function (e) {
-        e.preventDefault();
+        async function calculate() {
           const selectedMaterial = document.getElementById('materialSelect').value;
           let customMaterial = null;
           let materialId = null;
@@ -252,21 +247,24 @@ style="display: none;
           lastCalculationInput = input;
           lastCalculationResult = result;
 
-          document.getElementById('result').innerHTML = `
-            <strong>Total Material Cost:</strong> $${safeToFixed(result.materialCost)}<br/>
-            <strong>Build Prep Cost:</strong> $${safeToFixed(result.buildPrepCost)}<br/>
-            <strong>Post Process Cost:</strong> $${safeToFixed(result.postProcessCost)}<br/>
-            <strong>Machine Cost:</strong> $${safeToFixed(result.machineCost)}<br/>
-            <strong>Consumables:</strong> $${safeToFixed(result.consumables)}<br/>
-            <strong>Labor:</strong> $${safeToFixed(result.labor)}<br/>
-            <hr>
-            <strong>Total Cost:</strong> $${safeToFixed(result.totalCost)}
-          `;
+          function safeToFixed(num) {
+            return (typeof num === 'number' ? num : 0).toFixed(2);
+        }
 
+          document.getElementById('result').innerHTML = `
+            <strong>Total Material Cost:</strong> $${toFixed(result.materialCost)}<br/>
+            <strong>Build Prep Cost:</strong> $${toFixed(result.buildPrepCost)}<br/>
+            <strong>Post Process Cost:</strong> $${toFixed(result.postProcessCost)}<br/>
+            <strong>Machine Cost:</strong> $${toFixed(result.machineCost)}<br/>
+            <strong>Consumables:</strong> $${toFixed(result.consumables)}<br/>
+            <strong>Labor:</strong> $${toFixed(result.labor)}<br/>
+            <hr>
+            <strong>Total Cost:</strong> $${toFixed(result.totalCost)}
+          `;
         } catch (error) {
           document.getElementById('result').innerHTML = `<span style="color: red;">Error: ${error.message}</span>`;
         }
-      })
+      }
 
       async function saveCalculation() {
         if (!lastCalculationInput || !lastCalculationResult) {
@@ -331,7 +329,7 @@ style="display: none;
       }
 
 
-      document.getElementById('uploadStlBtn').addEventListener('click', async function (e) {
+      document.getElementById('calculateBtn').addEventListener('click', async function (e) {
         e.preventDefault();
 
         const fileInput = document.getElementById('stlFileInput');
@@ -340,73 +338,63 @@ style="display: none;
         const partAreaInput = document.getElementById('partArea');
         const partMassInput = document.getElementById('partMass');
 
+
         const file = fileInput.files[0];
 
-        if (!file || !file.name.toLowerCase().endsWith('.stl')) {
+        if (!file || (file.type !== 'application/sla' && !file.name.toLowerCase().endsWith('.stl'))) {
           alert("Please select a valid STL file.");
-          return;
+          return; // ❗ This return is inside the IF block only
         }
-        console.log('Selected file:', file);
-        
+          console.log('Selected file:', file);
+          {
+            try {
+            showSpinner();
+            const formData = new FormData();
+            formData.append('stlFileInput', file);
+            
+            console.log('Posting file to backend:', file);
+            const response = await fetch('/api/calculations/upload-stl', {
+              method: 'POST',
+              body: formData
+            });
 
-        try {
-          showSpinner();
-          const formData = new FormData();
-          formData.append('stlFileInput', file);
-          formData.append('materialId', materialSelect.value);
+            if (!response.ok) {
+              throw new Error(await response.text());
+            }
+
+            const stlData = await response.json();
+
+            if (stlData.height) partHeightInput.value = stlData.height.toFixed(2);
+            if (stlData.length && stlData.width) {
+              partAreaInput.value = (stlData.length * stlData.width).toFixed(2);
+            }
+
+            if (stlData.volume) {
+              const selectedMaterialId = materialSelect.value;
+              const material = materials.find(m => m.id == selectedMaterialId);
+              if (material) {
+                partMassInput.value = (stlData.volume * material.materialDensity).toFixed(2);
+              }
+            }
           
-          console.log('Posting file to backend:', file);
-          const response = await fetch('/api/calculations/upload-stl', {
-            method: 'POST',
-            body: formData
-          });
-
-          if (!response.ok) {
-            throw new Error(await response.text());
-          }
-
-          const stlData = await response.json();
-
-          if (stlData.height != null && !isNaN(stlData.height)) {
-            partHeightInput.value = safeToFixed(Number(stlData.height));
-          }
-
-          if (stlData.partArea != null && !isNaN(stlData.partArea)) {
-            partAreaInput.value = safeToFixed(Number(stlData.partArea));
-          }
-
-          // For partMass, if you want 5 decimal places, you can create a variant of safeToFixed that takes decimals:
-          function safeToFixedDecimal(num, decimals = 2) {
-            return (typeof num === 'number' ? num : 0).toFixed(decimals);
-          }
-
-          if (stlData.partMass != null && !isNaN(stlData.partMass)) {
-            partMassInput.value = safeToFixedDecimal(Number(stlData.partMass), 5);
-          
-          } else {
-            console.warn('Invalid partMass value:', stlData.partMass);
-          }// 5 decimals for small numbers
-          console.log('STL data from backend:', stlData);
-          }
-          
-        catch (error) {
+        } catch (error) {
           console.error('Error uploading STL:', error);
           alert('Failed to upload STL file: ' + error.message);
         } finally {
           hideSpinner();
         }
           }
-        )
+        })
         
-        function showSpinner() {
-              document.body.style.overflow = 'hidden'; // Disable scroll
-              document.getElementById('loadingOverlay').style.display = 'flex';
-        }
+      function showSpinner() {
+            document.body.style.overflow = 'hidden'; // Disable scroll
+            document.getElementById('loadingOverlay').style.display = 'flex';
+      }
 
-        function hideSpinner() {
-              document.body.style.overflow = ''; // Restore scroll
-              document.getElementById('loadingOverlay').style.display = 'none';
-        }
+      function hideSpinner() {
+            document.body.style.overflow = ''; // Restore scroll
+            document.getElementById('loadingOverlay').style.display = 'none';
+      }
       loadData();
       document.getElementById("materialSelect").addEventListener("change", function () {
       const customFields = document.getElementById("customMaterialFields");
@@ -416,8 +404,6 @@ style="display: none;
         customFields.style.display = "none";
       }
     });
-      
-      //})
 
 </script>
 </body>
