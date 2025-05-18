@@ -22,7 +22,7 @@ builder.Services.AddControllers()
     });
 
 builder.Services.AddLogging();
-builder.Services.AddControllers();
+
 
 var app = builder.Build();
 

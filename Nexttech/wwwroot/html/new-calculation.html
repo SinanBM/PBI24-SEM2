@@ -101,6 +101,7 @@ style="display: none;
     let printers = [], materials = [];
     let lastCalculationInput = null;
     let lastCalculationResult = null;
+ 
 
     //document.addEventListener('DOMContentLoaded', () => {
 
@@ -335,12 +336,30 @@ style="display: none;
         e.preventDefault();
 
         const fileInput = document.getElementById('stlFileInput');
-        const materialSelect = document.getElementById('materialSelect');
+        const selectedMaterial = materialSelect.value;
         const partHeightInput = document.getElementById('partHeight');
         const partAreaInput = document.getElementById('partArea');
         const partMassInput = document.getElementById('partMass');
 
         const file = fileInput.files[0];
+
+        // If custom material selected, validate custom fields
+        if (selectedMaterial === "custom") {
+            const name = document.getElementById("customMatName").value.trim();
+            const density = parseFloat(document.getElementById("customMatDensity").value);
+            const costPerKg = parseFloat(document.getElementById("customMatCost").value);
+
+            if (!name || isNaN(density) || isNaN(costPerKg)) {
+                alert("Please fill in all custom material fields before uploading.");
+                return;
+            }
+        } else if (!selectedMaterial) {
+            // No material selected at all
+            alert("Please select a material before uploading an STL file.");
+            return;
+        }
+
+
 
         if (!file || !file.name.toLowerCase().endsWith('.stl')) {
           alert("Please select a valid STL file.");
