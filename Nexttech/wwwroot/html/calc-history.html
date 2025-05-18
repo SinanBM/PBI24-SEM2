@@ -44,6 +44,9 @@
     cursor: pointer;
     background-color: #beddf6; /* color on hover */
   }
+  #historyTable tbody tr.selected {
+    background-color: #87ceeb; /* selected color */
+}
 </style>
 
 <body>
@@ -58,11 +61,12 @@
         
     />
 
-    <table id="historyTable">
+    <table id="historyTable" border="1" >
         <thead>
         <tr>
             <th>#</th>
             <th>Product Image</th>
+            <th data-sort="calc.id">Calculation ID</th>
             <th data-sort="calcName">Calc Name</th>
             <th data-sort="printer">Printer</th>
             <th data-sort="material">Material</th>
@@ -80,10 +84,10 @@
 };
 
 let selectedRowId = null;
+
 document.addEventListener("DOMContentLoaded", () => {
     let calculations = [];
     let currentSort = { column: null, asc: true };
-    let selectedRowId = null;
 
     const tbody = document.querySelector("#historyTable tbody");
     const searchInput = document.getElementById("searchInput");
@@ -101,10 +105,17 @@ document.addEventListener("DOMContentLoaded", () => {
         tbody.innerHTML = "";
         data.forEach((calc, index) => {
             const row = document.createElement("tr");
+            
+            // Highlight selected row
+            if (calc.id === selectedRowId) {
+            row.classList.add("selected");
+            }
+
             row.onclick = () => selectRow(row, calc.id);
             row.style.cursor = "pointer";
             row.innerHTML = `
                 <td>${index + 1}</td>
+                
                 <td>
                     
                     <img src="${calc.productImage || '../assets/placeholder.png'}" 
@@ -114,6 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <input type="file" accept="image/*" onchange="uploadPhoto(event, ${calc.id})">
                     <button onclick="event.stopPropagation(); deletePhoto(${calc.id})">Delete Photo</button>
                 </td>
+                <td>${calc.id}</td>
                 <td>${calc.calcName}</td>
                 <td>${calc.printer?.name || "N/A"}</td>
                 <td>${calc.material?.name || "N/A"}</td>
@@ -123,6 +135,14 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
             tbody.appendChild(row);
         });
+    }
+
+    function selectRow(rowElement, rowId) {
+    // Remove selection from all rows
+    document.querySelectorAll("#historyTable tbody tr").forEach(r => r.classList.remove("selected"));
+
+    // Add selection to the clicked row
+    rowElement.classList.add("selected");
     }
 
     headers.forEach(header => {
@@ -154,6 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function getSortValue(item, key) {
         switch (key) {
+            case "calc.id": return item.id;
             case "printer": return item.printer?.name || "";
             case "material": return item.material?.name || "";
             case "createdAt": return new Date(item.createdAt).getTime();
