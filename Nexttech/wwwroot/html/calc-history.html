@@ -41,12 +41,18 @@
     color: #000000;
     }
     #historyTable tbody tr:hover {
-    cursor: pointer;
     background-color: #beddf6; /* color on hover */
+    cursor: default;
   }
   #historyTable tbody tr.selected {
     background-color: #87ceeb; /* selected color */
+  }
+    button:hover,
+    a:hover {
+    cursor: pointer;
 }
+
+
 </style>
 
 <body>
@@ -112,19 +118,31 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             row.onclick = () => selectRow(row, calc.id);
-            row.style.cursor = "pointer";
+           // row.style.cursor = "pointer";
             row.innerHTML = `
                 <td>${index + 1}</td>
                 
                 <td>
-                    
-                    <img src="${calc.productImage || '../assets/placeholder.png'}" 
-                        alt="Product Image" 
-                        style="width:200px; height:155px;" 
-                        id="img-${calc.id}"><br>
-                    <input type="file" accept="image/*" onchange="uploadPhoto(event, ${calc.id})">
-                    <button onclick="event.stopPropagation(); deletePhoto(${calc.id})">Delete Photo</button>
+                <img src="${calc.productImage || '../assets/placeholder.png'}" 
+                    alt="Product Image" 
+                    style="width:200px; height:155px;" 
+                    id="img-${calc.id}"><br>
+
+                    <!-- Hidden file input -->
+                    <input 
+                    type="file" id="fileInput-${calc.id}" accept="image/*" onchange="uploadPhoto(event, ${calc.id})" style="display: none;">
+
+                    <!-- Upload File button -->
+                    <button 
+                        onclick="event.stopPropagation(); document.getElementById('fileInput-${calc.id}').click();" style="cursor:pointer;">
+                        Upload Photo
+                    </button>
+
+                    <button 
+                        onclick="event.stopPropagation(); deletePhoto(${calc.id})" style="cursor:pointer;">Delete Photo
+                    </button>
                 </td>
+
                 <td>${calc.id}</td>
                 <td>${calc.calcName}</td>
                 <td>${calc.printer?.name || "N/A"}</td>
