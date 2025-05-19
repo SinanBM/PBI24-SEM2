@@ -1,4 +1,4 @@
-using System.ComponentModel.DataAnnotations;
+/*using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Nexttech.Models
@@ -14,3 +14,4 @@ namespace Nexttech.Models
     public string Role { get; set; } = "user"; // Default to "user"
 }
 }
+*/

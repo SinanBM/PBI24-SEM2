@@ -56,7 +56,7 @@ using System.ComponentModel.DataAnnotations;
 
     public DateTime CreatedAt { get; set; }
 
-    public Printer Printer { get; set; }
+    public  Printer Printer { get; set; }
     public Material Material { get; set; }
     public string? ProductImage { get; set; }
 

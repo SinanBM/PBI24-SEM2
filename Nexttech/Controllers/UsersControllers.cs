@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
+/*using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Nexttech.Data;
 using Nexttech.Models;
@@ -107,3 +107,4 @@ namespace Nexttech.Controllers
         }
     }
 }
+*/

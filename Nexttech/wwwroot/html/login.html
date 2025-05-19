@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Register or Login</title>
+
+ 
+    <link rel="stylesheet" href="style.css" />
+
+ 
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    
+    <style>
+        
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* full screen height */
+  margin: 0;
+  background-color: #f0f0f0; /* optional */
+}
+
+  
+        .form_container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 500px; 
+            position: relative;
+        }
+
+  
+        .login_form, .signup_form {
+            display: none;
+        }
+
+     
+        .login_form.active {
+            display: block;
+        }
+
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+       
+        .input_box {
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .input_box input {
+            width: 90%;
+            padding: 10px 40px 10px 10px; 
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+    
+        .input_box i {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 20px;
+            color: #777;
+        }
+
+      
+        .button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+     
+        .form_link {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            color: #007bff;
+            cursor: default; 
+            text-decoration: none;
+        }
+
+      
+        .form_link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="form_container">
+       
+        <form id="login-form" class="login_form active" action="#">
+            <h2>Login</h2>
+           
+            <div class="input_box">
+                <input type="email" name="E-mail" placeholder="E-mail" required />
+                <i class="uil uil-envelope-alt"></i>
+            </div>
+     
+            <div class="input_box">
+                <input type="password" name="Password" placeholder="Password" required />
+                <i class="uil uil-lock"></i>
+
+                <i class="uil uil-eye-slash pw_toggle"></i>
+            </div>
+      
+            <div style="display:flex; justify-content: space-between; align-items: center; margin-bottom:15px;">
+                <label>
+                    <input type="checkbox" /> Remember me
+                </label>
+                <a href="#" class="form_link" id="forgot_pw">Forgot Password</a>
+            </div>
+ 
+            <button type="submit" class="button">Login</button>
+
+<a class="form_link" href="request_access.html">Request access</a>
+<p id="login-message" style="text-align:center; margin-top:10px;"></p>
+
+        </form>
+    </div>
+
+</body>
+</html>
