@@ -1,0 +1,38 @@
+
+
+.resultscontainer {
+  display: flex;
+  height: 100vh;
+  width: 200vh;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.inputs {
+  width: 40vh; /* 20% of viewport width */
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  overflow-y: auto;
+
+}
+
+.outputs {
+  width: 50vh; /* 40% of viewport width */
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.canvas {
+  width: 90vh; /* 40% of viewport width */
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 20px;
+}
+

@@ -1,3 +1,5 @@
+<!--    MOVED TO REACT
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,7 +61,7 @@
     <h1>Calculation History</h1>
     <a href="/html/index.html">Go Home</a>
     <button onclick="deleteSelectedRow()">Delete Selected</button>
-    <!-- Search bar -->
+  
     <input
         type="text"
         id="searchInput"
@@ -128,11 +130,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     style="width:200px; height:155px;" 
                     id="img-${calc.id}"><br>
 
-                    <!-- Hidden file input -->
+                 
                     <input 
                     type="file" id="fileInput-${calc.id}" accept="image/*" onchange="uploadPhoto(event, ${calc.id})" style="display: none;">
 
-                    <!-- Upload File button -->
+                  
                     <button 
                         onclick="event.stopPropagation(); document.getElementById('fileInput-${calc.id}').click();" style="cursor:pointer;">
                         Upload Photo

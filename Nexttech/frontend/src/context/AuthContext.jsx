@@ -4,7 +4,7 @@ const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(() => {
-  const stored = localStorage.getItem("user");
+    const stored = localStorage.getItem("user");
     return stored ? JSON.parse(stored) : null;
   });
 
@@ -15,7 +15,7 @@ export function AuthProvider({ children }) {
   }, []);
 
   const login = (userData) => {
-  const expiryTime = Date.now() + 15 * 60 * 1000; // 15 minutes from now
+    const expiryTime = Date.now() + 15 * 60 * 1000; // 15 minutes from now
 
     const userWithExpiry = {
       ...userData,
@@ -69,7 +69,7 @@ export function AuthProvider({ children }) {
   };
 
   return (
-    <AuthContext.Provider value={{ user, login, logout, refreshToken, loading }}>
+    <AuthContext.Provider value={{ user, login, logout, refreshToken, loading, setUser }}>
       {children}
     </AuthContext.Provider>
   );

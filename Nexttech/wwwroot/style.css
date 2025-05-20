@@ -1,4 +1,4 @@
-#historyTable thead th[data-sort] {
+/*#historyTable thead th[data-sort] {
   cursor: pointer;
   position: relative;
   padding-right: 25px;

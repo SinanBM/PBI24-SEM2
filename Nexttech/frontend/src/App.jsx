@@ -6,6 +6,15 @@ import PrivateRoute from "./components/PrivateRoute";
 import Spinner from "./components/Spinner";
 import { useAuth } from "./context/AuthContext";
 import { useAuthFetch } from "./hooks/useAuthFetch";
+import Navi from "./components/Navi";
+import Settings from "./components/Settings";
+import Material from "./components/Material";
+import Printers from "./components/Printer";
+import Users from "./components/User";
+import CostCalculator from "./components/New-calculation";
+import CalculationDetails from "./components/Results";
+import CalculationHistory from "./components/Calc-history";
+
 
 function Dashboard({ protectedData, loading, error, onLogout }) {
   const { user } = useAuth();
@@ -93,6 +102,14 @@ return (
           )
         }
       />
+      <Route path="/menu" element={<Navi />} />
+      <Route path="/settings" element={<Settings />} />
+      <Route path="/material" element={<Material />} />
+      <Route path="/printer" element={<Printers />} />
+      <Route path="/user" element={<Users />} />
+      <Route path="/new-calculation" element={<CostCalculator />} />
+      <Route path="/results" element={<CalculationDetails />} />
+      <Route path="/calc-history" element={<CalculationHistory />} />
     </Routes>
   </Router>
 );
@@ -100,3 +117,4 @@ return (
 }
 
 export default App;
+

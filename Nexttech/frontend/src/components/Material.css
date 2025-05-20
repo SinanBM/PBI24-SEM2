@@ -1,0 +1,62 @@
+/* Material.css */
+
+.material-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.material-container h1 {
+  margin-bottom: 10px;
+}
+
+.material-form label {
+  display: block;
+  margin-top: 10px;
+}
+
+.material-form input {
+  width: 100%;
+  padding: 6px;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+.material-form button {
+  margin-top: 10px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.material-form .clear-button {
+  margin-left: 10px;
+}
+
+.material-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.material-table th,
+.material-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.material-table th {
+  background-color: #f2f2f2;
+}
+
+.material-table td button {
+  padding: 4px 8px;
+}
+
+.material-table td .delete-button {
+  margin-left: 5px;
+}
+
+.material-table .no-data {
+  text-align: center;
+  font-style: italic;
+}

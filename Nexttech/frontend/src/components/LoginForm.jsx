@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import "./LoginForm.css"; 
+import { useNavigate } from "react-router-dom";
 
 export default function LoginForm() {
   const { login } = useAuth();
@@ -9,6 +10,8 @@ export default function LoginForm() {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+
+  const navigate = useNavigate();
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -41,6 +44,9 @@ export default function LoginForm() {
         token: data.token,
         refreshToken: data.refreshToken,
       });
+
+      navigate("/menu");
+
     } catch {
       setError("Network error, please try again.");
     } finally {
