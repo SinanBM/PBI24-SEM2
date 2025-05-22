@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { useNavigate, Routes, Route } from "react-router-dom"; // fixed import
 import "./App.css";
 import LoginForm from "./components/LoginForm";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import PrivateRoute from "./components/PrivateRoute";
 import Spinner from "./components/Spinner";
 import { useAuth } from "./context/AuthContext";
 import { useAuthFetch } from "./hooks/useAuthFetch";
-import Navi from "./components/Navi";
+import Navbar from "./components/Navbar";
 import Settings from "./components/Settings";
 import Material from "./components/Material";
 import Printers from "./components/Printer";
@@ -15,24 +15,8 @@ import CostCalculator from "./components/New-calculation";
 import CalculationDetails from "./components/Results";
 import CalculationHistory from "./components/Calc-history";
 
-
-function Dashboard({ protectedData, loading, error, onLogout }) {
-  const { user } = useAuth();
-
-  return (
-    <div className="App">
-      <h1>Welcome, {user?.userName || "User"}!</h1>
-      <button onClick={onLogout}>Logout</button>
-
-      {loading ? (
-        <p>Loading protected data...</p>
-      ) : error ? (
-        <p style={{ color: "red" }}>Error: {error}</p>
-      ) : (
-        <pre>{JSON.stringify(protectedData, null, 2)}</pre>
-      )}
-    </div>
-  );
+export function Dashboard() {
+  return null; // for future dashboard, the first thing user sees after a succesful login
 }
 
 function App() {
@@ -40,6 +24,8 @@ function App() {
   const [protectedData, setProtectedData] = useState(null);
   const [initializing, setInitializing] = useState(true);
   const { fetchWithAuth, loading, error } = useAuthFetch();
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (user) {
@@ -62,6 +48,7 @@ function App() {
   const handleLogout = () => {
     logout();
     setProtectedData(null);
+    navigate("/login");
   };
 
   if (initializing || authLoading) {
@@ -72,49 +59,138 @@ function App() {
     );
   }
 
-return (
-  <Router>
-    <Routes>
-      <Route
-        path="/"
-        element={
-          user ? (
-            <PrivateRoute>
-              <Dashboard
-                protectedData={protectedData}
-                loading={loading}
-                error={error}
-                onLogout={handleLogout}
-              />
-            </PrivateRoute>
-          ) : (
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                height: "100vh",
-                backgroundColor: "#f0f0f0",
-              }}
-            >
-              <LoginForm onLoginSuccess={login} />
-            </div>
-          )
-        }
-      />
-      <Route path="/menu" element={<Navi />} />
-      <Route path="/settings" element={<Settings />} />
-      <Route path="/material" element={<Material />} />
-      <Route path="/printer" element={<Printers />} />
-      <Route path="/user" element={<Users />} />
-      <Route path="/new-calculation" element={<CostCalculator />} />
-      <Route path="/results" element={<CalculationDetails />} />
-      <Route path="/calc-history" element={<CalculationHistory />} />
-    </Routes>
-  </Router>
-);
+  return (
+    <>
+      {user && <Navbar />}
+      <div className="main-content" style={{ padding: "1rem" }}>
+        <Routes>
+          {/* Root route */}
+          <Route
+            path="/"
+            element={
+              user ? (
+                <PrivateRoute>
+                  <Dashboard
+                    protectedData={protectedData}
+                    loading={loading}
+                    error={error}
+                    onLogout={handleLogout}
+                  />
+                </PrivateRoute>
+              ) : (
+                <LoginForm onLoginSuccess={login} />
+              )
+            }
+          />
 
+          {/* Login route: redirect to Dashboard if logged in */}
+          <Route
+            path="/login"
+            element={
+              user ? (
+                <PrivateRoute>
+                  <Dashboard
+                    protectedData={protectedData}
+                    loading={loading}
+                    error={error}
+                    onLogout={handleLogout}
+                  />
+                </PrivateRoute>
+              ) : (
+                <LoginForm onLoginSuccess={login} />
+              )
+            }
+          />
+
+          {/* Protected routes */}
+          <Route
+            path="/settings"
+            element={
+              user ? (
+                <PrivateRoute>
+                  <Settings />
+                </PrivateRoute>
+              ) : (
+                <LoginForm onLoginSuccess={login} />
+              )
+            }
+          />
+          <Route
+            path="/material"
+            element={
+              user ? (
+                <PrivateRoute>
+                  <Material />
+                </PrivateRoute>
+              ) : (
+                <LoginForm onLoginSuccess={login} />
+              )
+            }
+          />
+          <Route
+            path="/printer"
+            element={
+              user ? (
+                <PrivateRoute>
+                  <Printers />
+                </PrivateRoute>
+              ) : (
+                <LoginForm onLoginSuccess={login} />
+              )
+            }
+          />
+          <Route
+            path="/user"
+            element={
+              user ? (
+                <PrivateRoute>
+                  <Users />
+                </PrivateRoute>
+              ) : (
+                <LoginForm onLoginSuccess={login} />
+              )
+            }
+          />
+          <Route
+            path="/new-calculation"
+            element={
+              user ? (
+                <PrivateRoute>
+                  <CostCalculator />
+                </PrivateRoute>
+              ) : (
+                <LoginForm onLoginSuccess={login} />
+              )
+            }
+          />
+          <Route
+            path="/calculationdetails"
+            element={
+              user ? (
+                <PrivateRoute>
+                  <CalculationDetails />
+                </PrivateRoute>
+              ) : (
+                <LoginForm onLoginSuccess={login} />
+              )
+            }
+          />
+          <Route
+            path="/calc-history"
+            element={
+              user ? (
+                <PrivateRoute>
+                  <CalculationHistory />
+                </PrivateRoute>
+              ) : (
+                <LoginForm onLoginSuccess={login} />
+              )
+            }
+          />
+        </Routes>
+      </div>
+    </>
+  );
 }
 
 export default App;
-

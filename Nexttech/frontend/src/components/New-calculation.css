@@ -2,7 +2,6 @@
   font-family: Arial, sans-serif;
   max-width: 800px;
   margin: auto;
-  /* Optional: add some padding */
   padding: 1rem;
 }
 
@@ -16,7 +15,6 @@
 label {
   margin-bottom: 5px; /* space below label */
   font-weight: bold;
-  /* ensure label is block */
   display: block;
 }
 
@@ -28,6 +26,7 @@ input, select {
   /* full width of container */
   width: 100%;
   box-sizing: border-box;
+
 }
 
 button {

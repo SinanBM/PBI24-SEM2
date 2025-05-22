@@ -23,10 +23,10 @@ namespace Nexttech.Controllers
         {
             var materials = await _context.Materials.ToListAsync();
             return Ok(materials);
-
+        }
 
         // Temp material creator   
-        }
+
         [HttpPost("temp")]
         public async Task<IActionResult> CreateTemporaryMaterial([FromBody] TempMaterialDto dto)
         {
@@ -125,3 +125,4 @@ namespace Nexttech.Controllers
         }
     }
 }
+

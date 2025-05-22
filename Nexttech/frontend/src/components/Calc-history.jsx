@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import "./Calc-history.css";
 import CalculationDetails from "./Results";
 
@@ -187,7 +188,7 @@ const CalculationHistory = () => {
   return (
     <div className="calculation-history-container">
       <h1>Calculation History</h1>
-      <a href="/menu">Go Home</a>
+      <a href="/">Go Home</a>
       <button onClick={deleteSelectedRow}>Delete Selected</button>
       <br />
       <input

@@ -1,163 +1,373 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./User.css";  // Import the CSS file
+import "./User.css";
 
 export default function Users() {
   const [users, setUsers] = useState([]);
   const [formData, setFormData] = useState({
-    userId: 0,
-    Username: "",
-    Pwd: "",
-    E_mail: "",
-    Role: "user",
+    userId: "",
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "", // <-- added
+    role: "user",
   });
+
+  const [passwordData, setPasswordData] = useState({
+  currentPassword: "",
+  newPassword: "",
+  confirmNewPassword: "",
+  });
+
+  const [passwordMessage, setPasswordMessage] = useState(""); // feedback message
+
+  function handlePasswordChange(e) {
+  const { id, value } = e.target;
+  setPasswordData(prev => ({ ...prev, [id]: value }));
+  }
+
+  async function handleChangePassword(e) {
+  e.preventDefault();
+
+  if (passwordData.newPassword !== passwordData.confirmNewPassword) {
+    setPasswordMessage("New password and confirmation do not match.");
+    return;
+  }
+
+  const userString = localStorage.getItem("user");
+  if (!userString) {
+    setPasswordMessage("User not logged in.");
+    return;
+  }
+
+  const user = JSON.parse(userString);
+  const token = user?.token;
+  if (!token) {
+    setPasswordMessage("No token found.");
+    return;
+  }
+
+  try {
+    const response = axios.post(
+      `http://localhost:5077/api/user/change-password`,
+      {
+        currentPassword: passwordData.currentPassword,
+        newPassword: passwordData.newPassword,
+      },
+      { headers: { Authorization: `Bearer ${token}` } }
+    );
+
+    setPasswordMessage(response.data.message || "Password changed successfully.");
+    setPasswordData({ currentPassword: "", newPassword: "", confirmNewPassword: "" }); // reset form
+  } catch (error) {
+    if (error.response?.data) {
+      setPasswordMessage(
+        Array.isArray(error.response.data)
+          ? error.response.data.join(", ")
+          : error.response.data
+      );
+    } else {
+      setPasswordMessage("Error changing password.");
+    }
+  }
+}
 
   useEffect(() => {
     fetchUsers();
   }, []);
 
+
   function fetchUsers() {
-    axios.get("http://localhost:5077/api/users")
-      .then(res => setUsers(res.data))
-      .catch(console.error);
+    const userString = localStorage.getItem('user');
+    if (!userString) {
+      console.error('No user found, user not logged in');
+      return;
+    }
+
+    const user = JSON.parse(userString);
+    const token = user?.token;
+    if (!token) {
+      console.error('No token found inside user data');
+      return;
+    }
+
+    axios.get('http://localhost:5077/api/user', {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+    .then(response => {
+      console.log('Users:', response.data);
+      setUsers([...response.data]);
+      setUsers(response.data); 
+      // handle data
+    })
+    .catch(error => {
+      console.error('Error fetching users:', error);
+      if (error.response && error.response.status === 401) {
+        // handle unauthorized
+      }
+    });
   }
 
   function editUser(id) {
-    axios.get(`http://localhost:5077/api/users/${id}`)
-      .then(res => {
-        const user = res.data;
-        setFormData({
-          userId: user.id,
-          Username: user.username,
-          Pwd: user.pwd,
-          E_mail: user.e_mail,
-          Role: user.role,
-        });
-      })
-      .catch(console.error);
+    const userString = localStorage.getItem('user');
+    if (!userString) {
+      console.error('No user found, user not logged in');
+      return;
+    }
+    const user = JSON.parse(userString);
+    const token = user?.token;
+    if (!token) {
+      console.error('No token found inside user data');
+      return;
+    }
+
+    axios.get(`http://localhost:5077/api/user/${id}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      }
+    })
+    .then(res => {
+      const user = res.data;
+      setFormData({
+        userId: user.id,
+        firstName: user.firstName || "",
+        lastName: user.lastName || "",
+        email: user.email || "",
+        password: "", // clear password for editing
+        role: user.role || "user",
+      });
+    })
+    .catch(console.error);
   }
 
+
   function deleteUser(id) {
-    axios.delete(`http://localhost:5077/api/users/${id}`)
-      .then(() => fetchUsers())
-      .catch(console.error);
+    if (!window.confirm("Are you sure you want to delete this user?")) return;
+
+    const userString = localStorage.getItem('user');
+    if (!userString) {
+      console.error('User not logged in');
+      return;
+    }
+    const user = JSON.parse(userString);
+    const token = user?.token;
+    if (!token) {
+      console.error('No token found');
+      return;
+    }
+
+    axios.delete(`http://localhost:5077/api/user/${id}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      }
+    })
+    .then(() => fetchUsers())
+    .catch(console.error);
   }
+
 
   function handleChange(e) {
     const { id, value } = e.target;
     setFormData(prev => ({ ...prev, [id]: value }));
   }
 
-  function handleSubmit(e) {
-    e.preventDefault();
+  function handleSubmit(event) {
+    event.preventDefault();
 
-    const user = {
-      Id: formData.userId,
-      Username: formData.Username,
-      Pwd: formData.Pwd,
-      E_mail: formData.E_mail,
-      Role: formData.Role,
+    const userString = localStorage.getItem('user');
+    if (!userString) {
+      console.error('User not logged in');
+      return;
+    }
+    const user = JSON.parse(userString);
+    const token = user?.token;
+    if (!token) {
+      console.error('No token found');
+      return;
+    }
+
+    const updatedUser = {
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      password: formData.password,
+      role: formData.role,
     };
 
-    const url = formData.userId 
-      ? `http://localhost:5077/api/users/${formData.userId}`
-      : "http://localhost:5077/api/users";
-    const method = formData.userId ? "put" : "post";
-
-    axios[method](url, user)
-      .then(() => {
-        fetchUsers();
-        setFormData({
-          userId: 0,
-          Username: "",
-          Pwd: "",
-          E_mail: "",
-          Role: "user",
-        });
-      })
-      .catch(console.error);
+    axios.put(`http://localhost:5077/api/user/${formData.userId}`, updatedUser, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      }
+    })
+    .then(res => {
+      fetchUsers();
+      // Reset formData to initial values (with all keys present)
+      setFormData({
+        userId: "",
+        firstName: "",
+        lastName: "",
+        email: "",
+        password: "",
+        role: "user",
+          });
+})
+    .catch(err => {
+      console.error(err);
+      // handle error, e.g. show message to user
+    });
   }
 
-  return (
-    <div className="container">
-      <h1>Users</h1>
+return (
+  <div className="container">
+    <h1>Users</h1>
 
-      <h3>Add / Edit User</h3>
-      <form id="userForm" onSubmit={handleSubmit}>
-        <input type="hidden" id="userId" value={formData.userId} />
+    <h3>Add / Edit User</h3>
+    <form id="userForm" onSubmit={handleSubmit}>
+      <input type="hidden" id="userId" value={formData.userId || ""} />
 
-        <label htmlFor="Username">Username:</label>
-        <input
-          type="text"
-          id="Username"
-          value={formData.Username}
-          onChange={handleChange}
-          required
-        /><br />
+      <label htmlFor="firstName">First Name:</label>
+      <input
+        type="text"
+        id="firstName"
+        value={formData.firstName}
+        onChange={handleChange}
+        required
+      />
+      <br />
 
-        <label htmlFor="Pwd">Password:</label>
+      <label htmlFor="lastName">Last Name:</label>
+      <input
+        type="text"
+        id="lastName"
+        value={formData.lastName}
+        onChange={handleChange}
+        required
+      />
+      <br />
+
+      <label htmlFor="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        value={formData.email}
+        onChange={handleChange}
+        required
+      />
+      <br />
+
+      {/* Password field only for user creation */}
+      {!formData.userId && (
+        <>
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            value={formData.password}
+            onChange={handleChange}
+            required
+          />
+          <br />
+        </>
+      )}
+
+      <label htmlFor="role">Role:</label>
+      <select id="role" value={formData.role} onChange={handleChange} required>
+        <option value="user">User</option>
+        <option value="admin">Admin</option>
+      </select>
+
+      <button type="submit">Save User</button>
+    </form>
+
+    <hr />
+
+    {/* Change Password Section */}
+    <div className="changePasswordSection">
+      <h3>Change Password</h3>
+      <form onSubmit={handleChangePassword}>
+        <label htmlFor="currentPassword">Current Password:</label>
         <input
           type="password"
-          id="Pwd"
-          value={formData.Pwd}
-          onChange={handleChange}
+          id="currentPassword"
+          value={passwordData.currentPassword}
+          onChange={handlePasswordChange}
           required
-        /><br />
+        />
+        <br />
 
-        <label htmlFor="E_mail">Email:</label>
+        <label htmlFor="newPassword">New Password:</label>
         <input
-          type="email"
-          id="E_mail"
-          value={formData.E_mail}
-          onChange={handleChange}
+          type="password"
+          id="newPassword"
+          value={passwordData.newPassword}
+          onChange={handlePasswordChange}
           required
-        /><br />
+        />
+        <br />
 
-        <label htmlFor="Role">Role:</label>
-        <select
-          id="Role"
-          value={formData.Role}
-          onChange={handleChange}
+        <label htmlFor="confirmNewPassword">Confirm New Password:</label>
+        <input
+          type="password"
+          id="confirmNewPassword"
+          value={passwordData.confirmNewPassword}
+          onChange={handlePasswordChange}
           required
-        >
-          <option value="user">User</option>
-          <option value="admin">Admin</option>
-        </select>
+        />
+        <br />
 
-        <button type="submit">Save User</button>
+        <button type="submit">Change Password</button>
       </form>
 
-      <hr />
-
-      <h3>User List</h3>
-      <table id="usersTable">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Username</th>
-            <th>Email</th>
-            <th>Role</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {users.map((u, i) => (
-            <tr key={u.id}>
-              <td>{i + 1}</td>
-              <td>{u.username}</td>
-              <td>{u.e_mail}</td>
-              <td>{u.role}</td>
-              <td>
-                <button className="actionButton" onClick={() => editUser(u.id)}>Edit</button>
-                <button className="actionButton" onClick={() => deleteUser(u.id)}>Delete</button>
-              </td>
-            </tr>
-          ))}
-          {users.length === 0 && (
-            <tr><td colSpan="5" style={{textAlign: "center"}}>No users found</td></tr>
-          )}
-        </tbody>
-      </table>
+      {passwordMessage && (
+        <p style={{ color: passwordMessage.toLowerCase().includes("success") ? "green" : "red" }}>
+          {passwordMessage}
+        </p>
+      )}
     </div>
-  );
-}
+
+    <hr />
+
+    <h3>User List</h3>
+    <table id="usersTable">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {users.length === 0 && (
+          <tr>
+            <td colSpan="6" style={{ textAlign: "center" }}>
+              No users found
+            </td>
+          </tr>
+        )}
+        {users.map((u, i) => (
+          <tr key={u.id}>
+            <td>{i + 1}</td>
+            {/* If firstName or lastName are missing, fallback to email or userName */}
+            <td>{u.firstName ?? u.userName ?? "-"}</td>
+            <td>{u.lastName ?? "-"}</td>
+            <td>{u.email || u.userName}</td>
+            <td>{u.roles ? u.roles.join(", ") : "user"}</td>
+            <td>
+              <button className="actionButton" onClick={() => editUser(u.id)}>
+                Edit
+              </button>
+              <button className="actionButton" onClick={() => deleteUser(u.id)}>
+                Delete
+              </button>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+)};

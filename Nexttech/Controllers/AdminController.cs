@@ -12,9 +12,9 @@ namespace Nexttech.Controllers
     [Authorize(Roles = "Admin")]  // Apply role requirement to all endpoints here
     public class AdminController : ControllerBase
     {
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<NexttechUser> _userManager;
 
-        public AdminController(UserManager<IdentityUser> userManager)
+        public AdminController(UserManager<NexttechUser> userManager)
         {
             _userManager = userManager;
         }
@@ -24,20 +24,36 @@ namespace Nexttech.Controllers
         {
             return Ok(new { message = "You are an Admin" });
         }
-
-        // List all users
+        
         [HttpGet("users")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetAllUsers()
         {
-            var users = await _userManager.Users.Select(u => new
-            {
-                u.Id,
-                u.UserName,
-                u.Email
-            }).ToListAsync();
+            var users = await _userManager.Users.ToListAsync();
 
-            return Ok(users);
+            var userDtos = new List<UserDto>();
+
+            foreach (var user in users.Cast<NexttechUser>())
+            {
+                // Optional: Backend logging
+                Console.WriteLine($"User: {user.Email} | FirstName: {user.FirstName} | LastName: {user.LastName}");
+
+                var roles = await _userManager.GetRolesAsync(user);
+
+                userDtos.Add(new UserDto
+                {
+                    Id = user.Id,
+                    UserName = user.UserName,
+                    Email = user.Email,
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    Roles = roles.ToList()
+                });
+            }
+
+            return Ok(userDtos);
         }
+
 
         // Delete a user by ID
         [HttpDelete("users/{id}")]

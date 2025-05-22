@@ -5,7 +5,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-
+using Nexttech.Models;
+using System.Security.Claims;
 
 async Task CreateRoles(IServiceProvider serviceProvider)
 {
@@ -61,10 +62,9 @@ builder.Services.AddLogging();
 builder.Services.AddEndpointsApiExplorer();
 //builder.Services.AddSwaggerGen();    
 
-builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+builder.Services.AddIdentity<NexttechUser, IdentityRole>()
     .AddEntityFrameworkStores<DatabaseContext>()
     .AddDefaultTokenProviders();
-
 
 // Configure JWT Authentication and null check JWT key
 var jwtSettings = builder.Configuration.GetSection("Jwt");
@@ -94,9 +94,36 @@ builder.Services.AddAuthentication(options =>
         ValidateIssuerSigningKey = true,
         ValidIssuer = jwtSettings["Issuer"],
         ValidAudience = jwtSettings["Audience"],
-        IssuerSigningKey = key
+        IssuerSigningKey = key,
+        
+        // Set NameClaimType to match ASP.NET Identity expected claim type
+        NameClaimType = "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier",
+    };
+
+    options.Events = new JwtBearerEvents
+    {
+        OnTokenValidated = context =>
+        {
+            var principal = context.Principal;
+            if (principal == null)
+            {
+                context.Fail("No principal.");
+                return Task.CompletedTask;
+            }
+            
+            var claimsIdentity = principal.Identity as ClaimsIdentity;
+            if (claimsIdentity == null)
+            {
+                context.Fail("No claims identity.");
+                return Task.CompletedTask;
+            }
+
+            // safe to use claimsIdentity here
+            return Task.CompletedTask;
+        }
     };
 });
+
 
 builder.Services.AddAuthorization();
 

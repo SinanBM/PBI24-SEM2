@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { useAuth } from "../context/AuthContext";
 
 export function useAuthFetch() {
@@ -7,29 +7,24 @@ export function useAuthFetch() {
 
   const { user, refreshToken, logout, setUser } = useAuth();
 
-  const fetchWithAuth = async (url, options = {}) => {
+  const fetchWithAuth = useCallback(async (url, options = {}) => {
     setLoading(true);
     setError(null);
 
     try {
       let currentUser = user;
 
-      // Proactive token expiry check: refresh if expiring in less than 1 minute
       if (currentUser?.tokenExpiry && Date.now() > currentUser.tokenExpiry - 60 * 1000) {
         const newToken = await refreshToken();
         if (!newToken) {
           throw new Error("Session expired, please log in again.");
         }
 
-        // Update local currentUser with refreshed token info from localStorage
         const storedUser = localStorage.getItem("user");
         currentUser = storedUser ? JSON.parse(storedUser) : currentUser;
-
-        // Update React state too for sync
         setUser(currentUser);
       }
 
-      // Prepare fetch options with Authorization header
       const fetchOptions = {
         ...options,
         headers: {
@@ -40,14 +35,12 @@ export function useAuthFetch() {
 
       let res = await fetch(url, fetchOptions);
 
-      // If 401 (unauthorized) and we haven't retried yet, try refresh token once
       if (res.status === 401 && currentUser?.refreshToken && !fetchOptions._retry) {
         const newToken = await refreshToken();
         if (!newToken) {
           throw new Error("Session expired, please log in again.");
         }
 
-        // Retry original request with new token
         const retryOptions = {
           ...options,
           _retry: true,
@@ -64,8 +57,7 @@ export function useAuthFetch() {
 
       const data = await res.json();
       return data;
-    } catch (err) 
-    {
+    } catch (err) {
       if (err.message === "Session expired, please log in again.") {
         logout();
       }
@@ -74,9 +66,7 @@ export function useAuthFetch() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [user, refreshToken, logout, setUser]);
 
   return { fetchWithAuth, loading, error };
 }
-
-

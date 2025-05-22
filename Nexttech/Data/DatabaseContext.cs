@@ -5,7 +5,7 @@ using Nexttech.Models;
 
 namespace Nexttech.Data
 {
-    public class DatabaseContext : IdentityDbContext<IdentityUser>
+    public class DatabaseContext : IdentityDbContext<NexttechUser>
     {
         // Constructor that gets options injected (already done)
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options) {}

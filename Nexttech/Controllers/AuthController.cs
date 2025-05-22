@@ -18,11 +18,11 @@ namespace Nexttech.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<NexttechUser> _userManager;
         private readonly IConfiguration _config;
         private readonly DatabaseContext _context;
 
-        public AuthController(UserManager<IdentityUser> userManager, IConfiguration config, DatabaseContext context)
+        public AuthController(UserManager<NexttechUser> userManager, IConfiguration config, DatabaseContext context)
         {
             _userManager = userManager;
             _config = config;
@@ -33,7 +33,14 @@ namespace Nexttech.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterDto model)
         {
-            var user = new IdentityUser { UserName = model.Email, Email = model.Email };
+            var user = new NexttechUser
+            {
+                UserName = model.Email,
+                Email = model.Email,
+                FirstName = model.FirstName,
+                LastName = model.LastName
+            };
+
             var result = await _userManager.CreateAsync(user, model.Password);
 
             if (result.Succeeded)
@@ -44,6 +51,7 @@ namespace Nexttech.Controllers
 
             return BadRequest(result.Errors);
         }
+
         private string GenerateRefreshToken()
         {
             var randomNumber = new byte[32];
@@ -59,6 +67,7 @@ namespace Nexttech.Controllers
         {
             Console.WriteLine($"Login attempt for {model.Email}");
 
+          
             var user = await _userManager.FindByEmailAsync(model.Email);
             if (user == null || !await _userManager.CheckPasswordAsync(user, model.Password))
             {
@@ -67,7 +76,7 @@ namespace Nexttech.Controllers
 
             var roles = await _userManager.GetRolesAsync(user);
             var role = roles.FirstOrDefault() ?? "User";
-            var token = GenerateJwtToken(user, role);
+            var token = GenerateJwtToken(user, role); // Make sure this method works with NexttechUser
 
             // Create refresh token
             var refreshToken = GenerateRefreshToken();
@@ -86,13 +95,21 @@ namespace Nexttech.Controllers
             return Ok(new
             {
                 token,
-                refreshToken
+                refreshToken,
+                user = new {
+                    user.Id,
+                    user.Email,
+                    user.FirstName,
+                    user.LastName,
+                    role
+                }
             });
         }
 
-        private string GenerateJwtToken(IdentityUser user, string role)
+
+        private string GenerateJwtToken(NexttechUser user, string role)
         {
-            var claims = new[]
+            var claims = new List<Claim>
             {
                 new Claim(JwtRegisteredClaimNames.Sub, user.Email ?? ""),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
@@ -101,13 +118,18 @@ namespace Nexttech.Controllers
                 new Claim(ClaimTypes.Role, role ?? "")
             };
 
+            // Add your custom claims:
+            if (!string.IsNullOrEmpty(user.FirstName))
+                claims.Add(new Claim("FirstName", user.FirstName));
+
+            if (!string.IsNullOrEmpty(user.LastName))
+                claims.Add(new Claim("LastName", user.LastName));
 
             var keyString = _config["Jwt:Key"];
             if (string.IsNullOrEmpty(keyString))
                 throw new InvalidOperationException("JWT key not configured.");
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(keyString));
-
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             var token = new JwtSecurityToken(
@@ -119,6 +141,7 @@ namespace Nexttech.Controllers
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
+
         public class RefreshTokenRequest
         {
             public string RefreshToken { get; set; } = string.Empty;
