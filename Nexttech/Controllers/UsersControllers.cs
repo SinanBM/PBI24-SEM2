@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
+/*using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Nexttech.Data;
 using Nexttech.Models;
@@ -107,3 +107,25 @@ namespace Nexttech.Controllers
         }
     }
 }
+*/
+
+/*
+        [HttpPut("me")]
+        public async Task<IActionResult> UpdateMyProfile([FromBody] UpdateProfileDto model)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
+            var userId = _userManager.GetUserId(User);
+            if (userId == null) return Unauthorized();
+
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user == null) return NotFound();
+
+            // ... your existing update logic here
+
+            var result = await _userManager.UpdateAsync(user);
+            if (result.Succeeded)
+                return Ok(new { user.Id, user.UserName, user.Email });
+
+            return BadRequest(result.Errors.Select(e => e.Description));
+        }*/

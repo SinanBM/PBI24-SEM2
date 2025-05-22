@@ -1,0 +1,97 @@
+.product-image {
+  width: 200px;
+  height: 155px;
+}
+
+.hidden-file-input {
+  display: none;
+}
+
+.pointer-cursor {
+  cursor: pointer;
+}
+
+/* Table header sorting styles */
+#historyTable thead th[data-sort] {
+  cursor: pointer;
+  position: relative;
+  padding-right: 20px;
+}
+
+#historyTable thead th[data-sort]::after {
+  content: "▲"; /* Only show one triangle */
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%) rotate(0 deg);
+  font-size: 0.6em;
+  color: #ccc;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+#historyTable thead th.sorted-asc::after {
+  opacity: 1;
+  color: green;
+  transform: translateY(-50%) rotate(0deg);
+}
+
+#historyTable thead th.sorted-desc::after {
+  opacity: 1;
+  color: red;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* Selected row */
+.selected {
+  background-color: #ffffb3;
+}
+
+/* Table styling */
+#historyTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+#historyTable th,
+#historyTable td {
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+#historyTable th {
+  background-color: #f2f2f2;
+  user-select: none;
+}
+
+/* Container */
+.calculation-history-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Buttons */
+button {
+  margin: 5px 5px 5px 0;
+  padding: 6px 12px;
+  border: 1px solid #666;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+input[type="text"] {
+  margin-top: 10px;
+  padding: 6px;
+  width: 300px;
+  font-size: 14px;
+}

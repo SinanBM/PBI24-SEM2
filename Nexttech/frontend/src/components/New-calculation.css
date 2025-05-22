@@ -1,0 +1,68 @@
+.calculator-container {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* Wrap each label + input/select in a container */
+.form-group {
+  display: flex;
+  flex-direction: column;  /* Stack label above input */
+  margin-bottom: 15px;    /* space between groups */
+}
+
+label {
+  margin-bottom: 5px; /* space below label */
+  font-weight: bold;
+  display: block;
+}
+
+input, select {
+  padding: 8px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  /* full width of container */
+  width: 100%;
+  box-sizing: border-box;
+
+}
+
+button {
+  margin: 20px 0;
+  color: inherit;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.result {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.custom-material {
+  padding-left: 10px;
+  border-left: 2px solid #ccc;
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  font-size: 18px;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
