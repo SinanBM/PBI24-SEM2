@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import "./LoginForm.css"; 
 import { useNavigate } from "react-router-dom";
@@ -55,44 +55,45 @@ export default function LoginForm() {
   }
 
   return (
-    <div className="form_container">
-      <form className="login_form active" onSubmit={handleSubmit}>
-        <h2>Login</h2>
+<div className="form_container">
+  <form className="login_form active" onSubmit={handleSubmit}>
+    <h1>Login</h1>
 
-        {error && <p style={{ color: "red", textAlign: "center" }}>{error}</p>}
+    {error && <p style={{ color: "red", textAlign: "center" }}>{error}</p>}
 
-        <div className="input_box">
-          <input
-            type="email"
-            placeholder="E-mail"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <i className="fa-solid fa-envelope"></i>
-        </div>
+<div className="input_row">
+  <input
+    type="email"
+    placeholder="E-mail"
+    value={email}
+    onChange={(e) => setEmail(e.target.value)}
+    required
+  />
+  <i className="fa-solid fa-envelope"></i>
+</div>
 
-        <div className="input_box">
-          <input
-            type={showPassword ? "text" : "password"}
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-          <i
-            className={`fa-solid ${showPassword ? "fa-eye" : "fa-eye-slash"}`}
-            onClick={() => setShowPassword(!showPassword)}
-            style={{ cursor: "pointer" }}
-          ></i>
-        </div>
+  <div className="input_row">
+    <input
+      type={showPassword ? "text" : "password"}
+      placeholder="Password"
+      value={password}
+      onChange={(e) => setPassword(e.target.value)}
+      required
+    />
+    <i
+      className={`fa-solid ${showPassword ? "fa-lock-open" : "fa-lock"} clickable`}
+      onClick={() => setShowPassword(!showPassword)}
+      aria-label={showPassword ? "Hide password" : "Show password"}
+    ></i>
+  </div>
 
-        <button type="submit" className="button" disabled={loading}>
-          {loading ? "Logging in..." : "Login"}
-        </button>
+    <button type="submit" className="button" disabled={loading}>
+      {loading ? "Logging in..." : "Login"}
+    </button>
+  </form>
+</div>
 
-   {/*    <a className="form_link" href="/request_access">Request access</a> */}
-      </form>
-    </div>
+
+
   );
 }

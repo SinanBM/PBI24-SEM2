@@ -1,16 +1,17 @@
-import React, { useEffect, useState, useRef} from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Chart from 'chart.js/auto';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 import './Results.css';
 Chart.register(ChartDataLabels);
+import { useParams } from 'react-router-dom';
 
 export default function CalculationDetails() {
+  const { id } = useParams();
   const [data, setData] = useState(null);
+  const chartRef = useRef(null); // Use ref to access canvas
+  const chartInstanceRef = useRef(null); // To store chart instance
 
   useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const id = urlParams.get("id");
-
     if (!id) {
       alert("No calculation ID provided.");
       return;
@@ -20,75 +21,81 @@ export default function CalculationDetails() {
       .then(res => res.json())
       .then(data => {
         setData(data);
-
-        const ctx = document.getElementById('costDoughnutChart').getContext('2d');
-
-        const centerTextPlugin = {
-          id: 'centerText',
-          beforeDraw(chart) {
-            const { width, height, ctx } = chart;
-            const total = chart.data.datasets[0].data.reduce((a, b) => a + b, 0);
-
-            ctx.save();
-            ctx.font = 'bold 30px Arial';
-            ctx.fillStyle = '#666';
-            ctx.textAlign = 'center';
-            ctx.textBaseline = 'middle';
-            ctx.fillText('Total', width / 2, height / 2 - 12);
-
-            ctx.font = 'bold 20px Arial';
-            ctx.fillStyle = '#333';
-            ctx.fillText(`$${total.toFixed(2)}`, width / 2, height / 2 + 12);
-
-            ctx.restore();
-          }
-        };
-
-        new Chart(ctx, {
-          type: 'doughnut',
-          data: {
-            labels: ["Material", "Build Prep", "Machine Cost", "Consumables", "Labor", "Post Process"],
-            datasets: [{
-              data: [
-                data.materialCost,
-                data.buildPrepCost,
-                data.machineCost,
-                data.consumablesCost,
-                data.laborCost,
-                data.postProcessCost
-              ],
-              backgroundColor: [
-                "#4caf50", "#2196f3", "#ff9800", "#9c27b0", "#f44336", "#795548"
-              ]
-            }]
-          },
-          options: {
-            cutout: '70%',
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-              legend: { position: 'bottom' },
-              datalabels: {
-                color: '#fff',
-                formatter: (value, context) => {
-                  const data = context.chart.data.datasets[0].data;
-                  const total = data.reduce((a, b) => a + b, 0);
-                  const percent = ((value / total) * 100).toFixed(1);
-                  return `${percent}%`;
-                },
-                font: {
-                  weight: 'bold',
-                  size: 14
-                }
-              }
-            }
-          },
-          plugins: [ChartDataLabels, centerTextPlugin]
-        });
-
       })
       .catch(err => alert("Failed to load calculation data."));
-  }, []);
+  }, [id]);
+
+  useEffect(() => {
+    if (!data || !chartRef.current) return;
+
+    // Destroy previous chart instance if it exists to avoid duplication
+    if (chartInstanceRef.current) {
+      chartInstanceRef.current.destroy();
+    }
+
+    const centerTextPlugin = {
+      id: 'centerText',
+      beforeDraw(chart) {
+        const { width, height, ctx } = chart;
+        const total = chart.data.datasets[0].data.reduce((a, b) => a + b, 0);
+
+        ctx.save();
+        ctx.font = 'bold 30px Arial';
+        ctx.fillStyle = '#666';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText('Total', width / 2, height / 2 - 12);
+
+        ctx.font = 'bold 20px Arial';
+        ctx.fillStyle = '#333';
+        ctx.fillText(`$${total.toFixed(2)}`, width / 2, height / 2 + 12);
+        ctx.restore();
+      }
+    };
+
+    const ctx = chartRef.current.getContext('2d');
+    chartInstanceRef.current = new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: ["Material", "Build Prep", "Machine Cost", "Consumables", "Labor", "Post Process"],
+        datasets: [{
+          data: [
+            data.materialCost,
+            data.buildPrepCost,
+            data.machineCost,
+            data.consumablesCost,
+            data.laborCost,
+            data.postProcessCost
+          ],
+          backgroundColor: [
+            "#4caf50", "#2196f3", "#ff9800", "#9c27b0", "#f44336", "#795548"
+          ]
+        }]
+      },
+      options: {
+        cutout: '70%',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { position: 'bottom' },
+          datalabels: {
+            color: '#fff',
+            formatter: (value, context) => {
+              const dataset = context.chart.data.datasets[0].data;
+              const total = dataset.reduce((a, b) => a + b, 0);
+              const percent = ((value / total) * 100).toFixed(1);
+              return `${percent}%`;
+            },
+            font: {
+              weight: 'bold',
+              size: 14
+            }
+          }
+        }
+      },
+      plugins: [ChartDataLabels, centerTextPlugin]
+    });
+  }, [data]);
 
   if (!data) return <div>Loading...</div>;
 
@@ -140,7 +147,7 @@ export default function CalculationDetails() {
         </div>
 
         <div className="canvas">
-          <canvas id="costDoughnutChart"></canvas>
+          <canvas ref={chartRef}></canvas>
         </div>
 
       </div>

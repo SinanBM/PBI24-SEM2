@@ -40,13 +40,20 @@ namespace Nexttech.Controllers
 
         // POST: api/printers
         [HttpPost]
-        public async Task<ActionResult<Printer>> CreatePrinter(Printer printer)
+        public async Task<IActionResult> CreatePrinter(Printer printer)
         {
+            if (printer.Id != 0)
+            {
+                // Optionally reject or ignore client-supplied Id here
+                printer.Id = 0; // Reset to zero to insert new record
+            }
+
             _context.Printers.Add(printer);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction(nameof(GetPrinter), new { id = printer.Id }, printer);
         }
+
 
         // PUT: api/printers/{id}
         [HttpPut("{id}")]

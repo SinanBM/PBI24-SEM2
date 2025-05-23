@@ -337,7 +337,7 @@ const CalculationHistory = () => {
               <td>${calc.totalCost.toFixed(2)}</td>
               <td>{new Date(calc.createdAt).toLocaleString()}</td>
               <td>
-                <Link to={`/calculationdetails?id=${calc.id}`}>[details]</Link>
+                <Link to={`/calculationdetails/${calc.id}`}>[details]</Link>
               </td>
             </tr>
           ))}

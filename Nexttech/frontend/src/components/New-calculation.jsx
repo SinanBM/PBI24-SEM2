@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import './New-calculation.css';
 
 const PrintCostCalculator = () => {
   const [printers, setPrinters] = useState([]);
@@ -241,141 +242,143 @@ const PrintCostCalculator = () => {
   };
 
   return (
+    <div className="calculator-container">
     <div style={{ fontFamily: 'Arial', maxWidth: '800px', margin: 'auto' }}>
-      <h1>3D Print Cost Calculator</h1>
+      <h1>Calculator</h1>
+   
+        <div className="input-section">
 
-      <label>
-        Calculation Name:
-        <input type="text" value={calcName} onChange={(e) => setCalcName(e.target.value)} required />
-      </label>
-
-      <label>
-        Select a printer:
-        <select value={printerId} onChange={(e) => setPrinterId(e.target.value)} required>
-          <option value="" disabled>Select a printer</option>
-          {printers.map((printer) => (
-            <option key={printer.id} value={printer.id}>{printer.name}</option>
-          ))}
-        </select>
-      </label>
-
-      <label>
-        Select a material:
-        <select value={materialId} onChange={(e) => setMaterialId(e.target.value)} required>
-          <option value="" disabled>Select a material</option>
-          {materials.map((material) => (
-            <option key={material.id} value={material.id}>{material.name}</option>
-          ))}
-          <option value="custom">-- Custom Material --</option>
-        </select>
-      </label>
-
-      {materialId === 'custom' && (
-        <div style={{ paddingLeft: '10px', borderLeft: '2px solid #ccc' }}>
           <label>
-            Material Name:
-            <input type="text" value={customMatName} onChange={(e) => setCustomMatName(e.target.value)} />
+            Calculation Name:
+            <input type="text" value={calcName} onChange={(e) => setCalcName(e.target.value)} required />
           </label>
 
           <label>
-            Density (g/cm³):
-            <input type="number" step="0.01" value={customMatDensity} onChange={(e) => setCustomMatDensity(e.target.value)} />
+            Select a printer:
+            <select value={printerId} onChange={(e) => setPrinterId(e.target.value)} required>
+              <option value="" disabled>Select a printer</option>
+              {printers.map((printer) => (
+                <option key={printer.id} value={printer.id}>{printer.name}</option>
+              ))}
+            </select>
           </label>
 
           <label>
-            Cost per kg ($):
-            <input type="number" step="0.01" value={customMatCost} onChange={(e) => setCustomMatCost(e.target.value)} />
+            Select a material:
+            <select value={materialId} onChange={(e) => setMaterialId(e.target.value)} required>
+              <option value="" disabled>Select a material</option>
+              {materials.map((material) => (
+                <option key={material.id} value={material.id}>{material.name}</option>
+              ))}
+              <option value="custom">-- Custom Material --</option>
+            </select>
           </label>
-        </div>
-      )}
 
-      <label>
-        Parts Produced:
-        <input type="number" min="1" step="1" value={partsProduced} onChange={(e) => setPartsProduced(e.target.value)} />
-      </label>
+          {materialId === 'custom' && (
+            <div style={{ paddingLeft: '10px', borderLeft: '2px solid #ccc' }}>
+              <label>
+                Material Name:
+                <input type="text" value={customMatName} onChange={(e) => setCustomMatName(e.target.value)} />
+              </label>
 
-            <label>
-        Number of Builds:
-        <input
-          type="number"
-          min="1"
-          step="1"
-          value={numberOfBuilds}
-          onChange={(e) => setNumberOfBuilds(e.target.value)}
-        />
-      </label>
+              <label>
+                Density (g/cm³):
+                <input type="number" step="0.01" value={customMatDensity} onChange={(e) => setCustomMatDensity(e.target.value)} />
+              </label>
 
-      <label>
-        Part Mass (grams):
-        <input
-          type="number"
-          step="0.00001"
-          value={partMass}
-          onChange={(e) => setPartMass(e.target.value)}
-        />
-      </label>
+              <label>
+                Cost per kg ($):
+                <input type="number" step="0.01" value={customMatCost} onChange={(e) => setCustomMatCost(e.target.value)} />
+              </label>
+            </div>
+          )}
+                <label>
+            Upload STL file:
+            <input
+              type="file"
+              accept=".stl"
+              onChange={(e) => setStlFile(e.target.files[0])}
+            />
+          </label>
 
-      <label>
-        Part Height (mm):
-        <input
-          type="number"
-          step="0.01"
-          value={partHeight}
-          onChange={(e) => setPartHeight(e.target.value)}
-        />
-      </label>
+          <button
+            type="button"
+            onClick={handleUploadStl}
+            disabled={loading || !stlFile}
+            style={{ marginTop: '10px' }}
+          >
+            {loading ? 'Uploading...' : 'Upload'}
+          </button>
+          
+          <label>
+            Parts Produced:
+            <input type="number" min="1" step="1" value={partsProduced} onChange={(e) => setPartsProduced(e.target.value)} />
+          </label>
 
-      <label>
-        Part Base Area (cm²):
-        <input
-          type="number"
-          step="0.01"
-          value={partArea}
-          onChange={(e) => setPartArea(e.target.value)}
-        />
-      </label>
+                <label>
+            Number of Builds:
+            <input
+              type="number"
+              min="1"
+              step="1"
+              value={numberOfBuilds}
+              onChange={(e) => setNumberOfBuilds(e.target.value)}
+            />
+          </label>
 
-      <label>
-        Support Material (grams):
-        <input
-          type="number"
-          step="0.01"
-          value={supportMat}
-          onChange={(e) => setSupportMat(e.target.value)}
-        />
-      </label>
+          <label>
+            Part Mass (grams):
+            <input
+              type="number"
+              step="0.00001"
+              value={partMass}
+              onChange={(e) => setPartMass(e.target.value)}
+            />
+          </label>
 
-      <label>
-        Upload STL file:
-        <input
-          type="file"
-          accept=".stl"
-          onChange={(e) => setStlFile(e.target.files[0])}
-        />
-      </label>
+          <label>
+            Part Height (mm):
+            <input
+              type="number"
+              step="0.01"
+              value={partHeight}
+              onChange={(e) => setPartHeight(e.target.value)}
+            />
+          </label>
 
-      <button
-        type="button"
-        onClick={handleUploadStl}
-        disabled={loading || !stlFile}
-        style={{ marginTop: '10px' }}
-      >
-        {loading ? 'Uploading...' : 'Upload STL and Extract Data'}
-      </button>
+          <label>
+            Part Base Area (cm²):
+            <input
+              type="number"
+              step="0.01"
+              value={partArea}
+              onChange={(e) => setPartArea(e.target.value)}
+            />
+          </label>
 
-      <hr />
-
-      <div style={{ marginTop: '20px' }}>
+          <label>
+            Support Material (grams):
+            <input
+              type="number"
+              step="0.01"
+              value={supportMat}
+              onChange={(e) => setSupportMat(e.target.value)}
+            />
+          </label>
+        
         <button onClick={handleCalculate}>Calculate</button>{' '}
         <button onClick={handleSave} disabled={!result}>
           Save Calculation
         </button>{' '}
         <button onClick={handleReset}>Reset</button>
       </div>
-
+      </div>
+ 
+      <div className="result-section">
+        <div className="resultsub">
       {result && (
-        <div style={{ marginTop: '20px', borderTop: '1px solid #ccc', paddingTop: '10px' }}>
-          <h2>Calculation Results</h2>
+        <div>
+          <h1>Calculation Results</h1>
           {result.error ? (
             <p style={{ color: 'red' }}>Error: {result.error}</p>
           ) : (
@@ -417,8 +420,13 @@ const PrintCostCalculator = () => {
             </table>
           )}
         </div>
+        
       )}
     </div>
+    </div>
+    </div>
+  
+    
   );
 };
 

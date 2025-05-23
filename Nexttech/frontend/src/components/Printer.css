@@ -2,3 +2,52 @@
   cursor: pointer;
   background-color: #70b3e9;
 }
+
+.printer-container {
+  display: flex;
+  gap: 40px; /* space between form and table */
+  align-items: flex-start; /* align top edges */
+}
+
+.printer-form-section {
+  flex: 1; 
+}
+
+.printer-table-section {
+  flex: 2; 
+  width: 60%; 
+
+}
+
+.printer-form-section form div {
+  margin-bottom: 10px; 
+}
+
+.printer-form-section label {
+  display: block;
+  margin-top: 10px;
+  width: 100%;
+  text-align: left;
+
+}
+
+.printer-form-section input {
+  width: 300px;
+  padding: 6px;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+.printertable {
+  width: 70%;
+  border-collapse: collapse;
+  margin-top: 20px;
+
+}
+
+.printertable th,
+.printertable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
