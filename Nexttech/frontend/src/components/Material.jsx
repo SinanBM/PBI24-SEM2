@@ -70,82 +70,91 @@ function Material() {
 
   return (
     <div className="material-container">
-      <h1>Materials</h1>
+      
+      <div className="material-content">
+        <div className="material-form-section">
+          <h1>Materials</h1>
+          <h3>Add / Edit Material</h3>
+          <form onSubmit={saveMaterial} className="material-form">
+            <div>
+            <label>Name:</label>
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
+            <br />
+            <label>Material Cost:</label>
+            <input
+              type="number"
+              step="any"
+              value={materialCost}
+              onChange={(e) => setMaterialCost(e.target.value)}
+              required
+            />
+            <br />
+            <label>Material Density:</label>
+            <input
+              type="number"
+              step="any"
+              value={materialDensity}
+              onChange={(e) => setMaterialDensity(e.target.value)}
+              required
+            />
+            <br />
+            </div>
+            <div className="button-group">
+              <button type="submit">Save Material</button>
+              <button type="button" onClick={resetForm} className="clear-button">
+                Clear
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
 
-      <h3>Add / Edit Material</h3>
-      <form onSubmit={saveMaterial} className="material-form">
-        <label>Name:</label>
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
-
-        <label>Material Cost:</label>
-        <input
-          type="number"
-          step="any"
-          value={materialCost}
-          onChange={(e) => setMaterialCost(e.target.value)}
-          required
-        />
-
-        <label>Material Density:</label>
-        <input
-          type="number"
-          step="any"
-          value={materialDensity}
-          onChange={(e) => setMaterialDensity(e.target.value)}
-          required
-        />
-
-        <button type="submit">Save Material</button>
-        <button type="button" onClick={resetForm} className="clear-button">
-          Clear
-        </button>
-      </form>
-
-      <hr />
-
-      <h3>Material List</h3>
-      <table className="material-table">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Cost</th>
-            <th>Density</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {materials.map((m, index) => (
-            <tr key={m.id}>
-              <td>{index + 1}</td>
-              <td>{m.name}</td>
-              <td>{m.material_cost}</td>
-              <td>{m.material_density}</td>
-              <td>
-                <button onClick={() => editMaterial(m.id)}>Edit</button>
-                <button
-                  onClick={() => deleteMaterial(m.id)}
-                  className="delete-button"
-                >
-                  Delete
-                </button>
-              </td>
-            </tr>
-          ))}
-          {materials.length === 0 && (
-            <tr>
-              <td colSpan="5" className="no-data">
-                No materials found.
-              </td>
-            </tr>
-          )}
-        </tbody>
-      </table>
+      <div className="material-table-section">
+        <h3>Material List</h3>
+          <table className="material-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Cost</th>
+                <th>Density</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {materials.map((m, index) => (
+                <tr key={m.id}>
+                  <td>{index + 1}</td>
+                  <td>{m.name}</td>
+                  <td>{m.material_cost}</td>
+                  <td>{m.material_density}</td>
+                  <td>
+                    <button onClick={() => editMaterial(m.id)}>Edit</button>
+                    <button
+                      onClick={() => deleteMaterial(m.id)}
+                      className="delete-button"
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              ))}
+              {materials.length === 0 && (
+                <tr>
+                  <td colSpan="5" className="no-data">
+                    No materials found.
+                  </td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+      
+      </div>
     </div>
   );
 }

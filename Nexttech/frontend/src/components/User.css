@@ -1,58 +1,51 @@
 /* Users.css */
 
 .container {
-  max-width: 600px;
-  margin: auto;
-  font-family: Arial, sans-serif;
+  display: flex;
+  gap: 40px; /* space between form and table */
+  align-items: flex-start; 
 }
 
-form {
-  margin-bottom: 20px;
+.userformsection {
+  flex: 1;
 }
 
-label {
-  display: inline-block;
-  width: 100px;
-  margin-right: 10px;
-  text-align: right;
-}
-
-input[type="text"],
-input[type="password"],
-input[type="email"],
-select {
-  margin-bottom: 10px;
+.usertablesection {
+  flex: 2;
   width: 60%;
-  padding: 6px 8px;
 }
 
-select {
-  width: 64%;
+.userformsection form div{
+  margin-bottom: 10px;
 }
 
-button {
-  margin-left: 110px;
-  padding: 6px 15px;
-  cursor: pointer;
-}
-
-hr {
-  margin: 20px 0;
-}
-
-table {
+.userformsection label {
+  display: block;
+  margin-top: 10px;
   width: 100%;
-  border-collapse: collapse;
   text-align: left;
-  border: 1px solid black;
 }
 
-th, td {
+.userformsection input[type="text"],
+.userformsection input[type="password"],
+.userformsection input[type="email"],
+.userformsection select {
+  width: 300px;
+  padding: 6px;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+
+.userstable th, td{
+  border: 1px solid #ddd;
   padding: 8px;
-  border: 1px solid black;
+  text-align: center;
 }
 
-.actionButton {
-  margin-right: 5px;
-  cursor: pointer;
+.userstable {
+  width: 70%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
+

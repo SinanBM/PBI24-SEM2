@@ -135,9 +135,10 @@ namespace Nexttech.Controllers
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
 
+            var generatedUserName = model.Email.Split('@')[0];
             var user = new NexttechUser
             {
-                UserName = model.UserName,
+                UserName = generatedUserName,
                 Email = model.Email,
                 FirstName = model.FirstName,   // <- new required property
                 LastName = model.LastName      // <- new required property

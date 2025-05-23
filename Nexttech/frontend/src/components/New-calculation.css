@@ -1,8 +1,22 @@
 .calculator-container {
+  display: flex;
+  gap: 40px; /* space between form and table */
+  align-items: flex-start; 
+}
+
+.input-section{
+  flex:1;
   font-family: Arial, sans-serif;
-  max-width: 800px;
-  margin: auto;
   padding: 1rem;
+}
+
+.result-section{
+  flex: 2;
+  width: 60%;
+}
+
+.resultsub {
+  width: 60%;
 }
 
 /* Wrap each label + input/select in a container */
@@ -10,12 +24,15 @@
   display: flex;
   flex-direction: column;  /* Stack label above input */
   margin-bottom: 15px;    /* space between groups */
+  align-items: center;
 }
 
+
+
 label {
-  margin-bottom: 5px; /* space below label */
-  font-weight: bold;
-  display: block;
+    margin-bottom: 5px; /* space below label */
+    font-weight: bold;
+    display: block;
 }
 
 input, select {
@@ -27,22 +44,6 @@ input, select {
   width: 100%;
   box-sizing: border-box;
 
-}
-
-button {
-  margin: 20px 0;
-  color: inherit;
-  padding: 10px 20px;
-  font-size: 1em;
-  border-radius: 6px;
-  border: 1px solid transparent;
-  cursor: pointer;
-}
-
-.result {
-  margin-top: 20px;
-  padding: 10px;
-  border: 1px solid #ccc;
 }
 
 .custom-material {

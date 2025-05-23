@@ -164,7 +164,7 @@ function App() {
             }
           />
           <Route
-            path="/calculationdetails"
+            path="/calculationdetails/:id"
             element={
               user ? (
                 <PrivateRoute>

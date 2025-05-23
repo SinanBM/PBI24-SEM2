@@ -188,7 +188,7 @@ export default function Users() {
       return;
     }
 
-    const updatedUser = {
+    const userData = {
       firstName: formData.firstName,
       lastName: formData.lastName,
       email: formData.email,
@@ -196,37 +196,58 @@ export default function Users() {
       role: formData.role,
     };
 
-    axios.put(`http://localhost:5077/api/user/${formData.userId}`, updatedUser, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      }
-    })
-    .then(res => {
-      fetchUsers();
-      // Reset formData to initial values (with all keys present)
-      setFormData({
-        userId: "",
-        firstName: "",
-        lastName: "",
-        email: "",
-        password: "",
-        role: "user",
-          });
-})
-    .catch(err => {
-      console.error(err);
-      // handle error, e.g. show message to user
+    if (formData.userId) {
+      // Update existing user via PUT
+      axios.put(`http://localhost:5077/api/user/${formData.userId}`, userData, {
+        headers: { Authorization: `Bearer ${token}` }
+      })
+      .then(res => {
+        fetchUsers();
+        resetForm();
+      })
+      .catch(err => {
+        console.error(err);
+      });
+    } else {
+      // Create new user via POST
+      axios.post(`http://localhost:5077/api/user`, userData, {
+        headers: { Authorization: `Bearer ${token}` }
+      })
+      .then(res => {
+        fetchUsers();
+        resetForm();
+      })
+      .catch(err => {
+        console.error(err);
+      });
+    }
+  }
+
+  function resetForm() {
+    setFormData({
+      userId: "",
+      firstName: "",
+      lastName: "",
+      email: "",
+      password: "",
+      role: "user",
     });
   }
 
+
 return (
   <div className="container">
-    <h1>Users</h1>
-
+    <div className="userformsection">
+    <div className="userform">
+      <h1>Users</h1>
     <h3>Add / Edit User</h3>
-    <form id="userForm" onSubmit={handleSubmit}>
+     <input type="text" name="fakeusernameremembered" autoComplete="username" style={{ display: 'none' }} />
+  <input type="password" name="fakepasswordremembered" autoComplete="new-password" style={{ display: 'none' }} />
+    <form id="userForm" autocomplete="off" onSubmit={handleSubmit}>
+      
       <input type="hidden" id="userId" value={formData.userId || ""} />
-
+      <div>
+        
       <label htmlFor="firstName">First Name:</label>
       <input
         type="text"
@@ -277,14 +298,64 @@ return (
         <option value="user">User</option>
         <option value="admin">Admin</option>
       </select>
+      </div>
 
       <button type="submit">Save User</button>
     </form>
+      </div>
+      </div>
 
-    <hr />
+   
 
-    {/* Change Password Section */}
-    <div className="changePasswordSection">
+
+    <div className="usertablesection">
+    <h3>User List</h3>
+    <table className="userstable" id="usersTable">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {users.length === 0 && (
+          <tr>
+            <td colSpan="6" style={{ textAlign: "center" }}>
+              No users found
+            </td>
+          </tr>
+        )}
+        {users.map((u, i) => (
+          <tr key={u.id}>
+            <td>{i + 1}</td>
+            {/* If firstName or lastName are missing, fallback to email or userName */}
+            <td>{u.firstName ?? u.userName ?? "-"}</td>
+            <td>{u.lastName ?? "-"}</td>
+            <td>{u.email || u.userName}</td>
+            <td>{u.roles ? u.roles.join(", ") : "user"}</td>
+            <td>
+              <button className="actionButton" onClick={() => editUser(u.id)}>
+                Edit
+              </button>
+              <button className="actionButton" onClick={() => deleteUser(u.id)}>
+                Delete
+              </button>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+    </div>
+  </div>
+)};
+
+
+ {/* Change Password Section */}
+  {/*  <div className="changePasswordSection">
       <h3>Change Password</h3>
       <form onSubmit={handleChangePassword}>
         <label htmlFor="currentPassword">Current Password:</label>
@@ -325,49 +396,4 @@ return (
           {passwordMessage}
         </p>
       )}
-    </div>
-
-    <hr />
-
-    <h3>User List</h3>
-    <table id="usersTable">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Email</th>
-          <th>Role</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        {users.length === 0 && (
-          <tr>
-            <td colSpan="6" style={{ textAlign: "center" }}>
-              No users found
-            </td>
-          </tr>
-        )}
-        {users.map((u, i) => (
-          <tr key={u.id}>
-            <td>{i + 1}</td>
-            {/* If firstName or lastName are missing, fallback to email or userName */}
-            <td>{u.firstName ?? u.userName ?? "-"}</td>
-            <td>{u.lastName ?? "-"}</td>
-            <td>{u.email || u.userName}</td>
-            <td>{u.roles ? u.roles.join(", ") : "user"}</td>
-            <td>
-              <button className="actionButton" onClick={() => editUser(u.id)}>
-                Edit
-              </button>
-              <button className="actionButton" onClick={() => deleteUser(u.id)}>
-                Delete
-              </button>
-            </td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </div>
-)};
+    </div>*/}

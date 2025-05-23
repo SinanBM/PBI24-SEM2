@@ -269,18 +269,26 @@ namespace Nexttech.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Calculation>> GetCalculation(int id)
         {
-            var calculation = await _context.Calculations
-                .Include(c => c.Printer)
-                .Include(c => c.Material)
-                .FirstOrDefaultAsync(c => c.Id == id);
+            try
+            {
+                var calculation = await _context.Calculations
+                    .Include(c => c.Printer)
+                    .Include(c => c.Material)
+                    .FirstOrDefaultAsync(c => c.Id == id);
 
-            if (calculation == null)
-                return NotFound();
+                if (calculation == null)
+                    return NotFound();
 
-            return calculation;
+                return calculation;
+            }
+            catch (Exception ex)
+            {
+                // Log the exception if you have logging enabled
+                return StatusCode(500, new { error = ex.Message, stackTrace = ex.StackTrace });
+            }
+
         }
-
-        [HttpPost("upload-photo/{id}")]
+            [HttpPost("upload-photo/{id}")]
         public async Task<IActionResult> UploadPhoto(int id, IFormFile photo)
         {
             var calculation = await _context.Calculations.FindAsync(id);

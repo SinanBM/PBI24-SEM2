@@ -1,62 +1,69 @@
 /* Material.css */
 
 .material-container {
-  padding: 20px;
-  font-family: Arial, sans-serif;
+  display: flex;
+  gap: 40px; /* space between form and table */
+  align-items: flex-start; 
 }
 
-.material-container h1 {
-  margin-bottom: 10px;
+.material-content {
+ flex: 1;
 }
 
-.material-form label {
+.material-table-section {
+  flex: 2;
+  width: 60%;
+}
+
+.material-content form {
+  margin-bottom: 10px; 
+}
+
+.material-container label {
   display: block;
   margin-top: 10px;
+  width: 100%;
+  text-align: left;
 }
 
-.material-form input {
-  width: 100%;
+.material-content input {
+  width: 300px;
   padding: 6px;
   margin-top: 4px;
   box-sizing: border-box;
 }
 
-.material-form button {
-  margin-top: 10px;
-  padding: 6px 12px;
-  cursor: pointer;
+.material-form .button-group {
+  display: flex;
+  gap: 10px; /* spacing between buttons */
+  margin-top: 15px;
 }
 
+
 .material-form .clear-button {
-  margin-left: 10px;
+  margin-left: 0; /* reset margin since gap handles spacing */
 }
 
 .material-table {
-  width: 100%;
+  width: 70%;
   border-collapse: collapse;
   margin-top: 20px;
+  
 }
 
 .material-table th,
 .material-table td {
   border: 1px solid #ddd;
   padding: 8px;
-  text-align: left;
+  text-align: center;
 }
 
 .material-table th {
   background-color: #f2f2f2;
 }
 
-.material-table td button {
-  padding: 4px 8px;
-}
 
-.material-table td .delete-button {
-  margin-left: 5px;
-}
 
-.material-table .no-data {
-  text-align: center;
-  font-style: italic;
-}
+
+
+

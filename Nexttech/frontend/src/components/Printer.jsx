@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import "./Printer.css";
 
@@ -29,12 +29,12 @@ const initialPrinter = {
   support_removal_time_labor_constant: "",
   hours_per_day: "",
   days_per_week: "",
-  fte_per_machine_supervised: "",
-  fte_for_build_exchange: "",
-  fte_for_support_removal: "",
-  fte_salary_engineer: "",
-  fte_salary_operator: "",
-  fte_salary_technician: "",
+  ftE_per_machine_supervised: "",
+  ftE_for_build_exchange: "",
+  ftE_for_support_removal: "",
+  ftE_salary_engineer: "",
+  ftE_salary_operator: "",
+  ftE_salary_technician: "",
 };
 
 export default function Printers() {
@@ -88,59 +88,63 @@ export default function Printers() {
   };
 
   return (
-    <div>
-      <h1>Printers</h1>
+    <div className="printer-container">
+      <div className="printer-form-section">
+        <div className="printer-form">
+        <h1>Printers</h1>
+        <h3>Add / Edit Printer</h3>
+        <form onSubmit={handleSubmit}>
+          <input type="hidden" id="id" value={printer.id || ""} />
 
-      <h3>Add / Edit Printer</h3>
-      <form onSubmit={handleSubmit}>
-        <input type="hidden" id="id" value={printer.id || ""} />
+          {Object.keys(initialPrinter)
+            .filter((key) => key !== "id")
+            .map((key) => (
+              <div key={key}>
+                <label>{key.replace(/_/g, " ").replace(/\b\w/g, l => l.toUpperCase())}:</label>
+                <input
+                  type={key === "name" ? "text" : "number"}
+                  id={key}
+                  value={printer[key]}
+                  step="any"
+                  onChange={handleChange}
+                  required
+                />
+                <br />
+              </div>
+            ))}
 
-        {Object.keys(initialPrinter)
-          .filter((key) => key !== "id")
-          .map((key) => (
-            <div key={key}>
-              <label>{key.replace(/_/g, " ").replace(/\b\w/g, l => l.toUpperCase())}:</label>
-              <input
-                type="number"
-                id={key}
-                value={printer[key]}
-                step="any"
-                onChange={handleChange}
-                required
-              />
-              <br />
-            </div>
-          ))}
+          <button type="submit">Save Printer</button>
+        </form>
+        </div>
+      </div>
 
-        <button type="submit">Save Printer</button>
-      </form>
-
-      <hr />
-
+     
+      <div className="printer-table-section">
       <h3>Printer List</h3>
-      <table id="printersTable" border="1">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Purchase Cost</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {printers.map((p, i) => (
-            <tr key={p.id} onClick={() => handleEdit(p.id)}>
-              <td>{i + 1}</td>
-              <td>{p.name}</td>
-              <td>{p.purchase_cost}</td>
-              <td>
-                <button type="button" onClick={(e) => { e.stopPropagation(); handleEdit(p.id); }}>Edit</button>
-                <button type="button" onClick={(e) => { e.stopPropagation(); handleDelete(p.id); }}>Delete</button>
-              </td>
+        <table className="printertable" id="printersTable" border="1">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Purchase Cost</th>
+              <th>Actions</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {printers.map((p, i) => (
+              <tr key={p.id} onClick={() => handleEdit(p.id)}>
+                <td>{i + 1}</td>
+                <td>{p.name}</td>
+                <td>{p.purchase_cost}</td>
+                <td>
+                  <button type="button" onClick={(e) => { e.stopPropagation(); handleEdit(p.id); }}>Edit</button>
+                  <button type="button" onClick={(e) => { e.stopPropagation(); handleDelete(p.id); }}>Delete</button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
